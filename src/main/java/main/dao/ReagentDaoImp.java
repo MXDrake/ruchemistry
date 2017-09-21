@@ -20,7 +20,7 @@ public class ReagentDaoImp extends AbstractDao implements ReagentDao {
 
     @Override
     public List<Reagent> getAll() {
-        List<Reagent> list = entityManager.createQuery("FROM reagents order by name").setMaxResults(15).getResultList();
+        List<Reagent> list = entityManager.createQuery("FROM reagents order by name").getResultList();
         return list;
     }
 
@@ -28,4 +28,6 @@ public class ReagentDaoImp extends AbstractDao implements ReagentDao {
         List<Reagent> list = entityManager.createQuery("FROM reagents order by name").setFirstResult(firstResult).setMaxResults(10).getResultList();
         return list;
     }
+
+
 }

@@ -12,7 +12,9 @@
 <body>
 MainPage
 
-<p th:text="${reagent}" ></p>
+<p th:
+
+<p th:text="${pagesize}" ></p>
 
 <table>
 <tr th:each ="element: ${reagentList}">
@@ -21,16 +23,24 @@ MainPage
 </tr>
 </table>
 
-<a  th:href="@{?number=}+${page-10}+@{&page=}+${page}" th:text="${page-9}">test</a>
-<a  th:href="@{?number=}+${page-9}+@{&page=}+${page}" th:text="${page-8}">test</a>
-<a  th:href="@{?number=}+${page-8}+@{&page=}+${page}" th:text="${page-7}">test</a>
-<a  th:href="@{?number=}+${page-7}+@{&page=}+${page}" th:text="${page-6}">test</a>
-<a  th:href="@{?number=}+${page-6}+@{&page=}+${page}" th:text="${page-5}">test</a>
-<a  th:href="@{?number=}+${page-5}+@{&page=}+${page}" th:text="${page-4}">test</a>
-<a  th:href="@{?number=}+${page-4}+@{&page=}+${page}" th:text="${page-3}">test</a>
-<a  th:href="@{?number=}+${page-3}+@{&page=}+${page}" th:text="${page-2}">test</a>
-<a  th:href="@{?number=}+${page-2}+@{&page=}+${page}" th:text="${page-1}">test</a>
-<a  th:href="@{?page=}+${page+10}+@{&number=}+${page+10}" th:text="Next">test</a>
+<a  th:if="${page.getPage()} > 10" th:href="@{?page=10}+@{&number=0}" th:text="First">test</a>
+
+<a th:if="${page.getPage()} > 10" th:href="@{?page=}+${page.getPage()-10}+@{&number=}+${page.getPage()-10}"
+   th:text="Back">test</a>
+
+<a  th:href="@{?number=}+${page.getPage()-10}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-9}">test</a>
+<a  th:href="@{?number=}+${page.getPage()-9}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-8}">test</a>
+<a  th:href="@{?number=}+${page.getPage()-8}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-7}">test</a>
+<a  th:href="@{?number=}+${page.getPage()-7}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-6}">test</a>
+<a  th:href="@{?number=}+${page.getPage()-6}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-5}">test</a>
+<a  th:href="@{?number=}+${page.getPage()-5}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-4}">test</a>
+<a  th:href="@{?number=}+${page.getPage()-4}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-3}">test</a>
+<a  th:href="@{?number=}+${page.getPage()-3}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-2}">test</a>
+<a  th:href="@{?number=}+${page.getPage()-2}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-1}">test</a>
+<a  th:href="@{?number=}+${page.getPage()-1}+@{&page=}+${page.getPage()}" th:text="${page.getPage()}">test</a>
+<a th:if="${page.getPage()} < ${page.getPagesize()-2}" th:href="@{?page=}+${page.getPage()+10}+@{&number=}+${page.getPage()+10}"
+   th:text="Next">test</a>
+<a  th:if="${page.getPage()} < ${page.getPagesize()}" th:href="@{?page=}+${page.getPagesize()}+@{&number=}+${page.getPagesize()}" th:text="Last">test</a>
 
 
 
@@ -39,8 +49,6 @@ MainPage
 
 
 
-
-<div id="page_number" th:value="${page}" class="page_number">1</div>
 
 
 </body>

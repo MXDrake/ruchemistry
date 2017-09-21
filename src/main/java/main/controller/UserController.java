@@ -1,5 +1,6 @@
 package main.controller;
 
+import main.model.Page;
 import main.model.Reagent;
 import main.service.ReagentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,10 @@ public class UserController {
     @Autowired
     ReagentService reagentService;
 
+    @Autowired
+    Page pageModel;
+
+
     private static final int BUTTONS_TO_SHOW = 5;
     private static final int INITIAL_PAGE = 0;
     private static final int INITIAL_PAGE_SIZE = 5;
@@ -29,21 +34,24 @@ public class UserController {
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public ModelAndView mainGet(HttpServletRequest request, HttpSession session, HttpServletResponse response) throws IOException {
         ModelAndView model = new ModelAndView("main");
-        int page = 10;
-        int number =1;
-        if (request.getParameter("page") != null) {
-            page = Integer.parseInt(request.getParameter("page"));
+
+        pageModel.setPagesize(reagentService.getAll().size()/10);
+
+        pageModel.setPage(request.getParameter("page"));
+        pageModel.setNumber(request.getParameter("number"));
+
+        if (pageModel.getPage()>pageModel.getPagesize()) {
+            pageModel.setPage(String.valueOf(pageModel.getPagesize()+2));
         }
 
-        if (request.getParameter("number") != null) {
-            number = Integer.parseInt(request.getParameter("number"));
-        }
-
-        request.setAttribute("reagentList",reagentService.getPage(number*10));
+        request.setAttribute("reagentList",reagentService.getPage(pageModel.getNumber()*10));
         request.setAttribute("reagent",reagentService.get(35l));
 
-        request.setAttribute("page", page);
-
+        request.setAttribute("page", pageModel);
+       // request.setAttribute("page", pageModel.getPage());
+       // request.setAttribute("pagesize", pageModel.getPagesize());
+        String str ="<a  th:href=\"@{?number=}+${page.getPage()-10}+@{&page=}+${page.getPage()}\" th:text=\"${page.getPage()-9}\">test</a>";
+        request.setAttribute("navpage", str);
         return model;
     }
 
