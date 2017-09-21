@@ -20,16 +20,10 @@ import java.util.List;
 @Controller
 public class UserController {
     @Autowired
-    ReagentService reagentService;
+    private ReagentService reagentService;
 
     @Autowired
-    Page pageModel;
-
-
-    private static final int BUTTONS_TO_SHOW = 5;
-    private static final int INITIAL_PAGE = 0;
-    private static final int INITIAL_PAGE_SIZE = 5;
-    private static final int[] PAGE_SIZES = { 5, 10, 20 };
+    private Page pageModel;
 
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public ModelAndView mainGet(HttpServletRequest request, HttpSession session, HttpServletResponse response) throws IOException {
@@ -46,14 +40,22 @@ public class UserController {
 
         request.setAttribute("reagentList",reagentService.getPage(pageModel.getNumber()*10));
         request.setAttribute("reagent",reagentService.get(35l));
-
         request.setAttribute("page", pageModel);
-       // request.setAttribute("page", pageModel.getPage());
-       // request.setAttribute("pagesize", pageModel.getPagesize());
-        String str ="<a  th:href=\"@{?number=}+${page.getPage()-10}+@{&page=}+${page.getPage()}\" th:text=\"${page.getPage()-9}\">test</a>";
-        request.setAttribute("navpage", str);
+
         return model;
     }
 
+    @RequestMapping(value = {"/max"}, method = RequestMethod.GET)
+    public ModelAndView test(HttpServletRequest request, HttpSession session, HttpServletResponse response) throws IOException {
+        ModelAndView model = new ModelAndView("test");
 
+        return model;
+    }
+
+    @RequestMapping(value = {"/reagent"}, method = RequestMethod.GET)
+    public ModelAndView reagent(HttpServletRequest request, HttpSession session, HttpServletResponse response) throws IOException {
+        ModelAndView model = new ModelAndView("reagent");
+
+        return model;
+    }
 }

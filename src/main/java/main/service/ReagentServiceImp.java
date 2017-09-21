@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class ReagentServiceImp implements ReagentService {
     @Autowired
-    ReagentDao reagentDao;
+    private ReagentDao reagentDao;
 
     @Override
     public Reagent get(long id){

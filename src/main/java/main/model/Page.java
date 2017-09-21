@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class Page {
 
+    //@Autowired
+   // ReagentService reagentService;
 
     private int page;
     private int pagesize;
@@ -19,7 +21,7 @@ public class Page {
     public Page(){
          this.page = 10;
         this.number = 0;
-       //this.pagesize = reagentService.getAll().size() / 10;
+//        this.pagesize = reagentService.getAll().size() ;
     }
 
     public int getPage() {
