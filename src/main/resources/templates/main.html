@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:pages="http://www.w3.org/1999/xhtml">
 <head>
+    <script type="text/javascript" src="path_to/jquery.js"></script>
+    <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
+    <link type="text/css" rel="stylesheet" href="path_to/simplePagination.css"/>
+
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 MainPage
+
 <p th:text="${reagent}" ></p>
+
+<table>
+<tr th:each ="element: ${reagentList}">
+
+    <td th:text="${element.getName()}"></td>
+</tr>
+</table>
+
+<a  th:href="@{?number=}+${page-10}+@{&page=}+${page}" th:text="${page-9}">test</a>
+<a  th:href="@{?number=}+${page-9}+@{&page=}+${page}" th:text="${page-8}">test</a>
+<a  th:href="@{?number=}+${page-8}+@{&page=}+${page}" th:text="${page-7}">test</a>
+<a  th:href="@{?number=}+${page-7}+@{&page=}+${page}" th:text="${page-6}">test</a>
+<a  th:href="@{?number=}+${page-6}+@{&page=}+${page}" th:text="${page-5}">test</a>
+<a  th:href="@{?number=}+${page-5}+@{&page=}+${page}" th:text="${page-4}">test</a>
+<a  th:href="@{?number=}+${page-4}+@{&page=}+${page}" th:text="${page-3}">test</a>
+<a  th:href="@{?number=}+${page-3}+@{&page=}+${page}" th:text="${page-2}">test</a>
+<a  th:href="@{?number=}+${page-2}+@{&page=}+${page}" th:text="${page-1}">test</a>
+<a  th:href="@{?page=}+${page+10}+@{&number=}+${page+10}" th:text="Next">test</a>
+
+
+
+
+
+
+
+
+
+<div id="page_number" th:value="${page}" class="page_number">1</div>
+
+
 </body>
 </html>
