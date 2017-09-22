@@ -1,0 +1,959 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:pages="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <meta name="google-site-verification" content="2HWGgc7dLSkEITcF3EoPRkEgbgOV9MjQXok8Cu7Qf4g" />
+    <link type="image/x-icon" href="/favicon.gif" rel="icon">
+    <title>Периодическая система химических элементов (таблица Менделеева) </title>
+    <meta name="keywords" content="Периодическая система химических элементов , таблица Менделеева">
+    <meta name="description" content="Периодическая система химических элементов (таблица Менделеева">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
+
+
+
+
+</head>
+<body>
+
+<div id="hat">
+    <div id="menu">
+        <div id="search">
+            <form method="get" action="/reagents/search">
+                Поиск:
+                <input type="text" name="keyword"/><input id="find" type="submit" value="" /><br>
+                <input class="radio" type="radio" name="searchType" checked value="reactives" style="margin-left: 52px;"><label>по реактивам</label>
+                <input class="radio" type="radio" value="drugs" name="searchType"><label>по лекарствам</label>
+
+            </form>
+
+        </div>
+
+        <a href="/"></a>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<div id="monolite">
+
+
+    <table id="body" cellpadding=0 cellspacing=0>
+        <tr>
+            <td id="leftSide">
+                <ul id="leftMenu">
+                    <li>
+                        <a class="opt1 hover" href="/periodic">Таблица Менделеева</a>
+                    </li>
+                    <li>
+                        <a class="opt2" href="/redaktor-formul">Редактор формул</a>
+                    </li>
+                    <li>
+                        <a class="opt3" href="/reagents">Реактивы</a>
+                    </li>
+                    <li>
+                        <a class="opt4" href="/medications">Лекарства</a>
+                    </li>
+                    <!--	<li>
+                        <a class="opt8" href="/companys-catalog">Каталог компаний</a>
+                    </li>-->
+                    <li>
+                        <a class="opt5" href="/supplements">Пищевые добавки Е</a>
+                    </li>
+
+                    <li>
+                        <a class="opt6" href="/prekursori">Прекурсоры</a>
+                    </li>
+
+                    <li>
+                        <a class="opt9" href="/companys-catalog/">Каталог компаний</a>
+                    </li>
+
+
+                    <li>
+                        <a class="opt7" href="/raznoe">Разное</a>
+                    </li>
+                </ul>						<div style="margin-top:20px;width:140px;margin-left:23px;">
+
+
+                <noindex>  <p><a href="http://cosmochim.ru"><img src="/img/400x140r.gif" alt="" width="140" height="400" /></a></p> </noindex>
+
+
+                <noindex>  <a href="http://russian-chemistry.ru/reagents/1457"><img src="http://bannerovich.ru/makebanner/output/bannerovich_ru_file_4698_140x400(PRJ3284).jpg" title="Баннер сделан в www.bannerovich.ru" border="0" style="margin: 5px; border: 0; padding: 0;" /></a>  </noindex>
+
+
+                <br>
+            </div>
+            </td>
+            <td id="rightSide" style="background-color: #c53a99">
+
+
+                <div id="rightSideHat">
+
+                    <div class="leftPart" style="width:100%;">
+                        <p id="h1">
+                            Таблица Менделеева								</p>
+                    </div>
+
+                </div>
+
+
+                <div id="rightSideBody">
+
+                    <div class="fix"></div>
+                    <div id="content">
+
+
+                        <br>
+                        Периодическая система химических элементов (таблица Менделеева) &mdash; классификация химических элементов, устанавливающая зависимость различных свойств элементов от заряда атомного ядра. Система является графическим выражением периодического закона, установленного русским химиком Д. И. Менделеевым в 1869 году.<br><br>Её первоначальный вариант был разработан Д. И. Менделеевым в 1869&mdash;1871 годах и устанавливал зависимость свойств элементов от массового числа атомов (или их атомной массы). Всего предложено несколько сот вариантов изображения периодической системы (аналитических кривых, таблиц, геометрических фигур и т. п.). В современном варианте системы предполагается сведение элементов в двумерную таблицу, в которой каждый столбец (группа) определяет основные физико-химические свойства, а строки представляют собой периоды, в определённой мере подобные друг другу.
+                        <br />
+                        <br />
+                        <table cellspacing="0" cellpadding="0" border="0" id="p_table1">
+                            <tbody>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>I</th>
+                                <th>II</th>
+                                <th>III</th>
+                                <th>IV</th>
+                                <th>V</th>
+                                <th>IV</th>
+                                <th>VII</th>
+                                <th colspan="4">VIII</th>
+                            </tr>
+                            <tr>
+                                <th>I</th>
+                                <td class="r" id="H">
+                                    <a href="/reagents/7398">
+                                        <div class="num">1</div>
+                                        H
+                                        <div>1,00795</div>
+                                        <div>водород</div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="r" id="He">
+                                    <a href="/reagents/4071">
+                                        <div class="num">2</div>
+                                        He
+                                        <div>4,002602</div>
+                                        <div>гелий</div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>II</th>
+                                <td class="r" id="Li">
+                                    <a href="/reagents/96">
+                                        <div class="num">3</div>
+                                        Li
+                                        <div>6,941</div>
+                                        <div>литий</div>
+                                    </a>
+                                </td>
+                                <td class="r" id="Be">
+                                    <a href="/reagents/5223">
+                                        <div class="num">4</div>
+                                        Be
+                                        <div>9,01218</div>
+                                        <div>бериллий</div>
+                                </td>
+                                <td class="o" id="B">
+                                    <a href="/reagents/3149">
+                                        <div class="num">5</div>
+                                        B
+                                        <div>10,811</div>
+                                        <div>бор</div>
+                                </td>
+                                <td class="o" id="C">
+                                    <a href="/reagents/3171">
+                                        <div class="num">6</div>
+                                        C
+                                        <div>12,011</div>
+                                        <div>углерод</div>
+                                </td>
+                                <td class="o" id="N">
+                                    <a href="/reagents/3208">
+                                        <div class="num">7</div>
+                                        N
+                                        <div>14,0067</div>
+                                        <div>азот</div>
+                                </td>
+                                <td class="o" id="O">
+                                    <a href="/reagents/1219">
+                                        <div class="num">8</div>
+                                        O
+                                        <div>15,9994</div>
+                                        <div>кислород</div>
+                                </td>
+                                <td class="o" id="F">
+
+                                    <a href="/reagents/7399">
+                                        <div class="num">9</div>
+                                        F
+                                        <div>18,9984</div>
+                                        <div>фтор</div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="o" id="Ne">
+                                    <a href="/reagents/7400">
+                                        <div class="num">10</div>
+                                        Ne
+                                        <div>20,179</div>
+                                        <div>неон</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>III</th>
+                                <td class="r" id="Na">
+                                    <a href="/reagents/1648">
+                                        <div class="num">11</div>
+                                        Na
+                                        <div>22,9897</div>
+                                        <div>натрий</div>
+                                </td>
+                                <td class="r" id="Mg">
+                                    <a href="/reagents/1387">
+                                        <div class="num">12</div>
+                                        Mg
+                                        <div>24,305</div>
+                                        <div>магний</div>
+                                </td>
+                                <td class="o" id="Al">
+                                    <a href="/reagents/252">
+                                        <div class="num">13</div>
+                                        Al
+                                        <div>26,9815</div>
+                                        <div>алюминий</div>
+                                </td>
+                                <td class="o" id="Si">
+                                    <a href="/reagents/3172">
+                                        <div class="num">14</div>
+                                        Si
+                                        <div>28,0855</div>
+                                        <div>кремний</div>
+                                </td>
+                                <td class="o" id="P">
+                                    <a href="/reagents/3162">
+                                        <div class="num">15</div>
+                                        P
+                                        <div>30,9737</div>
+                                        <div>фосфор</div>
+                                </td>
+                                <td class="o" id="S">
+                                    <a href="/reagents/719">
+                                        <div class="num">16</div>
+                                        S
+                                        <div>32,066</div>
+                                        <div>сера</div>
+                                </td>
+                                <td class="o" id="Cl">
+                                    <a href="/reagents/4067">
+                                        <div class="num">17</div>
+                                        Cl
+                                        <div>35,453</div>
+                                        <div>хлор</div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="o" id="Ar">
+                                    <a href="/reagents/4070">
+                                        <div class="num">18</div>
+                                        Ar
+                                        <div>39,948</div>
+                                        <div>аргон</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">IV</th>
+                                <td class="r" id="K">
+                                    <a href="/reagents/3164">
+                                        <div class="num">19</div>
+                                        K
+                                        <div>39,0983</div>
+                                        <div>калий</div>
+                                </td>
+                                <td class="r" id="Ca">
+                                    <a href="/reagents/3169">
+                                        <div class="num">20</div>
+                                        Ca
+                                        <div>40,078</div>
+                                        <div>кальций</div>
+                                </td>
+                                <td class="b" id="Sc">
+
+                                    <a href="/reagents/7401">
+
+                                        <div class="num">21</div>
+                                        Sc
+                                        <div>44,9559</div>
+                                        <div>скандий</div>
+                                </td>
+                                <td class="b" id="Ti">
+                                    <a href="/reagents/3240">
+                                        <div class="num">22</div>
+                                        Ti
+                                        <div>47,88</div>
+                                        <div>титан</div>
+                                </td>
+                                <td class="b" id="V">
+                                    <a href="/reagents/3239">
+                                        <div class="num">23</div>
+                                        V
+                                        <div>50,9415</div>
+                                        <div>ванадий</div>
+                                </td>
+                                <td class="b" id="Cr">
+                                    <a href="/reagents/3237">
+                                        <div class="num">24</div>
+                                        Cr
+                                        <div>51,9961</div>
+                                        <div>хром</div>
+                                </td>
+                                <td class="b" id="Mn">
+                                    <a href="/reagents/3235">
+                                        <div class="num">25</div>
+                                        Mn
+                                        <div>54,9380</div>
+                                        <div>марганец</div>
+                                </td>
+                                <td class="b" id="Fe">
+                                    <a href="/reagents/876">
+                                        <div class="num">26</div>
+                                        Fe
+                                        <div>55,847</div>
+                                        <div>железо</div>
+                                </td>
+                                <td class="b" id="Co">
+                                    <a href="/reagents/3231">
+                                        <div class="num">27</div>
+                                        Co
+                                        <div>58,9332</div>
+                                        <div>кобальт</div>
+                                </td>
+                                <td class="b" id="Ni">
+                                    <a href="/reagents/3230">
+                                        <div class="num">28</div>
+                                        Ni
+                                        <div>58,69</div>
+                                        <div>никель</div>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="b" id="Cu">
+                                    <a href="/reagents/1165">
+                                        <div class="num">29</div>
+                                        Cu
+                                        <div>63,546</div>
+                                        <div>медь</div>
+                                </td>
+                                <td class="b" id="Zn">
+                                    <a href="/reagents/778">
+                                        <div class="num">30</div>
+                                        Zn
+                                        <div>65,39</div>
+                                        <div>цинк</div>
+                                </td>
+                                <td class="o" id="Ga">
+                                    <a href="/reagents/7402">
+                                        <div class="num">31</div>
+                                        Ga
+                                        <div>69,723</div>
+                                        <div>галлий</div>
+                                </td>
+                                <td class="o" id="Ge">
+                                    <a href="/reagents/7403">
+                                        <div class="num">32</div>
+                                        Ge
+                                        <div>72,59</div>
+                                        <div>германий</div>
+                                </td>
+                                <td class="o" id="As">
+                                    <a href="/reagents/3210">
+                                        <div class="num">33</div>
+                                        As
+                                        <div>74,9216</div>
+                                        <div>мышьяк</div>
+                                </td>
+                                <td class="o" id="Se">
+
+                                    <a href="/reagents/725">
+
+                                        <div class="num">34</div>
+                                        Se
+                                        <div>78,96</div>
+                                        <div>селен</div>
+                                </td>
+                                <td class="o" id="Br">
+                                    <a href="/reagents/477">
+                                        <div class="num">35</div>
+                                        Br
+                                        <div>79,904</div>
+                                        <div>бром</div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="o" id="Kr">
+                                    <a href="/reagents/7404">
+                                        <div class="num">36</div>
+                                        Kr
+                                        <div>83,80</div>
+                                        <div>криптон</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">V</th>
+
+                                <td class="r" id="Rb">
+                                    <a href="/reagents/7405">
+                                        <div class="num">37</div>
+                                        Rb
+                                        <div>85,4678</div>
+                                        <div>рубидий</div>
+                                </td>
+
+                                <td class="r" id="Sr">
+                                    <a href="/reagents/7406">
+                                        <div class="num">38</div>
+                                        Sr
+                                        <div>87,62</div>
+                                        <div>стронций</div>
+                                </td>
+                                <td class="b" id="Y">
+                                    <a href="/reagents/7407">
+                                        <div class="num">39</div>
+                                        Y
+                                        <div>88,9059</div>
+                                        <div>иттрий</div>
+                                </td>
+                                <td class="b" id="Zr">
+                                    <a href="/reagents/7408">
+                                        <div class="num">40</div>
+                                        Zr
+                                        <div>91,224</div>
+                                        <div>цирконий</div>
+                                </td>
+                                <td class="b" id="Nb">
+                                    <a href="/reagents/7409">
+                                        <div class="num">41</div>
+                                        Nb
+                                        <div>92,9064</div>
+                                        <div>ниобий</div>
+                                </td>
+                                <td class="b" id="Mo">
+                                    <a href="/reagents/7410">
+                                        <div class="num">42</div>
+                                        Mo
+                                        <div>95,94</div>
+                                        <div>молибден</div>
+                                </td>
+                                <td class="b" id="Tc">
+                                    <a href="/reagents/7411">
+                                        <div class="num">43</div>
+                                        Tc
+                                        <div>97,9072</div>
+                                        <div>технеций</div>
+                                </td>
+                                <td class="b" id="Ru">
+                                    <a href="/reagents/7412">
+                                        <div class="num">44</div>
+                                        Ru
+                                        <div>101,07</div>
+                                        <div>рутений</div>
+                                </td>
+                                <td class="b" id="Rh">
+                                    <a href="/reagents/7413">
+                                        <div class="num">45</div>
+                                        Rh
+                                        <div>102,905</div>
+                                        <div>родий</div>
+                                </td>
+                                <td class="b" id="Pd">
+                                    <a href="/reagents/2991">
+                                        <div class="num">46</div>
+                                        Pd
+                                        <div>106,42</div>
+                                        <div>палладий</div>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="b" id="Ag">
+                                    <a href="/reagents/4650">
+                                        <div class="num">47</div>
+                                        Ag
+                                        <div>107,868</div>
+                                        <div>серебро</div>
+                                </td>
+                                <td class="b" id="Cd">
+                                    <a href="/reagents/1121">
+                                        <div class="num">48</div>
+                                        Cd
+                                        <div>112,41</div>
+                                        <div>кадмий</div>
+                                </td>
+                                <td class="o" id="In">
+                                    <a href="/reagents/7414">
+                                        <div class="num">49</div>
+                                        In
+                                        <div>114,82</div>
+                                        <div>индий</div>
+                                </td>
+                                <td class="o" id="Sn">
+                                    <a href="/reagents/1753">
+                                        <div class="num">50</div>
+                                        Sn
+                                        <div>118,710</div>
+                                        <div>олово</div>
+                                </td>
+                                <td class="o" id="Sb">
+                                    <a href="/reagents/3211">
+                                        <div class="num">51</div>
+                                        Sb
+                                        <div>121,75</div>
+                                        <div>сурьма</div>
+                                </td>
+                                <td class="o" id="Te">
+                                    <a href="/reagents/7415">
+                                        <div class="num">52</div>
+                                        Te
+                                        <div>127,60</div>
+                                        <div>теллур</div>
+                                </td>
+                                <td class="o" id="I">
+                                    <a href="/reagents/907">
+                                        <div class="num">53</div>
+                                        I
+                                        <div>126,904</div>
+                                        <div>йод</div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="o" id="Xe">
+                                    <a href="/reagents/7416">
+                                        <div class="num">54</div>
+                                        Xe
+                                        <div>131,29</div>
+                                        <div>ксеон</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">VI</th>
+                                <td class="r" id="Cs">
+                                    <div class="num">55</div>
+                                    Cs
+                                    <div>132,905</div>
+                                    <div>цезий</div>
+                                </td>
+                                <td class="r" id="Ba">
+                                    <a href="/reagents/3365">
+                                        <div class="num">56</div>
+                                        Ba
+                                        <div>137,33</div>
+                                        <div>барий</div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td class="b" id="Hf">
+                                    <div class="num">72</div>
+                                    Hf
+                                    <div>178,49</div>
+                                    <div>гафний</div>
+                                </td>
+                                <td class="b" id="Ta">
+                                    <div class="num">73</div>
+                                    Ta
+                                    <div>180,947</div>
+                                    <div>тантал</div>
+                                </td>
+                                <td class="b" id="W">
+                                    <a href="/reagents/4386">
+                                        <div class="num">74</div>
+                                        W
+                                        <div>183,85</div>
+                                        <div>вольфрам</div>
+                                </td>
+                                <td class="b" id="Re">
+                                    <div class="num">75</div>
+                                    Re
+                                    <div>186,207</div>
+                                    <div>рений</div>
+                                </td>
+                                <td class="b" id="Os">
+                                    <div class="num">76</div>
+                                    Os
+                                    <div>190,2</div>
+                                    <div>осмий</div>
+                                </td>
+                                <td class="b" id="Ir">
+                                    <div class="num">77</div>
+                                    Ir
+                                    <div>192,22</div>
+                                    <div>иридий</div>
+                                </td>
+                                <td class="b" id="Pt">
+                                    <a href="/reagents/2006">
+                                        <div class="num">78</div>
+                                        Pt
+                                        <div>195,08</div>
+                                        <div>платина</div>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="b" id="Au">
+                                    <div class="num">79</div>
+                                    Au
+                                    <div>196,966</div>
+                                    <div>золото</div>
+                                </td>
+                                <td class="b" id="Hg">
+                                    <div class="num">80</div>
+                                    Hg
+                                    <div>200,59</div>
+                                    <div>ртуть</div>
+                                </td>
+                                <td class="o" id="Tl">
+                                    <div class="num">81</div>
+                                    Tl
+                                    <div>204,383</div>
+                                    <div>таллий</div>
+                                </td>
+                                <td class="o" id="Pb">
+                                    <a href="/reagents/1731">
+                                        <div class="num">82</div>
+                                        Pb
+                                        <div>207,2</div>
+                                        <div>свинец</div>
+                                </td>
+                                <td class="o" id="Bi">
+                                    <a href="/reagents/470">
+                                        <div class="num">83</div>
+                                        Bi
+                                        <div>208,980</div>
+                                        <div>висмут</div>
+                                </td>
+                                <td class="o" id="Po">
+                                    <div class="num">84</div>
+                                    Po
+                                    <div>208,982</div>
+                                    <div>полоний</div>
+                                </td>
+                                <td class="o" id="At">
+                                    <div class="num">85</div>
+                                    At
+                                    <div>209,987</div>
+                                    <div>астат</div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="o" id="Rn">
+                                    <div class="num">86</div>
+                                    Rn
+                                    <div>222,017</div>
+                                    <div>радон</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>VII</th>
+                                <td class="r" id="Fr">
+                                    <div class="num">87</div>
+                                    Fr
+                                    <div>223,019</div>
+                                    <div>франций</div>
+                                </td>
+                                <td class="r" id="Ra">
+                                    <div class="num">88</div>
+                                    Ra
+                                    <div>226,025</div>
+                                    <div>радий</div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td class="b" id="Rf">
+                                    <div class="num">104</div>
+
+
+                                    Rf
+                                    <div>261</div>
+                                    <div>Резерфордий</div>
+                                </td>
+                                <td class="b" id="Db">
+                                    <div class="num">0</div>
+                                    Db
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="b" id="Sg">
+                                    <div class="num">0</div>
+                                    Sg
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="b" id="Bh">
+                                    <div class="num">0</div>
+                                    Bh
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="b" id="Hs">
+                                    <div class="num">0</div>
+                                    Hs
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td class="b" id="Mt">
+                                    <div class="num">0</div>
+                                    Mt
+                                    <div>&nbsp;</div>
+                                    <div>&nbsp;</div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+                        <table cellspacing="0" cellpadding="0" border="0" id="p_table2">
+                            <tbody>
+                            <tr>
+                                <th colspan="15">* лантаноиды</th>
+                            </tr>
+                            <tr>
+                                <td class="k" id="La">
+                                    <div class="num">57</div>
+                                    La
+                                    <div>138,905</div>
+                                    <div>лантан</div>
+                                </td>
+                                <td class="k" id="Ce">
+                                    <div class="num">58</div>
+                                    Ce
+                                    <div>140,12</div>
+                                    <div>церий</div>
+                                </td>
+                                <td class="k" id="Pr">
+                                    <div class="num">59</div>
+                                    Pr
+                                    <div>140,90</div>
+                                    <div>празеодим</div>
+                                </td>
+                                <td class="k" id="Nd">
+                                    <div class="num">60</div>
+                                    Nd
+                                    <div>144,24</div>
+                                    <div>неодим</div>
+                                </td>
+                                <td class="k" id="Pm">
+                                    <div class="num">61</div>
+                                    Pm
+                                    <div>144,9128</div>
+                                    <div>прометий</div>
+                                </td>
+                                <td class="k" id="Sm">
+                                    <div class="num">62</div>
+                                    Sm
+                                    <div>150,36</div>
+                                    <div>самарий</div>
+                                </td>
+                                <td class="k" id="Eu">
+                                    <div class="num">63</div>
+                                    Eu
+                                    <div>151,96</div>
+                                    <div>европий</div>
+                                </td>
+                                <td class="k" id="Gd">
+                                    <div class="num">64</div>
+                                    Gd
+                                    <div>157,25</div>
+                                    <div>гадолиний</div>
+                                </td>
+                                <td class="k" id="Tb">
+                                    <div class="num">65</div>
+                                    Tb
+                                    <div>158,925</div>
+                                    <div>тербий</div>
+                                </td>
+                                <td class="k" id="Dy">
+                                    <div class="num">66</div>
+                                    Dy
+                                    <div>162,50</div>
+                                    <div>диспрозий</div>
+                                </td>
+                                <td class="k" id="Ho">
+                                    <div class="num">67</div>
+                                    Ho
+                                    <div>164,930</div>
+                                    <div>гольмий</div>
+                                </td>
+                                <td class="k" id="Er">
+                                    <div class="num">68</div>
+                                    Er
+                                    <div>167,26</div>
+                                    <div>эрбий</div>
+                                </td>
+                                <td class="k" id="Tm">
+                                    <div class="num">69</div>
+                                    Tm
+                                    <div>168,934</div>
+                                    <div>тулий</div>
+                                </td>
+                                <td class="k" id="Yb">
+                                    <div class="num">70</div>
+                                    Yb
+                                    <div>173,04</div>
+                                    <div>иттербий</div>
+                                </td>
+                                <td class="k" id="Lu">
+                                    <div class="num">71</div>
+                                    Lu
+                                    <div>174,967</div>
+                                    <div>лютеций</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="15">** актиноиды</th>
+                            </tr>
+                            <tr>
+                                <td class="k" id="Ac">
+                                    <div class="num">89</div>
+                                    Ac
+                                    <div>227,027</div>
+                                    <div>актиний</div>
+                                </td>
+                                <td class="k" id="Th">
+                                    <div class="num">90</div>
+                                    Th
+                                    <div>232,038</div>
+                                    <div>торий</div>
+                                </td>
+                                <td class="k" id="Pa">
+                                    <div class="num">91</div>
+                                    Pa
+                                    <div>231,0359</div>
+                                    <div>протактиний</div>
+                                </td>
+                                <td class="k" id="U">
+                                    <div class="num">92</div>
+                                    U
+                                    <div>238,028</div>
+                                    <div>уран</div>
+                                </td>
+                                <td class="k" id="Np">
+                                    <div class="num">93</div>
+                                    Np
+                                    <div>237,0482</div>
+                                    <div>нептуний</div>
+                                </td>
+                                <td class="k" id="Pu">
+                                    <div class="num">94</div>
+                                    Pu
+                                    <div>244,0642</div>
+                                    <div>плутоний</div>
+                                </td>
+                                <td class="k" id="Am">
+                                    <div class="num">95</div>
+                                    Am
+                                    <div>243,0614</div>
+                                    <div>америций</div>
+                                </td>
+                                <td class="k" id="Sm">
+                                    <div class="num">96</div>
+                                    Sm
+                                    <div>247,0703</div>
+                                    <div>кюрий</div>
+                                </td>
+                                <td class="k" id="Bk">
+                                    <div class="num">97</div>
+                                    Bk
+                                    <div>247,0703</div>
+                                    <div>берклий</div>
+                                </td>
+                                <td class="k" id="Cf">
+                                    <div class="num">98</div>
+                                    Cf
+                                    <div>251,0796</div>
+                                    <div>калифорний</div>
+                                </td>
+                                <td class="k" id="Es">
+                                    <div class="num">99</div>
+                                    Es
+                                    <div>252,0828</div>
+                                    <div>эйнштейний</div>
+                                </td>
+                                <td class="k" id="Fm">
+                                    <div class="num">100</div>
+                                    Fm
+                                    <div>257,0951</div>
+                                    <div>фермий</div>
+                                </td>
+                                <td class="k" id="Md">
+                                    <div class="num">101</div>
+                                    Md
+                                    <div>258,0986</div>
+                                    <div>менделевий</div>
+                                </td>
+                                <td class="k" id="No">
+                                    <div class="num">102</div>
+                                    No
+                                    <div>259,1009</div>
+                                    <div>нобелий</div>
+                                </td>
+                                <td class="k" id="Lr">
+                                    <div class="num">103</div>
+                                    Lr
+                                    <div>260,1054</div>
+                                    <div>лоуренсий</div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <p style="font:11px Tahoma;">
+                            * - Лантано&#769;иды (лантани&#769;ды) — семейство из 14 химических элементов с порядковыми номерами 58—71, расположенных в VI периоде системы Менделеева за лантаном и сходных с ним по свойствам. Располагаются в отдельном ряду внизу Периодической системы химических элементов Д. И. Менделеева (в краткой и полудлинной формах таблицы). В атоме лантаноидов заполняется глубоко лежащий четвертый слой 4f14. Поэтому лантаноидов может быть только 14. Поскольку по мере увеличения заряда ядра структура двух внешних электронных оболочек не меняется, все лантаноиды имеют сходные химические свойства. © <noindex><a href="http://ru.wikipedia.org/wiki/%D0%9B%D0%B0%D0%BD%D1%82%D0%B0%D0%BD%D0%BE%D0%B8%D0%B4%D1%8B">Wikipedia</a><noindex>
+                        </p>
+                        <br>
+                        <p style="font:11px Tahoma;">
+                            ** - Актино&#769;иды (актини&#769;ды) — семейство подобных по своим свойствам серебристых тяжёлых радиоактивных химических элементов. Данная группа обладает уникальными свойствами, которые не поддаются описанию обычными теориями металлического состояния. © <noindex><a href="http://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B8%D0%BD%D0%BE%D0%B8%D0%B4%D1%8B">Wikipedia</a><noindex>
+                        </p>
+
+
+
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+</div>
+<div id="basement">
+    <a href="/" id="baseLogo"></a>
+    <div class="emailLink">E-mail для связи:<br><b>info.russian.chemistry@yandex.ru</b></div>
+
+</div>
+
+</body>
+</html>

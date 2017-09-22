@@ -1,360 +1,38 @@
+<div class="pagination">
+    <div class="pages">
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="google-site-verification" content="2HWGgc7dLSkEITcF3EoPRkEgbgOV9MjQXok8Cu7Qf4g" />
-    <link type="image/x-icon" href="/favicon.gif" rel="icon">
-    <title>Российская Химия. Химическая энциклопедия. Реактивы, лекарства, химреактивы,пищевые добавки, прекурсоры.</title>
-    <meta name="keywords" content="Российская Химия. Химическая энциклопедия. Реактивы, лекарства, химреактивы , пищевые добавки, прекурсоры.">
-    <meta name="description" content="Российская Химия. Химическая энциклопедия. Реактивы, лекарства, химреактивы,пищевые добавки, прекурсоры.">
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
-    <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
-    <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
-    <script type="text/javascript" src="/js/jquery-ui-1.7.2.custom.min.js"></script>
-    <script type="text/javascript" src="/js/reagent.js"></script>
-    <script type="text/javascript" src="/js/app.js"></script>
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-19602514-1']);
-        _gaq.push(['_trackPageview']);
+        <a  th:if="${page.getPage()} > 20" th:href="@{?page=20}+@{&number=0}" th:text="First">Начало</a>
 
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-2353543-3']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
-
-</head>
-<body>
-<script type="text/javascript">
-    (function(){
-        var rb = document.createElement('script');
-        d = new Date();
-        d.setHours(0);
-        d.setMinutes(0);
-        d.setSeconds(0);
-        d.setMilliseconds(0);
-        rb.type = 'text/javascript';
-        rb.async = true;
-        rb.src = '//s1.rotaban.ru/rotaban.js?v=' + d.getTime();
-        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(rb);
-    })();
-</script>
-<div id="hat">
-    <div id="menu">
-        <div id="search">
-            <form method="get" action="/reagents_search">
-                Поиск:
-                <input type="text" name="keyword"/><input id="find" type="submit" value="" /><br>
-                <input class="radio" type="radio" name="searchType" checked value="reactives" style="margin-left: 52px;"><label>по реактивам</label>
-                <input class="radio" type="radio" value="drugs" name="searchType"><label>по лекарствам</label>
+        <a th:if="${page.getPage()} > 20" th:href="@{?page=}+${page.getPage()-20}+@{&number=}+${page.getPage()-20}"
+           th:text="Back">test</a>
 
 
+        <a  th:href="@{?number=}+${page.getPage()-20}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-19}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-19}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-18}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-18}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-17}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-17}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-16}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-16}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-15}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-15}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-14}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-14}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-13}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-13}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-12}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-12}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-11}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-11}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-10}">test</a>
 
-
-
-            </form>
-
-        </div>
-
-
-
-
-
-
-
-
-        <a href="/"></a>
-
-
+        <a  th:href="@{?number=}+${page.getPage()-10}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-9}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-9}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-8}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-8}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-7}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-7}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-6}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-6}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-5}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-5}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-4}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-4}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-3}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-3}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-2}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-2}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()-1}">test</a>
+        <a  th:href="@{?number=}+${page.getPage()-1}+@{&page=}+${page.getPage()} + @{&keyword=}+${keyword}" th:text="${page.getPage()}">test</a>
+        <a th:if="${page.getPage()} < ${page.getPagesize()-2}" th:href="@{?page=}+${page.getPage()+20}+@{&number=}+${page.getPage() + @{&keyword=}+${keyword}"
+           th:text="Next">test</a>
+        <a  th:if="${page.getPage()} < ${page.getPagesize()}" th:href="@{?page=}+${page.getPagesize()}+@{&number=}+${page.getPagesize()}" th:text="End">test</a>
 
 
 
     </div>
-
-
 </div>
-
-
-
-
-
-
-<div id="monolite">
-
-
-
-
-
-
-
-
-    <table id="body" cellpadding=0 cellspacing=0>
-        <tr>
-            <td id="leftSide">
-                <ul id="leftMenu">
-                    <li>
-                        <a class="opt1" href="/periodic_table">Таблица Менделеева</a>
-                    </li>
-                    <li>
-                        <a class="opt2" href="/redaktor-formul">Редактор формул</a>
-                    </li>
-                    <li>
-                        <a class="opt3" href="/reagents">Реактивы</a>
-                    </li>
-                    <li>
-                        <a class="opt4" href="/medications">Лекарства</a>
-                    </li>
-                    <!--	<li>
-                        <a class="opt8" href="/companys-catalog">Каталог компаний</a>
-                    </li>-->
-                    <li>
-                        <a class="opt5" href="/pishevie-dobavki-e">Пищевые добавки Е</a>
-                    </li>
-
-                    <li>
-                        <a class="opt6" href="/prekursori">Прекурсоры</a>
-                    </li>
-
-                    <li>
-                        <a class="opt9" href="/companys-catalog/">Каталог компаний</a>
-                    </li>
-
-
-                    <li>
-                        <a class="opt7" href="/raznoe">Разное</a>
-                    </li>
-                </ul>						<div style="margin-top:20px;width:140px;margin-left:23px;">
-
-
-                <noindex>  <p><a href="http://cosmochim.ru"><img src="/img/400x140r.gif" alt="" width="140" height="400" /></a></p> </noindex>
-
-
-                <noindex>  <a href="http://russian-chemistry.ru/reagents/1457"><img src="http://bannerovich.ru/makebanner/output/bannerovich_ru_file_4698_140x400(PRJ3284).jpg" title="Баннер сделан в www.bannerovich.ru" border="0" style="margin: 5px; border: 0; padding: 0;" /></a>  </noindex>
-
-
-
-                <!-- SAPE -->
-
-                <style type='text/css'> .block_links * { background:transparent none repeat scroll 0 0 !important; border:medium none !important; clear:none !important; clip:rect(auto, auto, auto, auto) !important; font-size:100% !important; font-style:normal !important; font-variant:normal !important; font-weight:normal !important; height:auto !important; letter-spacing:normal !important; line-height:normal !important; margin:0 !important; overflow:visible !important; padding:0 !important; position:static !important; text-align:left !important; text-decoration:none !important; text-indent:0 !important; text-transform:none !important; vertical-align:baseline !important; visibility:visible !important; white-space:normal !important; width:auto; word-spacing:normal !important; z-index:auto !important; cursor: pointer!important; word-wrap: break-word!important; } .block_links li { display:list-item !important; list-style-image:none !important; list-style-position:outside !important; list-style-type:none !important; display: inline; } .block_links li DIV { padding:0.5em !important; } .block_links DIV, .block_links TABLE { padding: 5px !important; } .block_links { width: auto!important; font-family: Verdana!important; font-size: 11px!important; border: 1px solid #DDDDDD!important; background-color: #FFFFFF!important; padding:5px!important; position: relative!important; display:block!important; } .block_links_icnt, .block_links_icnt * { text-align: left!important; } .block_links_text, .block_links_text A, .block_links_text A:hover { color: #000000!important; font-size: 11px!important; text-decoration: none!important; } .block_links_url { color: #006600!important; font-size: 11px!important; text-decoration: none!important; } .block_links_header, .block_links_header A { color: #000066!important; font-size: 10px!important; font-weight: bold!important; text-decoration: underline!important; } .block_links_sign { color: #999999!important; font-size: 10px!important; text-align: left!important; text-decoration: none!important; } .block_links_clear { clear:both!important; } .block_links TABLE { width: 100%!important; border: 0px!important; } </style><script type="text/javascript">
-                <!--
-                var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="//www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
-                //-->
-            </script><div class='block_links'  > <table> <tr> <td class='block_links_icnt' style='width:50%'> <span onclick='window.open(&#39;http://dioma.by/catalog/ochistka-uvlazhnenie-osushenievozdukha/ochistitelivozdukha&#39;, &#39;_blank&#39;); return false;'> <p class='block_links_text'> Купить <a href="http://dioma.by/catalog/ochistka-uvlazhnenie-osushenievozdukha/ochistitelivozdukha" target="_blank">очиститель воздуха для дома</a> в Минске. </p></span> </td><td class='block_links_icnt' style='width:50%'> <span onclick='window.open(&#39;http://www.azino777-azino888.net&#39;, &#39;_blank&#39;); return false;'> <p class='block_links_text'> <a href="http://www.azino777-azino888.net" target="_blank">Подробное описание Азино 777 здесь</a>. </p></span> </td> </tr> </table></div>
-
-
-                <br>
-            </div>
-            </td>
-            <td id="rightSide" style="background-color: #7f51c4">
-
-
-
-
-
-                <div id="rightSideHat">
-
-
-
-
-                    <div class="leftPart" style="width:100%;">
-                        <p id="h1">
-                            Добро пожаловать								</p>
-                    </div>
-
-
-
-                </div>
-
-
-                <div id="rightSideBody">
-
-                    <div class="fix"></div>
-                    <div id="content">
-
-
-                        <!-- Pingmedia TopLine code START-->
-                        <script language="javascript" type="text/javascript"><!--
-                        (function(L){if(typeof(ar_cn)=="undefined")ar_cn=1;
-                            var S='setTimeout(function(e){if(!self.CgiHref){document.close();e=parent.document.getElementById("ar_container_"+ar_bnum);e.parentNode.removeChild(e);}},3000);',
-                                j=' type="text/javascript"',t=0,D=document,n=ar_cn;L+=escape(D.referrer||'unknown')+'&rnd='+Math.round(Math.random()*999999999);
-                            function _(){if(t++<100){var F=D.getElementById('ar_container_'+n);
-                                if(F){try{var d=F.contentDocument||(window.ActiveXObject&&window.frames['ar_container_'+n].document);
-                                    if(d){d.write('<sc'+'ript'+j+'>var ar_bnum='+n+';'+S+'<\/sc'+'ript><sc'+'ript'+j+' src="'+L+'"><\/sc'+'ript>');t=0}
-                                    else setTimeout(_,100);}catch(e){try{F.src="javascript:{document.write('<sc'+'ript"+j+">var ar_bnum="+n+"; document.domain=\""
-                                    +D.domain+"\";"+S+"<\/sc'+'ript>');document.write('<sc'+'ript"+j+" src=\""+L+"\"><\/sc'+'ript>');}";return}catch(E){}}}else setTimeout(_,100);}}
-                            D.write('<div style="visibility:hidden;height:0px;left:-1000px;position:absolute;"><iframe id="ar_container_'+ar_cn
-                                +'" width=1 height=1 marginwidth=0 marginheight=0 scrolling=no frameborder=0><\/iframe><\/div><div id="ad_ph_'+ar_cn
-                                +'" style="display:none;"><\/div>');_();ar_cn++;
-                        })('http://ad.adriver.ru/cgi-bin/erle.cgi?sid=183942&target=blank&bt=43&tail256=');
-                        //--></script>
-                        <!-- Pingmedia TopLine code END -->
-
-
-
-                        <h1>Главная страница</h1>
-                        <table>
-                            <tr>
-                                <td>
-                                    Мы рады приветствовать вас на нашем сайте о <a href="/himiya">химии</a>. Здесь вы можете получить информацию о <a href="/himreaktivi">химических реактивах</a> и <a href="/lekarstva">лекарствах</a>. В соответствующих разделах воспользуйтесь поиском по алфавиту, чтобы ускорить процесс получения необходимых данных. На странице отдельного химического реактива вы можете найти его оригинальное название и синонимы, а также написание на английском языке. Страница также содержит изображение химической формулы реактива, его CAS-номер, условия эксплуатации, перечень возможных негативных эффектов при использовании, <span style="color:#888;" title='ссылка в "указателе препаративных синтезов органических соединений" Лернер И.М'>литературную ссылку</span>, физические свойства и общую характеристику. В вашем распоряжении также <a href="/periodic_table">таблица Менделеева</a> и графический <a href="/redaktor-formul">редактор формул</a>. На сайте в отдельные разделы вынесены <a href="/pishevie-dobavki-e">пищевые добавки</a> и <a href="/prekursori">запрещённые вещества</a>. В дополнение к этому, мы выкладываем в раздел <a href="/raznoe">"Разное"</a> необходимую литературу и дополнительную полезную информацию о константах, сплавах и смесях.
-                                    <p style="font-style:italic; text-align:right;">Спасибо за использование нашего ресурса. Администрация.</p>
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
-
-
-
-                        <br>
-                        <div style="float:left;width:63%;">
-                            <h5>Страница вещества:</h5>
-                            <img src="http://lh5.ggpht.com/_eN3tYXaAbwU/TNbqxOdmKvI/AAAAAAAAAB0/eLKYBpXvV6k/signature.jpg" style="border:9px solid #ddecf4;padding:16px;">
-                            <br>
-                            <h5>Пояснения:</h5>
-                            <h4>
-                                CAS#   (Chemical Abstracts Service)
-                            </h4>
-                            это номер, присвоенный производителем для одной химической формулы.
-
-                            <h4>Safety statements (Условия эксплуатации)</h4> это классификация мер безопасности. Обозначается как SS. Классификация SS  имеет числовой код, соответствующий одному определенному условию (хранение, транспортировка, работа). <br>
-
-                            <h4>Risk statements (Риск при использовании)</h4> это классификация возможного риска. Обозначается как RS. Классификация RS имеет числовой код, соответствующий одной определенной угрозе (риску, предостережению). <br>
-
-                        </div>
-                        <div class="halfPartedBox">
-
-                            <h5>Знаки предупреждения риска:</h5>
-
-                            <table class="warningSigns" cellspacing=0>
-                                <tr><td>
-                                    <img src="/img/signs/t.gif"></td><td>
-                                    ТОКСИЧЕН, МОЖЕТ ВЫЗЫВАТЬ НЕОБРАТИМЫЕ ПОСЛЕДСТВИЯ, В Т.Ч. КУМУЛЯТИВНЫЕ, МУТАГЕННЫЕ, ТЕРАТОГЕННЫЕ, КАНЦЕРОГЕННЫЕ.
-                                </td></tr>
-                                <tr><td>
-                                    <img src="/img/signs/c.gif"></td><td>
-                                    ЕДКОЕ. ВЕЩЕСТВА К.П. ВЫЗЫВАЮЩИЕ ТЯЖЕЛЫЕ, ДОЛГО ЗАЖИВАЮЩИЕ ОЖОГИ.
-                                </td></tr>
-                                <tr><td>
-                                    <img src="/img/signs/xn.gif"></td><td>
-                                    ВРЕДНО, ОКАЗЫВАЕТ ОБЩЕЕ НЕГАТИВНОЕ ВОЗДЕЙСТВИЕ НА ОРГАНИЗМ.
-                                </td></tr>
-                                <tr><td>
-                                    <img src="/img/signs/xi.gif"></td><td>
-                                    РАЗДРАЖАЮЩИЙ, ГИПЕРАЛЛИРГЕН, МОЖЕТ ВЫЗЫВАТЬ СЕРЬЕЗНЫЕ КОЖНЫЕ ЗАБОЛЕВАНИЯ.
-                                </td></tr>
-                                <tr><td>
-                                    <img src="/img/signs/t_plus.gif"></td><td>
-                                    ЧРЕЗВЫЧАЙНО ТОКСИЧЕН, ИМЕЕТ НИЗКУЮ ЛЕТАЛЬНУЮ ДОЗУ! СМ. ТОКСИЧЕН
-                                </td></tr>
-                                <tr><td>
-                                    <img src="/img/signs/e.gif"></td><td>
-                                    ВЗРЫВООПАСЕН
-                                </td></tr>
-                                <tr><td>
-                                    <img src="/img/signs/n.gif"></td><td>
-                                    ОПАСЕН ДЛЯ ОКРУЖАЮЩЕЙ СРЕДЫ. ДАННЫЙ ВИД ВЕЩЕСТВ КАТЕГОРИЧЕСКИ ЗАПРЕЩАЕТСЯ УТИЛИЗИРОВАТЬ В ОБЩУЮ КАНАЛИЗАЦИЮ
-                                </td></tr>
-                                <tr><td>
-                                    <img src="/img/signs/f.gif"></td><td>
-                                    ЛЕГКО ВОСПЛАМЕНЯЕМ.
-                                </td></tr>
-                                <tr><td>
-                                    <img src="/img/signs/f_plus.gif"></td><td>
-                                    ЧРЕЗВЫЧАЙНО ЛЕГКО ВОСПЛАМЕНЯЕМ.
-                                </td></tr>
-                                <tr><td>
-                                    <img src="/img/signs/o.gif"></td><td>
-                                    СИЛЬНЫЙ ОКИСЛИТЕЛЬ. КАТЕГОРИЧЕСКИ ЗАПРЕЩАЕТСЯ ХРАНЕНИЕ РЯДОМ С ВЕЩЕСТВАМИ КЛАССА F, F+
-                                </td></tr>
-                            </table>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </td>
-        </tr>
-
-    </table>
-</div>
-<div id="basement">
-    <a href="/" id="baseLogo"></a>
-    <div class="emailLink">E-mail для связи:<br><b>info.russian.chemistry@yandex.ru</b></div>
-    <div style='padding:0 0 10px 10px; opacity:0.5; filter:alpha(opacity=50);float:right;'>
-        <!--Rating@Mail.ru counter-->
-        <script language="javascript" type="text/javascript"><!--
-        d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
-        <script language="javascript1.1" type="text/javascript"><!--
-        a+=';j='+navigator.javaEnabled();js=11;//--></script>
-        <script language="javascript1.2" type="text/javascript"><!--
-        s=screen;a+=';s='+s.width+'*'+s.height;
-        a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
-        <script language="javascript1.3" type="text/javascript"><!--
-        js=13;//--></script><script language="javascript" type="text/javascript"><!--
-    d.write('<a href="http://top.mail.ru/jump?from=1698411" target="_top">'+
-        '<img src="http://da.ce.b9.a1.top.mail.ru/counter?id=1698411;t=95;js='+js+
-        a+';rand='+Math.random()+'" alt="пїЅпїЅпїЅпїЅпїЅпїЅпїЅ@Mail.ru" border="0" '+
-        'height="18" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
-        <noscript><a target="_top" href="http://top.mail.ru/jump?from=1698411">
-            <img src="http://da.ce.b9.a1.top.mail.ru/counter?js=na;id=1698411;t=95"
-                 height="18" width="88" border="0" alt="пїЅпїЅпїЅпїЅпїЅпїЅпїЅ@Mail.ru"></a></noscript>
-        <script language="javascript" type="text/javascript"><!--
-        if(11<js)d.write('--'+'>');//--></script>
-        <!--// Rating@Mail.ru counter-->
-    </div>
-
-    <!-- Yandex.Metrika -->
-    <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
-    <div style="display:none;"><script type="text/javascript">
-        try { var yaCounter1892647 = new Ya.Metrika(1892647);
-            yaCounter1892647.clickmap(true);
-            yaCounter1892647.trackLinks(true);
-        } catch(e){}
-    </script></div>
-    <noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1892647" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika -->
-    <!-- Yandex.Metrika informer -->
-    <a href="http://metrika.yandex.ru/stat/?id=8031604&amp;from=informer"
-       target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/8031604/1_0_DBDBDBFF_BBBBBBFF_0_uniques"
-                                           style="width:80px; height:15px; border:0;float:right;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (уникальные посетители)" /></a>
-    <!-- /Yandex.Metrika informer -->
-
-    <!-- Yandex.Metrika counter -->
-    <div style="display:none;"><script type="text/javascript">
-        (function(w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter8031604 = new Ya.Metrika({id:8031604, enableAll: true});
-                }
-                catch(e) { }
-            });
-        })(window, "yandex_metrika_callbacks");
-    </script></div>
-    <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
-    <noscript><div><img src="//mc.yandex.ru/watch/8031604" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-</div>
-
-
-
-
-</body>
-</html>
