@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:pages="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="2HWGgc7dLSkEITcF3EoPRkEgbgOV9MjQXok8Cu7Qf4g" />
+    <link type="image/x-icon" href="/favicon.gif" rel="icon">
+    <title>Реактивы</title>
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
+
+</head>
+<body>
+
+
+<div id="hat">
+    <div id="menu">
+        <div id="search">
+            <form method="get" action="/reagents_search">
+                Поиск:
+                <input type="text" name="keyword"/><input id="find" type="submit" value="" /><br>
+                <input class="radio" type="radio" name="searchType" checked value="reactives" style="margin-left: 52px;"><label>по реактивам</label>
+                <input class="radio" type="radio" value="drugs" name="searchType"><label>по лекарствам</label>
+            </form>
+
+        </div>
+
+        <a href="/"></a>
+
+    </div>
+
+</div>
+
+
+<div id="monolite">
+    <table id="body" cellpadding=0 cellspacing=0>
+        <li>
+            <td id="leftSide">
+                <ul id="leftMenu">
+                    <li>
+                        <a class="opt1" href="/periodic_table">Таблица Менделеева</a>
+                    </li>
+                    <li>
+                        <a class="opt2" href="/redaktor-formul">Редактор формул</a>
+                    </li>
+                    <li>
+                        <a class="opt3 hover" href="/reagents">Реактивы</a>
+                    </li>
+                    <li>
+                        <a class="opt4" href="/medications">Лекарства</a>
+                    </li>
+                    <!--	<li>
+                        <a class="opt8" href="/companys-catalog">Каталог компаний</a>
+                    </li>-->
+                    <li>
+                        <a class="opt5" href="/pishevie-dobavki-e">Пищевые добавки Е</a>
+                    </li>
+
+                    <li>
+                        <a class="opt6" href="/prekursori">Прекурсоры</a>
+                    </li>
+
+                    <li>
+                        <a class="opt9" href="/companys-catalog/">Каталог компаний</a>
+                    </li>
+
+
+                    <li>
+                        <a class="opt7" href="/raznoe">Разное</a>
+                    </li>
+                </ul>						<div style="margin-top:20px;width:140px;margin-left:23px;">
+
+
+                <noindex> <p><a href="http://cosmochim.ru"><img src="/img/400x140r.gif" alt="" width="140" height="400" /></a></p>  </noindex>
+
+
+                <br>
+            </div>
+            </td>
+            <td id="rightSide" style="background-color: #EC8B00">
+
+
+                <br />
+                <div id="rightSideHat">
+                    <div class="leftPart">
+                        <p id="h1">Реактивы</p>
+                    </div>
+                    <div class="rightPart">
+                        <div class="letter">
+                            <p>?</p>
+                        </div>
+                        <div id="letterSelect"></div>
+                        <div class="letterBlock">
+                            <div id="letterList">
+                                <div class="alphabet cyr">
+                                    <a href="/reagents_letters_search?letter=а">а</a>
+                                    <a href="/reagents_letters_search?letter=б">б</a>
+                                    <a href="/reagents_letters_search?letter=в">в</a>
+                                    <a href="/reagents_letters_search?letter=г">г</a>
+                                    <a href="/reagents_letters_search?letter=д">д</a>
+                                    <a href="/reagents_letters_search?letter=е">е</a>
+                                    <a href="/reagents_letters_search?letter=ж">ж</a>
+                                    <a href="/reagents_letters_search?letter=з">з</a>
+                                    <a href="/reagents_letters_search?letter=и">и</a>
+                                    <a href="/reagents_letters_search?letter=к">к</a>
+                                    <a href="/reagents_letters_search?letter=л">л</a>
+                                    <a href="/reagents_letters_search?letter=м">м</a>
+                                    <a href="/reagents_letters_search?letter=н">н</a>
+                                    <a href="/reagents_letters_search?letter=о">о</a>
+                                    <a href="/reagents_letters_search?letter=п">п</a>
+                                    <a href="/reagents_letters_search?letter=р">р</a>
+                                    <a href="/reagents_letters_search?letter=с">с</a>
+                                    <a href="/reagents_letters_search?letter=т">т</a>
+                                    <a href="/reagents_letters_search?letter=у">у</a>
+                                    <a href="/reagents_letters_search?letter=ф">ф</a>
+                                    <a href="/reagents_letters_search?letter=х">х</a>
+                                    <a href="/reagents_letters_search?letter=ц">ц</a>
+                                    <a href="/reagents_letters_search?letter=ч">ч</a>
+                                    <a href="/reagents_letters_search?letter=ш">ш</a>
+                                    <a href="/reagents_letters_search?letter=щ">щ</a>
+                                    <a href="/reagents_letters_search?letter=э">э</a>
+                                    <a href="/reagents_letters_search?letter=я">я</a>
+                                </div>
+                            </div>
+                            <div id="chooseLetter">Поиск по алфавиту</div>
+                        </div>
+                    </div></div>
+
+                <div id="rightSideBody">
+                    <div class="pagination">
+                        <div class="pages">
+                            <a class="hover" href="/reagents?page=1">1</a>
+                            <a href="/reagents?page=2">2</a>
+                            <a href="/reagents?page=3">3</a>
+                            <a href="/reagents?page=4">4</a>
+                            <a href="/reagents?page=5">5</a>
+                            <a href="/reagents?page=6">6</a>
+                            <a href="/reagents?page=7">7</a>
+                            <a href="/reagents?page=8">8</a>
+                            <a href="/reagents?page=9">9</a>
+                            <a href="/reagents?page=10">10</a>
+                            <a href="/reagents?page=11">11</a>
+                            <a href="/reagents?page=12">12</a>
+                            <a href="/reagents?page=13">13</a>
+                            <a href="/reagents?page=14">14</a>
+                            <a href="/reagents?page=15">15</a>
+                            <a href="/reagents?page=16">16</a>
+                            <a href="/reagents?page=17">17</a>
+                            <a href="/reagents?page=18">18</a>
+                            <a href="/reagents?page=19">19</a>
+                            <a href="/reagents?page=20">20</a>
+                            <a href="/reagents?page=21">21</a>
+                            <a href="/reagents?page=22">22</a>
+                            <a href="/reagents?page=23">23</a>
+                            <a href="/reagents?page=24">24</a>
+                            <a href="/reagents?page=25">25</a>
+                            <a href="/reagents?page=26">26</a>
+                            <a href="/reagents?page=27">27</a>
+                            <a href="/reagents?page=28">28</a>
+                            <a href="/reagents?page=29">29</a>
+                            <a href="/reagents?page=30">30</a>
+                            <a href="/reagents?page=31">31</a>
+                            <a href="/reagents?page=32">32</a>
+                            <a href="/reagents?page=33">33</a>
+                            <a href="/reagents?page=34">34</a>
+                            <a href="/reagents?page=35">35</a>
+                            <a href="/reagents?page=36">36</a>
+                            <a href="/reagents?page=37">37</a>
+                            <a href="/reagents?page=38">38</a>
+                            <a href="/reagents?page=39">39</a>
+                            <a href="/reagents?page=40">40</a>
+                            <a href="/reagents?page=41">41</a>
+                            <a href="/reagents?page=42">42</a>
+                            <a href="/reagents?page=43">43</a>
+                            <a href="/reagents?page=44">44</a>
+                            <a href="/reagents?page=45">45</a>
+                            <a href="/reagents?page=46">46</a>
+                            <a href="/reagents?page=47">47</a>
+                            <a href="/reagents?page=48">48</a>
+                            <a href="/reagents?page=49">49</a>
+                            <a href="/reagents?page=50">50</a>
+                            <a href="/reagents?page=51">51</a>
+                            <a href="/reagents?page=52">52</a>
+                            <a href="/reagents?page=53">53</a>
+                            <a href="/reagents?page=54">54</a>
+                            <a href="/reagents?page=55">55</a>
+                            <a href="/reagents?page=56">56</a>
+                            <a href="/reagents?page=57">57</a>
+                            <a href="/reagents?page=58">58</a>
+                            <a href="/reagents?page=59">59</a>
+                            <a href="/reagents?page=60">60</a>
+                            <a href="/reagents?page=61">61</a>
+                            <a href="/reagents?page=62">62</a>
+                            <a href="/reagents?page=63">63</a>
+                            <a href="/reagents?page=64">64</a>
+                            <a href="/reagents?page=65">65</a>
+                            <a href="/reagents?page=66">66</a>
+                            <a href="/reagents?page=67">67</a>
+                            <a href="/reagents?page=68">68</a>
+                            <a href="/reagents?page=69">69</a>
+                            <a href="/reagents?page=70">70</a>
+                            <a href="/reagents?page=71">71</a>
+                            <a href="/reagents?page=72">72</a>
+                            <a href="/reagents?page=73">73</a>
+                            <a href="/reagents?page=74">74</a>
+                            <a href="/reagents?page=75">75</a>
+                            <a href="/reagents?page=76">76</a>
+                            <a href="/reagents?page=77">77</a>
+                            <a href="/reagents?page=78">78</a>
+                            <a href="/reagents?page=79">79</a>
+                            <a href="/reagents?page=80">80</a>
+                            <a href="/reagents?page=81">81</a>
+                            <a href="/reagents?page=82">82</a>
+                            <a href="/reagents?page=83">83</a>
+                            <a href="/reagents?page=84">84</a>
+                            <a href="/reagents?page=85">85</a>
+                            <a href="/reagents?page=86">86</a>
+                            <a href="/reagents?page=87">87</a>
+                            <a href="/reagents?page=88">88</a>
+                            <a href="/reagents?page=89">89</a>
+                            <a href="/reagents?page=90">90</a>
+                            <a href="/reagents?page=91">91</a>
+                            <a href="/reagents?page=92">92</a>
+                            <a href="/reagents?page=93">93</a>
+                            <a href="/reagents?page=94">94</a>
+                            <a href="/reagents?page=95">95</a>
+                            <a href="/reagents?page=96">96</a>
+                            <a href="/reagents?page=97">97</a>
+                            <a href="/reagents?page=98">98</a>
+                            <a href="/reagents?page=99">99</a>
+                            <a href="/reagents?page=100">100</a>
+                            <a href="/reagents?page=101">101</a>
+                            <a href="/reagents?page=102">102</a>
+                            <a href="/reagents?page=103">103</a>
+                            <a href="/reagents?page=104">104</a>
+                            <a href="/reagents?page=105">105</a>
+                            <a href="/reagents?page=106">106</a>
+                            <a href="/reagents?page=107">107</a>
+                            <a href="/reagents?page=108">108</a>
+                            <a href="/reagents?page=109">109</a>
+                            <a href="/reagents?page=110">110</a>
+                            <a href="/reagents?page=111">111</a>
+                            <a href="/reagents?page=112">112</a>
+                            <a href="/reagents?page=113">113</a>
+                            <a href="/reagents?page=114">114</a>
+                            <a href="/reagents?page=115">115</a>
+                            <a href="/reagents?page=116">116</a>
+                            <a href="/reagents?page=117">117</a>
+                            <a href="/reagents?page=118">118</a>
+                            <a href="/reagents?page=119">119</a>
+                            <a href="/reagents?page=120">120</a>
+                            <a href="/reagents?page=121">121</a>
+                            <a href="/reagents?page=122">122</a>
+                            <a href="/reagents?page=123">123</a>
+                            <a href="/reagents?page=124">124</a>
+                            <a href="/reagents?page=125">125</a>
+                            <a href="/reagents?page=126">126</a>
+                            <a href="/reagents?page=127">127</a>
+                            <a href="/reagents?page=128">128</a>
+                            <a href="/reagents?page=129">129</a>
+                            <a href="/reagents?page=130">130</a>
+                            <a href="/reagents?page=131">131</a>
+                            <a href="/reagents?page=132">132</a>
+                            <a href="/reagents?page=133">133</a>
+                            <a href="/reagents?page=134">134</a>
+                            <a href="/reagents?page=135">135</a>
+                            <a href="/reagents?page=136">136</a>
+                            <a href="/reagents?page=137">137</a>
+                            <a href="/reagents?page=138">138</a>
+                            <a href="/reagents?page=139">139</a>
+                            <a href="/reagents?page=140">140</a>
+                            <a href="/reagents?page=141">141</a>
+                            <a href="/reagents?page=142">142</a>
+                        </div>
+                    </div>
+                    <div class="pageScroll">
+                        <a href="#" class="slider"></a>
+                    </div>
+
+                    <div class="fix"></div>
+                    <div id="content">
+
+                        <div class="qtty">всего <b th:text="${page.getRows()}"></b> элементов</div>
+
+                        <ul class="searchList">
+                            <li>
+
+
+                                    <li th:each ="element: ${reagentList}">
+
+                                        <a th:text="${element.getName()}"></a>
+                                        <p th:text="${element.getName()}"></p>
+
+
+                                    </li>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="basement">
+    <a href="/" id="baseLogo"></a>
+    <div class="emailLink">E-mail для связи:<br><b>info.russian.chemistry@yandex.ru</b></div>
+    <div style='padding:0 0 10px 10px; opacity:0.5; filter:alpha(opacity=50);float:right;'>
+
+</div>
+
+</div>
+</body>
+</html>

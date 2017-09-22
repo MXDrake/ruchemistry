@@ -25,21 +25,22 @@ public class UserController {
     @Autowired
     private Page pageModel;
 
-    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/reagents"}, method = RequestMethod.GET)
     public ModelAndView mainGet(HttpServletRequest request, HttpSession session, HttpServletResponse response) throws IOException {
-        ModelAndView model = new ModelAndView("main");
+        ModelAndView model = new ModelAndView("reagents");
 
-        pageModel.setPagesize(reagentService.getAll().size()/10);
+        pageModel.setRows(reagentService.getAll().size());
+        //pageModel.setPagesize(pageModel. / 10);
 
         pageModel.setPage(request.getParameter("page"));
         pageModel.setNumber(request.getParameter("number"));
 
-        if (pageModel.getPage()>pageModel.getPagesize()) {
-            pageModel.setPage(String.valueOf(pageModel.getPagesize()+2));
+        if (pageModel.getPage() > pageModel.getPagesize()) {
+            pageModel.setPage(String.valueOf(pageModel.getPagesize() + 2));
         }
 
-        request.setAttribute("reagentList",reagentService.getPage(pageModel.getNumber()*10));
-        request.setAttribute("reagent",reagentService.get(35l));
+        request.setAttribute("reagentList", reagentService.getPage(pageModel.getNumber() * 10));
+        request.setAttribute("reagent", reagentService.get(35l));
         request.setAttribute("page", pageModel);
 
         return model;
@@ -58,4 +59,5 @@ public class UserController {
 
         return model;
     }
+
 }

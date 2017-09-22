@@ -16,6 +16,7 @@ public class Page {
     private int page;
     private int pagesize;
     private int number;
+    private int rows;
 
 
     public Page(){
@@ -50,5 +51,14 @@ public class Page {
         if (number != null) {
             this.number = Integer.parseInt(number);
         }
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public void setRows(int rows) {
+        this.rows = rows;
+        this.pagesize = rows/10;
     }
 }

@@ -25,7 +25,7 @@ public class ReagentDaoImp extends AbstractDao implements ReagentDao {
     }
 
     public List<Reagent> getPage(int firstResult) {
-        List<Reagent> list = entityManager.createQuery("FROM reagents order by name").setFirstResult(firstResult).setMaxResults(10).getResultList();
+        List<Reagent> list = entityManager.createQuery("FROM reagents order by name").setFirstResult(firstResult).setMaxResults(50).getResultList();
         return list;
     }
 
