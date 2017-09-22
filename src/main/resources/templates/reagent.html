@@ -1,17 +1,13 @@
+<!DOCTYPE html>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:pages="http://www.w3.org/1999/xhtml">
 <head>
-
     <meta charset="UTF-8">
 
     <link type="image/x-icon" href="/favicon.gif" rel="icon">
-    <title>Реактивы -  СЕРЕБРО </title>
-    <meta name="keywords" content=" СЕРЕБРО ; Silver , metal, powder , Argentum ">
-    <meta name="description" content=" СЕРЕБРО ; Silver , metal, powder , Argentum ">
+    <title th:text="${reagent.getName()}">Реактивы  </title>
+    <meta name="keywords"   th:content="${reagent.getName()} + @{ ; } + ${reagent.getSinonim()}">
+    <meta name="description"  th:content="${reagent.getName()} + @{ ; } +${reagent.getSinonim()}">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
 
@@ -21,7 +17,7 @@
 <div id="hat">
     <div id="menu">
         <div id="search">
-            <form method="get" action="/reagents_search">
+            <form method="get" action="/reagents/search">
                 Поиск:
                 <input type="text" name="keyword"/><input id="find" type="submit" value="" /><br>
                 <input class="radio" type="radio" name="searchType" checked value="reactives" style="margin-left: 52px;"><label>по реактивам</label>
@@ -45,7 +41,7 @@
             <td id="leftSide">
                 <ul id="leftMenu">
                     <li>
-                        <a class="opt1" href="/periodic_table">Таблица Менделеева</a>
+                        <a class="opt1" href="/periodic">Таблица Менделеева</a>
                     </li>
                     <li>
                         <a class="opt2" href="/redaktor-formul">Редактор формул</a>
@@ -60,7 +56,7 @@
                         <a class="opt8" href="/companys-catalog">Каталог компаний</a>
                     </li>-->
                     <li>
-                        <a class="opt5" href="/pishevie-dobavki-e">Пищевые добавки Е</a>
+                        <a class="opt5" href="/supplements">Пищевые добавки Е</a>
                     </li>
 
                     <li>
@@ -89,57 +85,19 @@
                     <div class="leftPart">
                         <p id="h1">Реактивы</p>
                     </div>
-                    <div class="rightPart">
-                        <div class="letter">
-                            <p>?</p>
-                        </div>
-                        <div id="letterSelect"></div>
-                        <div class="letterBlock">
-                            <div id="letterList">
-                                <div class="alphabet cyr">
-                                    <a href="/reagents_letters_search?letter=а">а</a>
-                                    <a href="/reagents_letters_search?letter=б">б</a>
-                                    <a href="/reagents_letters_search?letter=в">в</a>
-                                    <a href="/reagents_letters_search?letter=г">г</a>
-                                    <a href="/reagents_letters_search?letter=д">д</a>
-                                    <a href="/reagents_letters_search?letter=е">е</a>
-                                    <a href="/reagents_letters_search?letter=ж">ж</a>
-                                    <a href="/reagents_letters_search?letter=з">з</a>
-                                    <a href="/reagents_letters_search?letter=и">и</a>
-                                    <a href="/reagents_letters_search?letter=к">к</a>
-                                    <a href="/reagents_letters_search?letter=л">л</a>
-                                    <a href="/reagents_letters_search?letter=м">м</a>
-                                    <a href="/reagents_letters_search?letter=н">н</a>
-                                    <a href="/reagents_letters_search?letter=о">о</a>
-                                    <a href="/reagents_letters_search?letter=п">п</a>
-                                    <a href="/reagents_letters_search?letter=р">р</a>
-                                    <a href="/reagents_letters_search?letter=с">с</a>
-                                    <a href="/reagents_letters_search?letter=т">т</a>
-                                    <a href="/reagents_letters_search?letter=у">у</a>
-                                    <a href="/reagents_letters_search?letter=ф">ф</a>
-                                    <a href="/reagents_letters_search?letter=х">х</a>
-                                    <a href="/reagents_letters_search?letter=ц">ц</a>
-                                    <a href="/reagents_letters_search?letter=ч">ч</a>
-                                    <a href="/reagents_letters_search?letter=ш">ш</a>
-                                    <a href="/reagents_letters_search?letter=щ">щ</a>
-                                    <a href="/reagents_letters_search?letter=э">э</a>
-                                    <a href="/reagents_letters_search?letter=я">я</a>
-                                </div>
-                            </div>
-                            <div id="chooseLetter">Поиск по алфавиту</div>
-                        </div>
-                    </div>						</div>
+                </div>
                 <div id="rightSideBody">
 
 
                     <div id="content">
 
-                        <h1> СЕРЕБРО </h1>
+                        <h1 th:text="${reagent.getName()}"> Name </h1>
 
-                        <h3>Silver , metal, powder , Argentum </h3>
+                        <h3 th:text="${reagent.getSinonim()}">Sinonim </h3>
+                        <h3 th:text="${reagent.getEngName()}">Sinonim </h3>
 
                         <div class="formula">
-                            <img src="/upload/media/56023f06602ed1a9dd65367f1535927a.gif" alt=" СЕРЕБРО , ">
+                            <img th:src="@{/media/} + ${reagent.getImage()}" alt=" СЕРЕБРО , ">
                         </div>
 
                         <div id="adShop">
@@ -158,15 +116,15 @@
                                     <table cellspacing=0 cellpadding=0>
                                         <tr>
                                             <td>CAS номер:</td>
-                                            <td><b>7440-22-4 </b></td>
+                                            <td><b th:text="${reagent.getCas()}">- </b></td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 Литературная ссылка:
                                             </td>
                                             <td>
-                                                <b title='ссылка в "Указатель препаративных синтезов неорганических, комплексных и элементорганических соединений" Лернер И.М'>
-                                                    Р6, 475                        </b>
+                                                <b th:text="${reagent.getLink()}" title='ссылка в "Указатель препаративных синтезов неорганических, комплексных и элементорганических соединений" Лернер И.М'>
+                                                    -         </b>
                                                 <b title='ссылка в "указателе препаративных синтезов органических соединений" Лернер И.М'>
                                                 </b>
                                             </td>
@@ -189,22 +147,21 @@
                             </tr>
                             <tr>
                                 <td>
-                                    107,8682 а. е. м. (г/моль)		</td>
+                                   <p th:text="${reagent.getWeight()}"> - </p>	</td>
                                 <td>
-                                    <p>961</p>
+                                    <p th:text="${reagent.getTmp_p()}">-</p>
                                 </td>
                                 <td>
-                                    <p>2212</p>
+                                    <p th:text="${reagent.getTmp_k()}">-</p>
                                 </td>
                                 <td>
-                                    <p> - </p>
+                                    <p th:text="${reagent.getD204()}"> - </p>
                                 </td>
                                 <td>
-                                    <p>не растворим</p>
+                                    <p th:text="${reagent.getwDissolubility()}"> - </p>
                                 </td>
                                 <td>
-                                    <p>
-                                        HNO3,  горячая H2SO4, растворим в цианидах щелочных металлов                        </p>
+                                    <p th:text="${reagent.getvDissolubility()}"> - </p>
                                 </td>
                             </tr>
                         </table>
@@ -217,35 +174,14 @@
                         <h4>Общая характеристика:</h4>
 
 
-                        <p oncopy="return false">
-                        <h2>Описание</h2>
-                        <p>Серебро &mdash; элемент побочной подгруппы первой группы, пятого периода <a href="/periodic_table">периодической системы химических элементов Д. И. Менделеева</a>, с атомным номером 47. Обозначается символом Ag (лат. Argentum).</p>
-                        <p>Простое вещество серебро (CAS-номер: 7440-22-4) &mdash; ковкий, пластичный благородный металл серебристо-белого цвета. Кристаллическая решётка &mdash; гранецентрированная кубическая. Температура плавления &mdash; 960 &deg;C, плотность &mdash; 10,5 г/см&sup3;.</p>
-                        <h2>Физические свойства</h2>
-                        <p>Чистое серебро &mdash; довольно тяжёлый (легче свинца, но тяжелее меди), необычайно пластичный серебристо-белый металл (коэффициент отражения  света близок к 100 %). Тонкая серебряная фольга в проходящем свете имеет фиолетовый цвет. C течением времени металл тускнеет, реагируя с содержащимися в воздухе следами сероводорода и образуя налёт сульфида. Обладает высокой теплопроводностью. При комнатной температуре имеет самую высокую электропроводность  среди всех известных металлов.</p>
-                        <h2>Химические свойства</h2>
-                        <p>Серебро, будучи благородным металлом, отличается относительно низкой реакционной способностью, оно не растворяется в соляной и разбавленной серной кислотах. Однако в окислительной среде (в азотной, горячей концентрированной серной кислоте, а также в соляной кислоте в присутствии свободного кислорода) серебро растворяется:</p>
-                        <p><b>  Ag + 2HNO3(конц.) = AgNO3 + NO2&uarr; + H2O</b></p>
-                        <p>Растворяется оно и в хлорном железе, что применяется для травления:</p>
-                        <p><b>    Ag + FeCl3 = AgCl + FeCl2</b></p>
-                        <p>Серебро также легко растворяется в ртути, образуя амальгаму (жидкий сплав ртути и серебра).</p>
-                        <p>Серебро не окисляется кислородом даже при высоких температурах, однако в виде тонких плёнок может быть окислено кислородной плазмой или озоном при облучении ультрафиолетом. Во влажном воздухе в присутствии даже малейших следов двухвалентной серы (сероводород, тиосульфаты, резина) образуется налёт малорастворимого сульфида серебра, обуславливающего потемнение серебряных изделий:</p>
-                        <p><b>4Ag + 2H2S + O2 = 2Ag2S + 2H2O</b></p>
-                        <p>Свободные галогены легко окисляют серебро до галогенидов:</p>
-                        <p><b>    2Ag + I2 = 2AgI</b></p>
-                        <p>Однако на свету эта реакция обращается, и галогениды серебра (кроме фторида) постепенно разлагаются.</p>
-                        <p>При нагревании с серой серебро даёт сульфид.</p>
-                        <p>Наиболее устойчивой степенью окисления серебра в соединениях является +1. В присутствии аммиака соединения серебра (I) дают легко растворимый в воде комплекс [Ag(NH3)2]+. Серебро образует комплексы так же с цианидами, тиосульфатами. Комплексообразование используют для растворения малорастворимых соединений серебра, для извлечения серебра из руд. Более высокие степени окисления (+2, +3) серебро проявляет только в соединении с кислородом (AgO, Ag2O3) и фтором (AgF2, AgF3), такие соединения гораздо менее устойчивы, чем соединения серебра (I).</p>
-                        <p>Соли серебра (I), за редким исключением (нитрат, перхлорат, фторид), нерастворимы в воде, что часто используется для определения ионов галогенов (хлора, брома, йода) в водном растворе.</p>
-                        <p><noindex><small> </small><span style="color: rgb(192, 192, 192);"><small>Источник: ru.wikipedia.org </small></span></noindex></p></p>
-
+                        <p oncopy="return false"  th:utext="${reagent.getContent()}">  </p>
 
 
 
 
 
                         <div id="links">
-                            <p class="copy">Данная страница сайта <a href="/">Российская Химия</a> посвящена описанию вещества <strong> СЕРЕБРО </strong>. Частичное или полное копирование запрещено.</p>
+                            <p class="copy">Данная страница сайта <a href="/">Российская Химия</a> посвящена описанию вещества <strong th:text="${reagent.getName()}"> - </strong>. Частичное или полное копирование запрещено.</p>
                         </div>
 
 

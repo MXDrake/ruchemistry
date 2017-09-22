@@ -20,7 +20,7 @@ public class Page {
 
 
     public Page(){
-         this.page = 10;
+         this.page = 20;
         this.number = 0;
 //        this.pagesize = reagentService.getAll().size() ;
     }
@@ -59,6 +59,6 @@ public class Page {
 
     public void setRows(int rows) {
         this.rows = rows;
-        this.pagesize = rows/10;
+        this.pagesize = rows/50;
     }
 }

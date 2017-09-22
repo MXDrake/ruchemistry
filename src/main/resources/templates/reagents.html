@@ -3,7 +3,6 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:pages="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="2HWGgc7dLSkEITcF3EoPRkEgbgOV9MjQXok8Cu7Qf4g" />
     <link type="image/x-icon" href="/favicon.gif" rel="icon">
     <title>Реактивы</title>
 
@@ -17,7 +16,7 @@
 <div id="hat">
     <div id="menu">
         <div id="search">
-            <form method="get" action="/reagents_search">
+            <form method="get" action="/reagents/search">
                 Поиск:
                 <input type="text" name="keyword"/><input id="find" type="submit" value="" /><br>
                 <input class="radio" type="radio" name="searchType" checked value="reactives" style="margin-left: 52px;"><label>по реактивам</label>
@@ -39,7 +38,7 @@
             <td id="leftSide">
                 <ul id="leftMenu">
                     <li>
-                        <a class="opt1" href="/periodic_table">Таблица Менделеева</a>
+                        <a class="opt1" href="/periodic">Таблица Менделеева</a>
                     </li>
                     <li>
                         <a class="opt2" href="/redaktor-formul">Редактор формул</a>
@@ -54,7 +53,7 @@
                         <a class="opt8" href="/companys-catalog">Каталог компаний</a>
                     </li>-->
                     <li>
-                        <a class="opt5" href="/pishevie-dobavki-e">Пищевые добавки Е</a>
+                        <a class="opt5" href="/supplements">Пищевые добавки Е</a>
                     </li>
 
                     <li>
@@ -130,148 +129,40 @@
                 <div id="rightSideBody">
                     <div class="pagination">
                         <div class="pages">
-                            <a class="hover" href="/reagents?page=1">1</a>
-                            <a href="/reagents?page=2">2</a>
-                            <a href="/reagents?page=3">3</a>
-                            <a href="/reagents?page=4">4</a>
-                            <a href="/reagents?page=5">5</a>
-                            <a href="/reagents?page=6">6</a>
-                            <a href="/reagents?page=7">7</a>
-                            <a href="/reagents?page=8">8</a>
-                            <a href="/reagents?page=9">9</a>
-                            <a href="/reagents?page=10">10</a>
-                            <a href="/reagents?page=11">11</a>
-                            <a href="/reagents?page=12">12</a>
-                            <a href="/reagents?page=13">13</a>
-                            <a href="/reagents?page=14">14</a>
-                            <a href="/reagents?page=15">15</a>
-                            <a href="/reagents?page=16">16</a>
-                            <a href="/reagents?page=17">17</a>
-                            <a href="/reagents?page=18">18</a>
-                            <a href="/reagents?page=19">19</a>
-                            <a href="/reagents?page=20">20</a>
-                            <a href="/reagents?page=21">21</a>
-                            <a href="/reagents?page=22">22</a>
-                            <a href="/reagents?page=23">23</a>
-                            <a href="/reagents?page=24">24</a>
-                            <a href="/reagents?page=25">25</a>
-                            <a href="/reagents?page=26">26</a>
-                            <a href="/reagents?page=27">27</a>
-                            <a href="/reagents?page=28">28</a>
-                            <a href="/reagents?page=29">29</a>
-                            <a href="/reagents?page=30">30</a>
-                            <a href="/reagents?page=31">31</a>
-                            <a href="/reagents?page=32">32</a>
-                            <a href="/reagents?page=33">33</a>
-                            <a href="/reagents?page=34">34</a>
-                            <a href="/reagents?page=35">35</a>
-                            <a href="/reagents?page=36">36</a>
-                            <a href="/reagents?page=37">37</a>
-                            <a href="/reagents?page=38">38</a>
-                            <a href="/reagents?page=39">39</a>
-                            <a href="/reagents?page=40">40</a>
-                            <a href="/reagents?page=41">41</a>
-                            <a href="/reagents?page=42">42</a>
-                            <a href="/reagents?page=43">43</a>
-                            <a href="/reagents?page=44">44</a>
-                            <a href="/reagents?page=45">45</a>
-                            <a href="/reagents?page=46">46</a>
-                            <a href="/reagents?page=47">47</a>
-                            <a href="/reagents?page=48">48</a>
-                            <a href="/reagents?page=49">49</a>
-                            <a href="/reagents?page=50">50</a>
-                            <a href="/reagents?page=51">51</a>
-                            <a href="/reagents?page=52">52</a>
-                            <a href="/reagents?page=53">53</a>
-                            <a href="/reagents?page=54">54</a>
-                            <a href="/reagents?page=55">55</a>
-                            <a href="/reagents?page=56">56</a>
-                            <a href="/reagents?page=57">57</a>
-                            <a href="/reagents?page=58">58</a>
-                            <a href="/reagents?page=59">59</a>
-                            <a href="/reagents?page=60">60</a>
-                            <a href="/reagents?page=61">61</a>
-                            <a href="/reagents?page=62">62</a>
-                            <a href="/reagents?page=63">63</a>
-                            <a href="/reagents?page=64">64</a>
-                            <a href="/reagents?page=65">65</a>
-                            <a href="/reagents?page=66">66</a>
-                            <a href="/reagents?page=67">67</a>
-                            <a href="/reagents?page=68">68</a>
-                            <a href="/reagents?page=69">69</a>
-                            <a href="/reagents?page=70">70</a>
-                            <a href="/reagents?page=71">71</a>
-                            <a href="/reagents?page=72">72</a>
-                            <a href="/reagents?page=73">73</a>
-                            <a href="/reagents?page=74">74</a>
-                            <a href="/reagents?page=75">75</a>
-                            <a href="/reagents?page=76">76</a>
-                            <a href="/reagents?page=77">77</a>
-                            <a href="/reagents?page=78">78</a>
-                            <a href="/reagents?page=79">79</a>
-                            <a href="/reagents?page=80">80</a>
-                            <a href="/reagents?page=81">81</a>
-                            <a href="/reagents?page=82">82</a>
-                            <a href="/reagents?page=83">83</a>
-                            <a href="/reagents?page=84">84</a>
-                            <a href="/reagents?page=85">85</a>
-                            <a href="/reagents?page=86">86</a>
-                            <a href="/reagents?page=87">87</a>
-                            <a href="/reagents?page=88">88</a>
-                            <a href="/reagents?page=89">89</a>
-                            <a href="/reagents?page=90">90</a>
-                            <a href="/reagents?page=91">91</a>
-                            <a href="/reagents?page=92">92</a>
-                            <a href="/reagents?page=93">93</a>
-                            <a href="/reagents?page=94">94</a>
-                            <a href="/reagents?page=95">95</a>
-                            <a href="/reagents?page=96">96</a>
-                            <a href="/reagents?page=97">97</a>
-                            <a href="/reagents?page=98">98</a>
-                            <a href="/reagents?page=99">99</a>
-                            <a href="/reagents?page=100">100</a>
-                            <a href="/reagents?page=101">101</a>
-                            <a href="/reagents?page=102">102</a>
-                            <a href="/reagents?page=103">103</a>
-                            <a href="/reagents?page=104">104</a>
-                            <a href="/reagents?page=105">105</a>
-                            <a href="/reagents?page=106">106</a>
-                            <a href="/reagents?page=107">107</a>
-                            <a href="/reagents?page=108">108</a>
-                            <a href="/reagents?page=109">109</a>
-                            <a href="/reagents?page=110">110</a>
-                            <a href="/reagents?page=111">111</a>
-                            <a href="/reagents?page=112">112</a>
-                            <a href="/reagents?page=113">113</a>
-                            <a href="/reagents?page=114">114</a>
-                            <a href="/reagents?page=115">115</a>
-                            <a href="/reagents?page=116">116</a>
-                            <a href="/reagents?page=117">117</a>
-                            <a href="/reagents?page=118">118</a>
-                            <a href="/reagents?page=119">119</a>
-                            <a href="/reagents?page=120">120</a>
-                            <a href="/reagents?page=121">121</a>
-                            <a href="/reagents?page=122">122</a>
-                            <a href="/reagents?page=123">123</a>
-                            <a href="/reagents?page=124">124</a>
-                            <a href="/reagents?page=125">125</a>
-                            <a href="/reagents?page=126">126</a>
-                            <a href="/reagents?page=127">127</a>
-                            <a href="/reagents?page=128">128</a>
-                            <a href="/reagents?page=129">129</a>
-                            <a href="/reagents?page=130">130</a>
-                            <a href="/reagents?page=131">131</a>
-                            <a href="/reagents?page=132">132</a>
-                            <a href="/reagents?page=133">133</a>
-                            <a href="/reagents?page=134">134</a>
-                            <a href="/reagents?page=135">135</a>
-                            <a href="/reagents?page=136">136</a>
-                            <a href="/reagents?page=137">137</a>
-                            <a href="/reagents?page=138">138</a>
-                            <a href="/reagents?page=139">139</a>
-                            <a href="/reagents?page=140">140</a>
-                            <a href="/reagents?page=141">141</a>
-                            <a href="/reagents?page=142">142</a>
+
+                            <a  th:if="${page.getPage()} > 20" th:href="@{?page=20}+@{&number=0}" th:text="First">Начало</a>
+
+                            <a th:if="${page.getPage()} > 20" th:href="@{?page=}+${page.getPage()-20}+@{&number=}+${page.getPage()-20}"
+                               th:text="Back">test</a>
+
+
+                            <a  th:href="@{?number=}+${page.getPage()-20}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-19}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-19}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-18}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-18}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-17}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-17}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-16}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-16}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-15}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-15}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-14}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-14}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-13}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-13}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-12}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-12}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-11}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-11}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-10}">test</a>
+
+                            <a  th:href="@{?number=}+${page.getPage()-10}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-9}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-9}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-8}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-8}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-7}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-7}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-6}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-6}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-5}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-5}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-4}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-4}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-3}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-3}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-2}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-2}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-1}">test</a>
+                            <a  th:href="@{?number=}+${page.getPage()-1}+@{&page=}+${page.getPage()}" th:text="${page.getPage()}">test</a>
+                            <a th:if="${page.getPage()} < ${page.getPagesize()-2}" th:href="@{?page=}+${page.getPage()+20}+@{&number=}+${page.getPage()}"
+                               th:text="Next">test</a>
+                            <a  th:if="${page.getPage()} < ${page.getPagesize()}" th:href="@{?page=}+${page.getPagesize()}+@{&number=}+${page.getPagesize()}" th:text="End">test</a>
+
+
+
                         </div>
                     </div>
                     <div class="pageScroll">
@@ -289,15 +180,15 @@
 
                                     <li th:each ="element: ${reagentList}">
 
-                                        <a th:text="${element.getName()}"></a>
-                                        <p th:text="${element.getName()}"></p>
+                                        <a th:href="@{/reagents/} + ${element.getId()}" th:text="${element.getName()}"></a>
+                                        <p th:text="${element.getSinonim()}+ ${element.getEngName()}+${element.getName()}"></p>
 
 
                                     </li>
 
 
 
-
+                        </ul>
                         </ul>
                     </div>
                 </div>

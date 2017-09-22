@@ -26,4 +26,9 @@ public class ReagentServiceImp implements ReagentService {
     public List<Reagent> getPage(int firstResult){
         return  reagentDao.getPage(firstResult);
     }
+
+    @Override
+    public List <Reagent> searchByName(String name) {
+        return reagentDao.searchByName(name);
+    }
 }
