@@ -41,36 +41,16 @@
             <td id="leftSide">
                 <ul id="leftMenu">
                     <li>
-                        <a class="opt1" href="/periodic">Таблица Менделеева</a>
-                    </li>
                     <li>
-                        <a class="opt2" href="/redaktor-formul">Редактор формул</a>
-                    </li>
-                    <li>
-                        <a class="opt3 hover" href="/reagents">Реактивы</a>
-                    </li>
-                    <li>
-                        <a class="opt4" href="/medications">Лекарства</a>
-                    </li>
-                    <!--	<li>
-                        <a class="opt8" href="/companys-catalog">Каталог компаний</a>
-                    </li>-->
-                    <li>
-                        <a class="opt5" href="/supplements">Пищевые добавки Е</a>
+                        <a class="opt1 hover"  href="/reagents">Реактивы</a>
                     </li>
 
-                    <li>
-                        <a class="opt6" href="/prekursori">Прекурсоры</a>
+                    <li th:each ="element: ${menu}">
+
+                        <span th:utext="${element}" > </span>
+
                     </li>
 
-                    <li>
-                        <a class="opt9" href="/companys-catalog/">Каталог компаний</a>
-                    </li>
-
-
-                    <li>
-                        <a class="opt7" href="/raznoe">Разное</a>
-                    </li>
                 </ul>						<div style="margin-top:20px;width:140px;margin-left:23px;">
 
                 <noindex>  <p><a href="http://cosmochim.ru"><img src="/img/400x140r.gif" alt="" width="140" height="400" /></a></p>  </noindex>
@@ -80,7 +60,7 @@
 
             </div>
             </td>
-            <td id="rightSide" style="background-color: #EC8B00">
+            <td id="rightSide" style="background-color: #ec8b00">
                 <div id="rightSideHat">
                     <div class="leftPart">
                         <p id="h1">Реактивы</p>

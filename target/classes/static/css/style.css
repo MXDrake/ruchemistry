@@ -186,9 +186,9 @@ h5{
 	padding-left:15px;
 	color:#fff;
 }
-#leftMenu a.opt1{}
+#leftMenu a.opt3{}
 #leftMenu a.opt2{ background-position:0 -34px; }
-#leftMenu a.opt3{ background-position:0 -68px; }
+#leftMenu a.opt1{ background-position:0 -68px; }
 #leftMenu a.opt4{ background-position:0 -102px; }
 #leftMenu a.opt5{ background-position:0 -170px; }
 #leftMenu a.opt6{ background-position:0 -204px; }
@@ -199,9 +199,9 @@ h5{
 	text-shadow:1px 1px 0px #444;
 }
 
-	#leftMenu a.opt1:hover, #leftMenu a.opt1.hover{ background-color: #c53a99; }
+	#leftMenu a.opt1:hover, #leftMenu a.opt1.hover{ background-color: #ec8b00; }
 	#leftMenu a.opt2:hover, #leftMenu a.opt2.hover{ background-color: #00bf79; }
-	#leftMenu a.opt3:hover, #leftMenu a.opt3.hover{ background-color: #ec8b00; }
+	#leftMenu a.opt3:hover, #leftMenu a.opt3.hover{ background-color: #c53a99; }
 	#leftMenu a.opt4:hover, #leftMenu a.opt4.hover{ background-color: #0097c3; }
 	#leftMenu a.opt5:hover, #leftMenu a.opt5.hover{ background-color: #d03639; }
 	#leftMenu a.opt6:hover, #leftMenu a.opt6.hover{ background-color: #99ab00; }
