@@ -1,4 +1,8 @@
 package main.dao;
 
-public class UserDao {
+import main.model.User;
+
+public interface UserDao {
+    public User getByName(String login);
+
 }

@@ -29,7 +29,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable().addFilterBefore(filter, CsrfFilter.class);
         http.authorizeRequests()
-                .antMatchers("/admin/**").anonymous()//hasAnyAuthority("ADMIN")////?????.access("hasRole('ROLE_admin')")
+                .antMatchers("/admin/**").hasAnyAuthority("ADMIN")////?????.access("hasRole('ROLE_admin')")
                 .antMatchers("/profile/**").authenticated()
                 .antMatchers("/fff/**").hasAnyAuthority("TESTER")
                 .and().formLogin().loginPage("/login").and().exceptionHandling().accessDeniedPage("/403");

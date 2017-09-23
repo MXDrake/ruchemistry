@@ -28,7 +28,12 @@ public class ReagentServiceImp implements ReagentService {
     }
 
     @Override
-    public List <Reagent> searchByName(String name) {
-        return reagentDao.searchByName(name);
+    public List <Reagent> searchByName(String value, String type) {
+        return reagentDao.searchByName(value, type);
+    }
+
+    @Override
+    public Long getCount() {
+        return reagentDao.getCount();
     }
 }

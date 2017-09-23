@@ -9,5 +9,6 @@ public interface ReagentService {
     public Reagent get(long id);
     public List<Reagent> getAll();
     public List<Reagent> getPage(int firstResult);
-    public List<Reagent> searchByName(String name);
+    public List<Reagent> searchByName(String value, String type);
+    public Long getCount();
 }

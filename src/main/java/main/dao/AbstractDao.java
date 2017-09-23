@@ -1,4 +1,10 @@
 package main.dao;
 
-public class AbstractDao {
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.persistence.EntityManager;
+
+public interface AbstractDao <T> {
+
+    public void addModel(T model);
 }

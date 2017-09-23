@@ -1,4 +1,7 @@
 package main.service;
 
-public class UserService {
+import main.model.User;
+
+public interface UserService {
+    public User getByName(String login);
 }

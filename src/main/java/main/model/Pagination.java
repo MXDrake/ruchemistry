@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Page {
+public class Pagination {
 
     //@Autowired
    // ReagentService reagentService;
@@ -16,10 +16,10 @@ public class Page {
     private int page;
     private int pagesize;
     private int number;
-    private int rows;
+    private Long rows;
 
 
-    public Page(){
+    public Pagination(){
          this.page = 20;
         this.number = 0;
 //        this.pagesize = reagentService.getAll().size() ;
@@ -53,12 +53,12 @@ public class Page {
         }
     }
 
-    public int getRows() {
+    public Long getRows() {
         return rows;
     }
 
-    public void setRows(int rows) {
+    public void setRows(Long rows) {
         this.rows = rows;
-        this.pagesize = rows/50;
+        this.pagesize = (int) (rows/50);
     }
 }

@@ -4,12 +4,16 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.lang.reflect.ParameterizedType;
 
 @Transactional
-public class AbstractDao<T> {
+public class AbstractDaoImpl<T> implements AbstractDao {
     @PersistenceContext
     EntityManager entityManager;
+
+    public void addModel(Object model){
+        entityManager.persist(model);
+    }
+
 
 
 }
