@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
 
 </head>
-<body>
+
+
+
+<body >
 
 
 <div id="hat">
@@ -20,8 +23,8 @@
             <form method="get" action="/reagents/search">
                 Поиск:
                 <input type="text" name="keyword"/><input id="find" type="submit" value="" /><br>
-                <input class="radio" type="radio" name="searchType" checked value="reactives" style="margin-left: 52px;"><label>по реактивам</label>
-                <input class="radio" type="radio" value="drugs" name="searchType"><label>по лекарствам</label>
+                <input class="radio" type="radio" name="searchType" th:checked="${name}" value="name" style="margin-left: 52px;"><label>по названию</label>
+                <input class="radio" type="radio" th:checked="${cas}" value="cas" name="searchType"><label>по CAS</label>
             </form>
 
         </div>
@@ -148,5 +151,40 @@
     </div>
 
 </div>
-</body>
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46046490 = new Ya.Metrika({
+                    id:46046490,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body >
+
+
+
 </html>

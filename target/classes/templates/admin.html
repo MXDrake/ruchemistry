@@ -75,6 +75,12 @@
                         <form role="form" action="/admin/addpage" method="post">
 
                             <div class="form-group">
+
+                                <label th:text="${message}"></label>
+
+                                <label for="menu">Login</label>
+                                <input type="text" class="form-control" id="menu" name="menu" placeholder="menu">
+
                                 <label for="name">name</label>
                                 <textarea rows="1" class="form-control" id="name" name="name" placeholder="Text">
                                 </textarea>
