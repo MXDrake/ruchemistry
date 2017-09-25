@@ -1,5 +1,6 @@
 package main.dao;
 
+import main.model.Role;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
@@ -12,6 +13,11 @@ public class AbstractDaoImpl<T> implements AbstractDao {
 
     public void addModel(Object model){
         entityManager.persist(model);
+    }
+
+    public void update(Object model) {
+
+        entityManager.merge(model);
     }
 
 

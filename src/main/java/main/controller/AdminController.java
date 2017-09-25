@@ -2,6 +2,7 @@ package main.controller;
 
 import main.model.Page;
 import main.model.Pagination;
+import main.model.Reagent;
 import main.service.PageService;
 import main.service.ReagentService;
 import main.service.UserService;
@@ -56,8 +57,36 @@ public class AdminController {
         catch (Exception e) {
             request.setAttribute("message", "Error");
         }
+        return model;
+    }
 
 
+    @RequestMapping(value = {"/admin/getreagent"}, method = RequestMethod.POST)
+    public ModelAndView getreagent(HttpServletRequest request) throws IOException {
+        ModelAndView model = new ModelAndView("admin");
+        if (request.getParameter("get_id") != null) {
+            Long id = Long.valueOf(request.getParameter("get_id"));
+            Reagent reagent = reagentService.get(id);
+            request.setAttribute("r_name", reagent.getName() );
+            request.setAttribute("r_id", reagent.getId() );
+            request.setAttribute("r_content", reagent.getContent() );
+
+        }
+        return model;
+    }
+
+    @RequestMapping(value = {"/admin/editreagent"}, method = RequestMethod.POST)
+    public ModelAndView editreagent(HttpServletRequest request) throws IOException {
+        ModelAndView model = new ModelAndView("admin");
+
+        if (request.getParameter("r_id") != null){
+            Long id = Long.parseLong(request.getParameter("r_id"));
+            Reagent reagent = reagentService.get(id);
+            reagent.setName(request.getParameter("r_name"));
+            reagent.setContent(request.getParameter("r_content"));
+            reagentService.update(reagent);
+
+        }
 
         return model;
     }

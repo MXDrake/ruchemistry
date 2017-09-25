@@ -11,4 +11,5 @@ public interface ReagentService {
     public List<Reagent> getPage(int firstResult);
     public List<Reagent> searchByName(String value, String type);
     public Long getCount();
+    public void update( Reagent reagent);
 }

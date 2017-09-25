@@ -104,4 +104,60 @@ public class Reagent {
     public String getD204() {
         return d204;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSinonim(String sinonim) {
+        this.sinonim = sinonim;
+    }
+
+    public void setEngName(String engName) {
+        this.engName = engName;
+    }
+
+    public void setCas(String cas) {
+        this.cas = cas;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setwDissolubility(String wDissolubility) {
+        this.wDissolubility = wDissolubility;
+    }
+
+    public void setvDissolubility(String vDissolubility) {
+        this.vDissolubility = vDissolubility;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public void setTmp_p(String tmp_p) {
+        this.tmp_p = tmp_p;
+    }
+
+    public void setTmp_k(String tmp_k) {
+        this.tmp_k = tmp_k;
+    }
+
+    public void setD204(String d204) {
+        this.d204 = d204;
+    }
 }

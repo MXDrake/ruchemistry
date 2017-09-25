@@ -36,4 +36,9 @@ public class ReagentServiceImp implements ReagentService {
     public Long getCount() {
         return reagentDao.getCount();
     }
+
+    @Override
+    public void update(Reagent reagent) {
+        reagentDao.update(reagent);
+    }
 }
