@@ -13,19 +13,39 @@ public class ReagentDaoImp extends AbstractDaoImpl implements ReagentDao {
 
 
     public Reagent get(long id) {
-        Reagent reagent = entityManager.find(Reagent.class,id);
-        return reagent;
+        try {
+            Reagent reagent = entityManager.find(Reagent.class,id);
+            return reagent;
+        }
+        catch (Exception e) {
+
+        }
+       return null;
     }
 
 
-    public List<Reagent> getAll() {
-        List<Reagent> list = entityManager.createQuery("FROM Reagent order by name").getResultList();
-        return list;
+    public List<Reagent> getAll(String kind) {
+        try {
+            kind = "%"+kind+"%";
+            List<Reagent> list = entityManager.createQuery("FROM Reagent WHERE kind like :KIND  order by name").setParameter("KIND", kind) .getResultList();
+            return list;
+        }
+        catch (Exception e) {
+
+        }
+       return null;
     }
 
-    public List<Reagent> getPage(int firstResult) {
-        List<Reagent> list = entityManager.createQuery("FROM Reagent order by name").setFirstResult(firstResult).setMaxResults(50).getResultList();
-        return list;
+    public List<Reagent> getPage(int firstResult, String kind) {
+        kind = "%"+kind+"%";
+        try {
+            List<Reagent> list = entityManager.createQuery("FROM Reagent WHERE kind like :KIND ORDER BY  name").setParameter("KIND", kind).setFirstResult(firstResult).setMaxResults(50).getResultList();
+            return list;
+        }
+        catch (Exception e) {
+
+        }
+        return null;
     }
 
 
@@ -44,10 +64,11 @@ public class ReagentDaoImp extends AbstractDaoImpl implements ReagentDao {
     }
 
 
-    public Long getCount() {
+    public Long getCount(String kind) {
         Long count;
+        kind = "%"+kind+"%";
         try {
-            count = (Long) entityManager.createQuery("SELECT COUNT(*) FROM Reagent").getSingleResult();
+            count = (Long) entityManager.createQuery("SELECT COUNT(*) FROM Reagent WHERE kind like :KIND").setParameter("KIND", kind).getSingleResult();
         }
         catch (Exception e) {
             count = 0l;

@@ -20,11 +20,11 @@ public class ReagentServiceImp implements ReagentService {
     }
 
     @Override
-    public List<Reagent> getAll() {
-        return reagentDao.getAll();
+    public List<Reagent> getAll(String kind) {
+        return reagentDao.getAll(kind);
     }
-    public List<Reagent> getPage(int firstResult){
-        return  reagentDao.getPage(firstResult);
+    public List<Reagent> getPage(int firstResult, String kind){
+        return  reagentDao.getPage(firstResult,kind);
     }
 
     @Override
@@ -33,12 +33,17 @@ public class ReagentServiceImp implements ReagentService {
     }
 
     @Override
-    public Long getCount() {
-        return reagentDao.getCount();
+    public Long getCount(String kind) {
+        return reagentDao.getCount(kind);
     }
 
     @Override
     public void update(Reagent reagent) {
         reagentDao.update(reagent);
+    }
+
+    @Override
+    public void add(Reagent reagent) {
+        reagentDao.addModel(reagent);
     }
 }

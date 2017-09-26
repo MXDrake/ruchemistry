@@ -31,6 +31,9 @@ public class Page {
     @Column (name = "menu")
     private int menu;
 
+    @Column (name = "path")
+    private String path;
+
     public long getId() {
         return id;
     }
@@ -93,6 +96,14 @@ public class Page {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }
 

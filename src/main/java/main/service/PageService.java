@@ -9,4 +9,5 @@ public interface PageService {
     public void addPage(Page page);
     public Page getByName(String name);
     public List getMenu(String name);
+    public void update (Page page);
 }

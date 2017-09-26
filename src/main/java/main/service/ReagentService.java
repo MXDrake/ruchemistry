@@ -7,9 +7,10 @@ import java.util.List;
 
 public interface ReagentService {
     public Reagent get(long id);
-    public List<Reagent> getAll();
-    public List<Reagent> getPage(int firstResult);
+    public List<Reagent> getAll(String kind);
+    public List<Reagent> getPage(int firstResult, String kind);
     public List<Reagent> searchByName(String value, String type);
-    public Long getCount();
+    public Long getCount(String kind);
     public void update( Reagent reagent);
+    public void add (Reagent reagent);
 }

@@ -32,4 +32,9 @@ public class PageServiceImpl  implements PageService{
     public List getMenu(String name) {
         return pageDao.getMenu(name);
     }
+
+    @Override
+    public void update(Page page) {
+        pageDao.update(page);
+    }
 }
