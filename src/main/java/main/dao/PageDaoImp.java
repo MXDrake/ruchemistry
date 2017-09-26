@@ -39,8 +39,8 @@ public class PageDaoImp extends AbstractDaoImpl implements PageDao {
     public List getMenu(String name) {
         List<String> result = new ArrayList <>();
         try {
-            List<Page> list = entityManager.createQuery("FROM Page WHERE menu =:MENU  ORDER BY name").setParameter("MENU", 1).getResultList();
-            int j =1;
+            List<Page> list = entityManager.createQuery("FROM Page WHERE menu =:MENU and deleted=0 ORDER BY name").setParameter("MENU", 1).getResultList();
+            int j =0;
             String color="";
 
             if (name.equals("main")) {
@@ -61,10 +61,12 @@ public class PageDaoImp extends AbstractDaoImpl implements PageDao {
 
                 }
                 else {
-                    switch (i+1){
+                    switch (i){
+                        case 0: color = "background-color: #c53a99";
+                            break;
                         case 1: color = "background-color: #00bf79";
                             break;
-                        case 2: color = "background-color: #c53a99";
+                        case 2: color = "background-color: #ec8b00";
                             break;
                         case 3: color = "background-color: #0097c3";
                             break;

@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -45,7 +46,7 @@ public class UserController {
             paginationModel.setRows(reagentService.getCount(kind));
             paginationModel.setPage(request.getParameter("page"));
             paginationModel.setNumber(request.getParameter("number"));
-
+            request.setAttribute("title", "Реактивы");
             if (paginationModel.getPage() > paginationModel.getPagesize()) {
                 paginationModel.setPage(String.valueOf(paginationModel.getPagesize()));
             }
@@ -55,7 +56,17 @@ public class UserController {
                 paginationModel.setPage("20");
             }
             request.setAttribute("page", paginationModel);
-            request.setAttribute("menu", pageService.getMenu("main"));
+
+            String pageName = "reagents";
+            List list = pageService.getMenu(pageName);
+            if ( pageService.getByName(pageName) != null) {
+                request.setAttribute("color", list.get(list.size()-1));
+                list.remove(list.size()-1);
+                request.setAttribute("menu", list);
+            }
+            else {
+                request.getRequestDispatcher("/").forward(request, response);
+            }
         }
         catch (Exception e){
             request.getRequestDispatcher("/").forward(request,response);
@@ -70,12 +81,19 @@ public class UserController {
         try {
             String search = request.getParameter("keyword");
             String type = request.getParameter("searchType");
-            List <Reagent> list = reagentService.searchByName(search, type);
+
+            List <Reagent> list = new ArrayList <>();
+
+            list = reagentService.searchByName(search, type);
             paginationModel.setRows((long) list.size());
             request.setAttribute("reagentList", list);
             request.setAttribute("page", paginationModel);
             request.setAttribute("menu", pageService.getMenu("main"));
             request.setAttribute("keyword", search);
+            if (request.getParameter("letter") != null){
+                request.setAttribute("letter",request.getParameter("letter") );
+            }
+
             if (type.equals("cas")) {
                 request.setAttribute("cas", 1);
                 request.setAttribute("name", 0);
@@ -196,4 +214,31 @@ public class UserController {
         }
         return model;
     }
+
+
+    @RequestMapping(value = {"/medications/{id_str}"}, method = RequestMethod.GET)
+    public ModelAndView medication(HttpServletRequest request, @PathVariable String id_str, HttpServletResponse response) throws IOException, ServletException {
+        ModelAndView model = new ModelAndView("reagent");
+        try {
+            Long id = Long.parseLong(id_str);
+            request.setAttribute("menu", pageService.getMenu("main"));
+            if (reagentService.get(id) != null) {
+                request.setAttribute("reagent", reagentService.get(id));
+            } else {
+                request.getRequestDispatcher("/reagents").forward(request, response);
+            }
+        }
+        catch (Exception e) {
+            request.getRequestDispatcher("/reagents").forward(request, response);
+        }
+        return model;
+    }
+
+
+
+
+
+
+
+
 }

@@ -50,14 +50,26 @@ public class ReagentDaoImp extends AbstractDaoImpl implements ReagentDao {
 
 
     public List <Reagent> searchByName(String value, String type) {
-        value = "%" + value +"%";
-        List<Reagent> list = new ArrayList <>();
-        if (type.equals("name")) {
-            list = entityManager.createQuery("FROM Reagent WHERE name like :NAME or sinonim like :NAME or engName like :NAME ORDER BY name").setParameter("NAME", value) .getResultList();
-        }
-        else {
-            list = entityManager.createQuery("FROM Reagent WHERE cas like :CAS  ORDER BY name").setParameter("CAS", value) .getResultList();
 
+        List<Reagent> list = new ArrayList <>();
+
+        switch (type){
+
+            case "name": {
+                value = "%" + value +"%";
+                list = entityManager.createQuery("FROM Reagent WHERE name like :NAME or sinonim like :NAME or engName like :NAME ORDER BY name").setParameter("NAME", value) .getResultList();
+                break;
+            }
+            case "cas": {
+                value = "%" + value +"%";
+                list = entityManager.createQuery("FROM Reagent WHERE cas like :CAS  ORDER BY name").setParameter("CAS", value) .getResultList();
+                break;
+            }
+            case "alph":{
+                value =value +"%";
+                list = entityManager.createQuery("FROM Reagent WHERE name like :NAME  ORDER BY name").setParameter("NAME", value) .getResultList();
+                break;
+            }
         }
 
         return list;
@@ -75,4 +87,7 @@ public class ReagentDaoImp extends AbstractDaoImpl implements ReagentDao {
         }
         return count ;
     }
+
+
+
 }
