@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-
+@Repository
 @Transactional
 public class AbstractDaoImpl<T> implements AbstractDao {
     @PersistenceContext
@@ -15,10 +15,11 @@ public class AbstractDaoImpl<T> implements AbstractDao {
 
     public void addModel(Object model){
         try {
+
             entityManager.persist(model);
         }
         catch (Exception e){
-
+            System.out.println("7777");
         }
     }
 

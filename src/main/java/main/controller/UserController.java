@@ -5,6 +5,7 @@ import main.model.Pagination;
 import main.model.Reagent;
 import main.model.User;
 import main.service.PageService;
+import main.service.Pars;
 import main.service.ReagentService;
 import main.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,11 +68,13 @@ public class UserController {
             else {
                 request.getRequestDispatcher("/").forward(request, response);
             }
+            return model;
         }
         catch (Exception e){
             request.getRequestDispatcher("/").forward(request,response);
+            return null;
         }
-        return model;
+
     }
 
 
@@ -102,12 +105,12 @@ public class UserController {
                 request.setAttribute("name", 1);
             }
 
+            return model;
         }
         catch (Exception e) {
             request.getRequestDispatcher("/reagents").forward(request,response);
+            return null;
         }
-
-        return model;
     }
 
 
@@ -122,57 +125,78 @@ public class UserController {
             } else {
                 request.getRequestDispatcher("/reagents").forward(request, response);
             }
+            return model;
         }
         catch (Exception e) {
             request.getRequestDispatcher("/reagents").forward(request, response);
+            return null;
         }
 
-        return model;
     }
-
-
 
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
-    public ModelAndView main(HttpServletRequest request) throws IOException {
+    public ModelAndView main(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         ModelAndView model = new ModelAndView("page");
-        request.setAttribute("menu", pageService.getMenu("main"));
-        request.setAttribute("page", pageService.getByName("main") );
-        return model;
+        try {
+            request.setAttribute("menu", pageService.getMenu("main"));
+            request.setAttribute("page", pageService.getByName("main") );
+            return   model;
+        }
+        catch (Exception e){
+
+            request.getRequestDispatcher("/reagents").forward(request, response);
+            return null;
+        }
+
+
     }
-
-
 
     @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
     public ModelAndView login(@RequestParam(value = "error", required = false) String error,
-                              @RequestParam(value = "logout", required = false) String logout){
-        ModelAndView model = new ModelAndView();
-        if (error != null) {
-            model.addObject("error", "Invalid username and password!");
-        }
+                              @RequestParam(value = "logout", required = false) String logout,
+                              HttpServletResponse response, HttpServletRequest request) throws ServletException, IOException {
+        try {
 
-        if (logout != null) {
-            model.addObject("msg", "You've been logged out successfully.");
+            ModelAndView model = new ModelAndView();
+            if (error != null) {
+                model.addObject("error", "Invalid username and password!");
+            }
+
+            if (logout != null) {
+                model.addObject("msg", "You've been logged out successfully.");
+            }
+            model.setViewName("login");
+            return model;
         }
-        model.setViewName("login");
-        return model;
+        catch (Exception e) {
+            request.getRequestDispatcher("/reagents").forward(request, response);
+            return null;
+        }
     }
 
 
     @RequestMapping(value = {"/page/{name}"}, method = RequestMethod.GET)
     public ModelAndView pages(HttpServletRequest request, @PathVariable String name,HttpServletResponse response) throws IOException, ServletException {
         ModelAndView model = new ModelAndView("page");
-        List list = pageService.getMenu(name);
-        if ( pageService.getByName(name) != null) {
-            request.setAttribute("color", list.get(list.size()-1));
-            list.remove(list.size()-1);
-            request.setAttribute("menu", list);
-            request.setAttribute("page", pageService.getByName(name) );
+        try {
+            List list = pageService.getMenu(name);
+            if ( pageService.getByName(name) != null) {
+                request.setAttribute("color", list.get(list.size()-1));
+                list.remove(list.size()-1);
+                request.setAttribute("menu", list);
+                request.setAttribute("page", pageService.getByName(name) );
+            }
+            else {
+                request.getRequestDispatcher("/").forward(request, response);
+            }
+
+            return model;
         }
-        else {
-            request.getRequestDispatcher("/").forward(request, response);
+        catch (Exception e) {
+            request.getRequestDispatcher("/reagents").forward(request, response);
+            return null;
         }
 
-        return model;
     }
 
 
@@ -207,12 +231,13 @@ public class UserController {
             else {
                 request.getRequestDispatcher("/").forward(request, response);
             }
-
+            return model;
         }
         catch (Exception e){
             request.getRequestDispatcher("/").forward(request,response);
+            return null;
         }
-        return model;
+
     }
 
 
@@ -227,18 +252,24 @@ public class UserController {
             } else {
                 request.getRequestDispatcher("/reagents").forward(request, response);
             }
+            return model;
         }
         catch (Exception e) {
             request.getRequestDispatcher("/reagents").forward(request, response);
+            return null;
         }
-        return model;
+
     }
 
 
 
 
 
-
-
-
+    @Autowired
+    Pars pars;
+    @RequestMapping(value = {"/pars"}, method = RequestMethod.GET)
+    public void pars() throws IOException, ServletException {
+        ModelAndView model = new ModelAndView("pars");
+        pars.pars();
+    }
 }

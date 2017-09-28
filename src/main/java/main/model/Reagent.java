@@ -8,7 +8,7 @@ public class Reagent {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
@@ -83,13 +83,15 @@ public class Reagent {
     @Column (name = "description")
     private String description;
 
+    @Column (name = "bf")
+    private String formula;
 
 
     public String getName() {
         return name;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -141,7 +143,7 @@ public class Reagent {
         return d204;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -303,6 +305,14 @@ public class Reagent {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getFormula() {
+        return formula;
+    }
+
+    public void setFormula(String formula) {
+        this.formula = formula;
     }
 
     public void setDescription(String description) {
