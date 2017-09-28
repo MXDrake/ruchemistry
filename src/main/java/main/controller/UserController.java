@@ -82,8 +82,17 @@ public class UserController {
     public ModelAndView search(HttpServletRequest request, HttpSession session, HttpServletResponse response) throws IOException, ServletException {
         ModelAndView model = new ModelAndView("search");
         try {
-            String search = request.getParameter("keyword");
             String type = request.getParameter("searchType");
+            String search = request.getParameter("keyword");
+            if ( type == null| search == null) {
+                response.sendRedirect("/reagents");
+                return null;
+            }
+            if (search.equals("")| type.equals("")) {
+                response.sendRedirect("/reagents");
+                return null;
+            }
+
 
             List <Reagent> list = new ArrayList <>();
 
