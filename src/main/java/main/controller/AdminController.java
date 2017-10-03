@@ -66,6 +66,7 @@ public class AdminController {
             page.setKeywords(request.getParameter("keywords"));
             page.setTitle(request.getParameter("title"));
             page.setName(request.getParameter("name"));
+            page.setPath(request.getParameter("path"));
             page.setMenu(Integer.parseInt(request.getParameter("menu")));
             request.setAttribute("message", "Succesfull");
 
@@ -91,7 +92,9 @@ public class AdminController {
             page.setTitle(request.getParameter("title"));
             page.setName(request.getParameter("name"));
             page.setMenu(Integer.parseInt(request.getParameter("menu")));
+            page.setPath(request.getParameter("path"));
             request.setAttribute("message", "Succesfull");
+
 
             pageService.update(page);
         }

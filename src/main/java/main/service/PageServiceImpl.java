@@ -37,4 +37,9 @@ public class PageServiceImpl  implements PageService{
     public void update(Page page) {
         pageDao.update(page);
     }
+
+    @Override
+    public List <Page> getAll() {
+        return pageDao.getAll();
+    }
 }

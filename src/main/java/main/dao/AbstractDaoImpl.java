@@ -15,11 +15,10 @@ public class AbstractDaoImpl<T> implements AbstractDao {
 
     public void addModel(Object model){
         try {
-
             entityManager.persist(model);
         }
         catch (Exception e){
-            System.out.println("7777");
+            System.out.println("Ошибка создания обьекта");
         }
     }
 
@@ -28,8 +27,7 @@ public class AbstractDaoImpl<T> implements AbstractDao {
             entityManager.merge(model);
         }
         catch (Exception e){
-
+            System.out.println("Ошибка обновления обьекта");
         }
-
     }
 }

@@ -31,8 +31,6 @@ public class PageDaoImp extends AbstractDaoImpl implements PageDao {
         catch (Exception e) {
             return  null;
         }
-
-
     }
 
     @Override
@@ -95,6 +93,11 @@ public class PageDaoImp extends AbstractDaoImpl implements PageDao {
     }
 
 
+    @Override
+    public List<Page> getAll(){
+        List<Page> list = entityManager.createQuery("FROM Page WHERE menu > 1 and deleted=0 ORDER BY name").getResultList();
+        return list;
+    }
 }
 
 

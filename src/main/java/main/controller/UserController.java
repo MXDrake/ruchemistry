@@ -43,6 +43,7 @@ public class UserController {
     public ModelAndView mainGet(HttpServletRequest request, HttpSession session, HttpServletResponse response) throws IOException, ServletException {
         ModelAndView model = new ModelAndView("reagents");
         try {
+
             String kind = "ChemicalAgent";
             paginationModel.setRows(reagentService.getCount(kind));
             paginationModel.setPage(request.getParameter("page"));
@@ -281,4 +282,20 @@ public class UserController {
         ModelAndView model = new ModelAndView("pars");
         pars.pars();
     }
+
+
+
+    @RequestMapping(value = {"/sitemap.xml"}, method = RequestMethod.GET)
+    public ModelAndView sitemap(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        ModelAndView model = new ModelAndView("sitemap");
+
+        List<Reagent> a = reagentService.getAll("ChemicalAgent");
+
+        request.setAttribute("reagents", reagentService.getAll("ChemicalAgent"));
+        request.setAttribute("pages", pageService.getAll());
+        request.setAttribute("medications", reagentService.getAll("Medication"));
+        return model;
+
+    }
+
 }
