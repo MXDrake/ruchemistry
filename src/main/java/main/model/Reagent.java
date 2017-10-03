@@ -83,9 +83,20 @@ public class Reagent {
     @Column (name = "description")
     private String description;
 
-    @Column (name = "bf")
+    @Column (name = "formula")
     private String formula;
 
+
+    @Column (name = "type")
+    private int type;
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public String getName() {
         return name;

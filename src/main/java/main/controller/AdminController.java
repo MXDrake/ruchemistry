@@ -119,6 +119,22 @@ public class AdminController {
             request.setAttribute("r_weight", reagent.getWeight() );
             request.setAttribute("r_k", reagent.getTmp_k() );
             request.setAttribute("r_p", reagent.getTmp_p() );
+            request.setAttribute("r_d204", reagent.getD204() );
+            request.setAttribute("r_wDissolubility", reagent.getwDissolubility() );
+            request.setAttribute("r_vDissolubility", reagent.getvDissolubility() );
+            request.setAttribute("r_formula", reagent.getFormula() );
+            request.setAttribute("r_has_t", reagent.getHas_t() );
+            request.setAttribute("r_has_c", reagent.getHas_c() );
+            request.setAttribute("r_has_xn", reagent.getHas_xn() );
+            request.setAttribute("r_has_xi", reagent.getHas_xi() );
+            request.setAttribute("r_has_t_plus", reagent.getHas_t_plus() );
+            request.setAttribute("r_has_e", reagent.getHas_e() );
+            request.setAttribute("r_has_n", reagent.getHas_n() );
+            request.setAttribute("r_has_f", reagent.getHas_f() );
+            request.setAttribute("r_has_o", reagent.getHas_o() );
+            request.setAttribute("r_has_f_plus", reagent.getHas_f_plus() );
+            request.setAttribute("r_type", reagent.getType() );
+
 
         }
         return model;
@@ -138,8 +154,24 @@ public class AdminController {
             reagent.setTmp_p(request.getParameter("r_p"));
             reagent.setTmp_k(request.getParameter("r_k"));
             reagent.setWeight(request.getParameter("r_weight"));
+            reagent.setD204(request.getParameter("r_d204"));
+            reagent.setwDissolubility(request.getParameter("r_wDissolubility"));
+            reagent.setvDissolubility(request.getParameter("r_vDissolubility"));
+            reagent.setFormula(request.getParameter("r_formula"));
 
+            reagent.setHas_t(Integer.parseInt(request.getParameter("r_has_t")));
+            reagent.setHas_c(Integer.parseInt(request.getParameter("r_has_c")));
+            reagent.setHas_xn(Integer.parseInt(request.getParameter("r_has_xn")));
+            reagent.setHas_xi(Integer.parseInt(request.getParameter("r_has_xi")));
+            reagent.setHas_t_plus(Integer.parseInt(request.getParameter("r_has_t_plus")));
+            reagent.setHas_e(Integer.parseInt(request.getParameter("r_has_e")));
+            reagent.setHas_n(Integer.parseInt(request.getParameter("r_has_n")));
+            reagent.setHas_f(Integer.parseInt(request.getParameter("r_has_f")));
+            reagent.setHas_o(Integer.parseInt(request.getParameter("r_has_o")));
+            reagent.setHas_f_plus(Integer.parseInt(request.getParameter("r_has_f_plus")));
+            reagent.setType(Integer.parseInt(request.getParameter("r_type")));
             reagentService.update(reagent);
+            request.setAttribute("message", "Обьект сохранен");
         }
         return model;
     }

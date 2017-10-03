@@ -130,11 +130,13 @@ public class UserController {
         try {
             Long id = Long.parseLong(id_str);
             request.setAttribute("menu", pageService.getMenu("main"));
-            if (reagentService.get(id) != null) {
-                request.setAttribute("reagent", reagentService.get(id));
+            Reagent reagent = reagentService.get(id);
+            if (reagent != null) {
+                request.setAttribute("reagent", reagent);
             } else {
                 request.getRequestDispatcher("/reagents").forward(request, response);
             }
+
             return model;
         }
         catch (Exception e) {
@@ -297,5 +299,27 @@ public class UserController {
         return model;
 
     }
+
+
+    @RequestMapping(value = {"/chemical_agents"}, method = RequestMethod.GET)
+    public ModelAndView chemical_agents(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        ModelAndView model = new ModelAndView("reagent");
+        try {
+            Long id = Long.parseLong(request.getParameter("id"));
+            request.setAttribute("menu", pageService.getMenu("main"));
+            if (reagentService.get(id) != null) {
+                request.setAttribute("reagent", reagentService.get(id));
+            } else {
+                request.getRequestDispatcher("/reagents").forward(request, response);
+            }
+            return model;
+        }
+        catch (Exception e) {
+            request.getRequestDispatcher("/reagents").forward(request, response);
+            return null;
+        }
+
+    }
+
 
 }
