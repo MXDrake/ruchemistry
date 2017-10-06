@@ -4,18 +4,19 @@ import main.model.Page;
 import main.model.Pagination;
 import main.model.Reagent;
 import main.model.User;
-import main.service.PageService;
-import main.service.Pars;
-import main.service.ReagentService;
-import main.service.UserService;
+import main.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
 
+import javax.mail.MessagingException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -321,6 +322,14 @@ public class UserController {
 
     }
 
+    @Autowired
+    EmailServiceImpl emailService;
+
+    @RequestMapping(value = {"/admin/sendmail"}, method = RequestMethod.GET)
+    public void test() throws IOException, ServletException, MessagingException {
+        ModelAndView model = new ModelAndView("test");
+        emailService.sendEmail("arcas.llc@yandex.ru","proberka","Тексттписьма");
+    }
 
 
 
