@@ -1,17 +1,26 @@
 package main.model.order;
 
-public class ShopCart {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="items")
+public class Item {
     private String item;
+    private String ntd;
     private int count;
+    private double pack;
+    private String ei;
     private String type;
     private double price;
     private double sum;
 
-    public ShopCart(){
+
+    public Item(){
 
     }
 
-    public ShopCart (String item, String type, int count, double price){
+    public Item(String item, String type, int count, double price){
         this.item = item;
         this.type = type;
         this.count = count;
@@ -57,5 +66,29 @@ public class ShopCart {
 
     public void setSum(double sum) {
         this.sum = sum;
+    }
+
+    public double getPack() {
+        return pack;
+    }
+
+    public void setPack(double pack) {
+        this.pack = pack;
+    }
+
+    public String getEi() {
+        return ei;
+    }
+
+    public void setEi(String ei) {
+        this.ei = ei;
+    }
+
+    public String getNtd() {
+        return ntd;
+    }
+
+    public void setNtd(String ntd) {
+        this.ntd = ntd;
     }
 }
