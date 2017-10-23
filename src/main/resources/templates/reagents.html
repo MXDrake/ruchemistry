@@ -5,8 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
     <link type="image/x-icon" href="/favicon.gif" rel="icon">
     <title th:title="${title}">Реактивы</title>
+
     <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -24,78 +26,62 @@
 </head>
 <body >
 
-<div class="container-fluid rounded" style="background: inherit;">
+<div class="container-fluid rounded inheritBack">
 
     <!--Шапка -->
+    <div class="row  mxHat" >
+        <div class="container" >
 
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-12 ">
+                <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-5 inheritBack "  >
 
-<div class="row " style="height: 10%; background:url(/img/hatTexture.gif) ">
-        <div class="container"style="height: 100%;" >
+                    <a href="http://russian-chemistry.ru"> <img src="/img/logo.png" ></a>
+                    <b> <p class="mxLogo">info@russian-chemistry.ru</p></b>
 
-            <div style="height: 100%"
-                 class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-12 ">
-        <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-5  " style="height: 100%; background:
-        inherit" >
+                </div>
 
-            <img src="/img/logo.png" >
-         <b style="color: #bee3ff">  <p style="font: Tahoma">info@russian-chemistry.ru</p></b>
+                <!-- Правая сторона поиск -->
+                <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6 inheritBack">
 
-
-        </div>
-
-        <!-- Правая сторона поиск -->
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6  " style="height: 100%;
-            background: inherit;" >
-
-            <form method="get" action="/reagents/search"  >
-                <div class="search" style=":height: 100%; text-align: right">
-                Поиск:
-                    <div class="input-group" >
-
-
-                            <input  type="text" name="keyword"/>
-                            <span class="input-group-btn">
-                                    <input  class="find" type="submit" value=""/><br>
-                              </span>
-
+                    <form method="get" action="/reagents/search"  >
+                        <div class="search mxRight">
+                            Поиск:
+                            <div class="input-group" >
+                                <input  type="text" name="keyword"/>
+                                <span class="input-group-btn">
+                                    <input  class="find" type="submit" value=""/>
+                                <br>
+                            </span>
+                            </div>
                         </div>
 
+                        <div class="searchRL mxRight">
+                            <input id="radioName" type="radio" name="searchType" checked value="name"  >
+                            <label for="radioName">по названию</label>
+                            <input  type="radio" value="cas" name="searchType" >
+                            <label>по CAS</label>
+                        </div>
+
+                    </form>
                 </div>
 
-                <div class="searchRL" style="text-align: right">
-                <input id="radioName" type="radio" name="searchType" checked value="name"  >
-                <label for="radioName">по названию</label>
-                <input  type="radio" value="cas" name="searchType" >
-                <label>по CAS</label>
-                </div>
-
-            </form>
-
-
-        </div>
-
-        <!-- Конец поиска -->
+                <!-- Конец поиска -->
 
             </div>
-
-
         </div>
-</div>
+    </div>
 
 
     <!-- конец Шапки -->
 
     <!-- тело -->
 
-    <div class="row " style="background:url(/img/bg.gif)" >
+    <div class="row mxContentBack" >
         <br>
         <div class="container " >
 
             <!-- Menu -->
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 "
-                 style=" background-color: rgba(48,48,48,0.46) ;border: 10px solid inherit;
-                  border-top-left-radius: 10px;" >
-
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 mxMenu">
 
                 <div class="row slim " id="leftSide" >
                     <ul id="leftMenu" class="nav">
@@ -111,65 +97,116 @@
                     </ul>
                 </div>
 
-
-
-
-
             </div>
             <!-- end menu -->
 
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-9 main col-lg-9   " style=" height: 100%;border:
-            10px solid inherit;  border-top-right-radius: 10px;" >
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-9 main col-lg-9 mxContent"  >
 
                 <div class="row" >
 
+                    <div id="rightSide"   th:style="${color}"  >
 
-
-                    <div id="rightSide"   th:style="${color}" >
 
                         <div id="rightSideHat">
+                            <div class="row">
+                                <div class="container-fluid col-xs-12 col-sm-12  col-md-5 main col-lg-5">
+                                    <div class="leftPart">
+                                        <p id="h1" th:text="${title}">Реактивы</p>
+                                    </div>
+                                </div>
 
-                            <div class="leftPart" style="width:100%;">
-                                <p id="h1" th:text="${title}">Реактивы</p>
+                                <div class="container-fluid col-xs-12 col-sm-12  col-md-5 main col-lg-7">
+                                    <div class="rightPart " th:style="${color}">
+                                        <div class="letter"  >
+                                            <p>?</p>
+                                        </div>
+                                        <div id="letterSelect" ></div>
+                                        <div class="letterBlock"  >
+                                            <div id="letterList" th:style="${color}"  >
+                                                <div class="alphabet cyr" th:style="${color}" >
+                                                    <a href="/reagents/search?keyword=А&searchType=alph&letter=а">а</a>
+                                                    <a href="/reagents/search?keyword=Б&searchType=alph&letter=б">б</a>
+                                                    <a href="/reagents/search?keyword=В&searchType=alph&letter=в">в</a>
+                                                    <a href="/reagents/search?keyword=Г&searchType=alph&letter=г">г</a>
+                                                    <a href="/reagents/search?keyword=Д&searchType=alph&letter=д">д</a>
+                                                    <a href="/reagents/search?keyword=Е&searchType=alph&letter=е">е</a>
+                                                    <a href="/reagents/search?keyword=Ж&searchType=alph&letter=ж">ж</a>
+                                                    <a href="/reagents/search?keyword=З&searchType=alph&letter=з">з</a>
+                                                    <a href="/reagents/search?keyword=И&searchType=alph&letter=и">и</a>
+                                                    <a href="/reagents/search?keyword=К&searchType=alph&letter=к">к</a>
+                                                    <a href="/reagents/search?keyword=Л&searchType=alph&letter=л">л</a>
+                                                    <a href="/reagents/search?keyword=М&searchType=alph&letter=м">м</a>
+                                                    <a href="/reagents/search?keyword=Н&searchType=alph&letter=н">н</a>
+                                                    <a href="/reagents/search?keyword=О&searchType=alph&letter=о">о</a>
+                                                    <a href="/reagents/search?keyword=П&searchType=alph&letter=п">п</a>
+                                                    <a href="/reagents/search?keyword=Р&searchType=alph&letter=р">р</a>
+                                                    <a href="/reagents/search?keyword=С&searchType=alph&letter=с">с</a>
+                                                    <a href="/reagents/search?keyword=Т&searchType=alph&letter=т">т</a>
+                                                    <a href="/reagents/search?keyword=У&searchType=alph&letter=у">у</a>
+                                                    <a href="/reagents/search?keyword=Ф&searchType=alph&letter=ф">ф</a>
+                                                    <a href="/reagents/search?keyword=Х&searchType=alph&letter=х">х</a>
+                                                    <a href="/reagents/search?keyword=Ц&searchType=alph&letter=ц">ц</a>
+                                                    <a href="/reagents/search?keyword=Ч&searchType=alph&letter=ч">ч</a>
+                                                    <a href="/reagents/search?keyword=Ш&searchType=alph&letter=ш">ш</a>
+                                                    <a href="/reagents/search?keyword=Щ&searchType=alph&letter=щ">щ</a>
+                                                    <a href="/reagents/search?keyword=Э&searchType=alph&letter=э">э</a>
+                                                    <a href="/reagents/search?keyword=Я&searchType=alph&letter=я">я</a>
+                                                </div>
+                                            </div>
+                                            <div id="chooseLetter">Поиск по алфавиту</div>
+                                        </div>
+                                    </div></div>
+                                </div>
+
                             </div>
 
-                        </div>
-
-
+                        <div class="row" >
+                            <div class="container-fluid col-xs-12 col-sm-12  col-md-12 main col-lg-12">
                         <div id="rightSideBody" >
-                            <div class="pagination" >
-                                <div class="pages">
-
-                                    <a  th:if="${page.getPage()} > 20" th:href="@{?page=20}+@{&number=0}" th:text="'|<<'">Начало</a>
-
-                                    <a th:if="${page.getPage()} > 20" th:href="@{?page=}+${page.getPage()-20}+@{&number=}+${page.getPage()-20}"
-                                       th:text="'<<-'">Назад</a>
+                            <div class="" >
+                                <div class=" container-fluid text-primary " style="text-align: center;font:13px
+                                Tahoma;">
 
 
-                                    <a  th:href="@{?number=}+${page.getPage()-20}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-19}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-19}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-18}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-18}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-17}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-17}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-16}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-16}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-15}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-15}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-14}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-14}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-13}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-13}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-12}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-12}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-11}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-11}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-10}">test</a>
 
-                                    <a  th:href="@{?number=}+${page.getPage()-10}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-9}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-9}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-8}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-8}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-7}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-7}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-6}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-6}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-5}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-5}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-4}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-4}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-3}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-3}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-2}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-2}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-1}">test</a>
-                                    <a  th:href="@{?number=}+${page.getPage()-1}+@{&page=}+${page.getPage()}" th:text="${page.getPage()}">test</a>
-                                    <a th:if="${page.getPage()} < ${page.getPagesize()-2}" th:href="@{?page=}+${page.getPage()+20}+@{&number=}+${page.getPage()}"
-                                       th:text="'->>'">Next</a>
-                                    <a  th:href="@{?page=}+${page.getPagesize()}+@{&number=}+${page.getPagesize()}" th:text="'>>|'">End</a>
+                                        <a th:if="${page.getPage()} > 20" th:href="@{?page=20}+@{&number=0}"
+                                           th:text="'|<<'">Начало</a>
+
+                                        <a th:if="${page.getPage()} > 20" th:href="@{?page=}+${page.getPage()-20}+@{&number=}+${page.getPage()-20}"
+                                           th:text="'<<-'">Назад</a>
+
+
+                                        <a    th:href="@{?number=}+${page.getPage()-20}+@{&page=}+${page.getPage()}"
+                                              th:text="${page.getPage()-19}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-19}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-18}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-18}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-17}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-17}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-16}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-16}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-15}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-15}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-14}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-14}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-13}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-13}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-12}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-12}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-11}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-11}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-10}">test</a>
+
+                                        <a  th:href="@{?number=}+${page.getPage()-10}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-9}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-9}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-8}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-8}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-7}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-7}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-6}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-6}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-5}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-5}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-4}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-4}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-3}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-3}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-2}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-2}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-1}">test</a>
+                                        <a  th:href="@{?number=}+${page.getPage()-1}+@{&page=}+${page.getPage()}" th:text="${page.getPage()}">test</a>
+                                        <a th:if="${page.getPage()} < ${page.getPagesize()-2}" th:href="@{?page=}+${page.getPage()+20}+@{&number=}+${page.getPage()}"
+                                           th:text="'->>'">Next</a>
+                                        <a  th:href="@{?page=}+${page.getPagesize()}+@{&number=}+${page.getPagesize()}" th:text="'>>|'">End</a>
+
+
+
+
+
+
 
 
 
@@ -201,16 +238,19 @@
                                 </ul>
                             </div>
                         </div>
-
+                        </div>
+                        </div>
                     </div>
 
 
 
 
+
+                    </div>
+
                 </div>
 
             </div>
-
 
         </div>
     </div>
@@ -228,6 +268,38 @@
     </div>
     <!-- конец Footer -->
 </div>
+
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46046490 = new Ya.Metrika({
+                    id:46046490,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
 </body>
 </html>
