@@ -6,9 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
     <link type="image/x-icon" href="/favicon.gif" rel="icon">
-    <title th:text="${page.getTitle()}"> </title>
-    <meta name="keywords" th:content="${page.getKeywords()}">
-    <meta name="description" th:content="${page.getDescription()}">
+    <title th:title="${title}">Реактивы</title>
     <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -123,37 +121,93 @@
             <div class="container-fluid col-xs-12 col-sm-12  col-md-9 main col-lg-9   " style=" height: 100%;border:
             10px solid inherit;  border-top-right-radius: 10px;" >
 
-            <div class="row" >
+                <div class="row" >
 
 
 
-                <div id="rightSide"   th:style="${color}" >
+                    <div id="rightSide"   th:style="${color}" >
 
-                    <div id="rightSideHat">
+                        <div id="rightSideHat">
 
-                        <div class="leftPart" style="width:100%;">
-                            <p id="h1" th:text="${page.getTitle()}"></p>
+                            <div class="leftPart" style="width:100%;">
+                                <p id="h1" th:text="${title}">Реактивы</p>
+                            </div>
+
+                        </div>
+
+
+                        <div id="rightSideBody" >
+                            <div class="pagination" >
+                                <div class="pages">
+
+                                    <a  th:if="${page.getPage()} > 20" th:href="@{?page=20}+@{&number=0}" th:text="'|<<'">Начало</a>
+
+                                    <a th:if="${page.getPage()} > 20" th:href="@{?page=}+${page.getPage()-20}+@{&number=}+${page.getPage()-20}"
+                                       th:text="'<<-'">Назад</a>
+
+
+                                    <a  th:href="@{?number=}+${page.getPage()-20}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-19}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-19}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-18}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-18}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-17}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-17}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-16}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-16}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-15}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-15}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-14}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-14}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-13}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-13}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-12}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-12}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-11}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-11}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-10}">test</a>
+
+                                    <a  th:href="@{?number=}+${page.getPage()-10}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-9}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-9}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-8}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-8}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-7}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-7}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-6}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-6}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-5}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-5}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-4}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-4}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-3}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-3}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-2}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-2}+@{&page=}+${page.getPage()}" th:text="${page.getPage()-1}">test</a>
+                                    <a  th:href="@{?number=}+${page.getPage()-1}+@{&page=}+${page.getPage()}" th:text="${page.getPage()}">test</a>
+                                    <a th:if="${page.getPage()} < ${page.getPagesize()-2}" th:href="@{?page=}+${page.getPage()+20}+@{&number=}+${page.getPage()}"
+                                       th:text="'->>'">Next</a>
+                                    <a  th:href="@{?page=}+${page.getPagesize()}+@{&number=}+${page.getPagesize()}" th:text="'>>|'">End</a>
+
+
+
+                                </div>
+                            </div>
+                            <div class="pageScroll">
+                                <a href="#" class="slider"></a>
+                            </div>
+
+                            <div class="fix"></div>
+                            <div id="content">
+
+                                <div class="qtty">всего <b th:text="${page.getRows()}"></b> элементов</div>
+
+                                <ul class="searchList">
+
+
+                                    <li th:each ="element: ${reagentList}">
+
+                                        <a th:href="@{/reagents/} + ${element.getId()}" th:text="${element.getName()}"></a>
+                                        <p th:text="${element.getSinonim()}+ ${element.getEngName()}+${element.getName()}"></p>
+
+
+                                    </li>
+
+
+
+                                </ul>
+                                </ul>
+                            </div>
                         </div>
 
                     </div>
 
 
-                    <div id="rightSideBody">
 
-                        <div class="fix"></div>
-                        <div id="content" style="padding-left: 10px">
 
-                            <span th:utext="${page.getContent()}"></span>
-
-                        </div>
-
-                    </div>
                 </div>
-
-
-
-
-            </div>
 
             </div>
 

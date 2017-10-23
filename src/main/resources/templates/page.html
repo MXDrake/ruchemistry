@@ -4,7 +4,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <link type="image/x-icon" href="/favicon.gif" rel="icon">
+    <title th:text="${page.getTitle()}"> </title>
+    <meta name="keywords" th:content="${page.getKeywords()}">
+    <meta name="description" th:content="${page.getDescription()}">
+    <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
@@ -14,50 +19,43 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="stylesheet" href="/css/maxstyle.css" type="text/css">
+
+
 </head>
 <body >
 
-<div class="container-fluid rounded" style="background: inherit;">
+<div class="container-fluid rounded inheritBack">
 
     <!--Шапка -->
+<div class="row  mxHat" >
+        <div class="container" >
 
-
-<div class="row " style="height: 10%; background:url(/img/hatTexture.gif) ">
-        <div class="container"style="height: 100%;" >
-        <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style=" height: 100%; background: inherit" ></div>
-
-            <div style="height: 100%"
-                 class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-10 ">
-        <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-6  " style="height: 100%; background:
-        inherit" >
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-12 ">
+        <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-5 inheritBack "  >
 
             <img src="/img/logo.png" >
-         <b style="color: #bee3ff">  <p style="color: white; font: Tahoma">info@russian-chemistry.ru</p></b>
-
+         <b> <p class="mxLogo">info@russian-chemistry.ru</p></b>
 
         </div>
 
         <!-- Правая сторона поиск -->
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6  " style="height: 100%;
-            background: inherit;" >
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6 inheritBack">
 
             <form method="get" action="/reagents/search"  >
-                <div class="search" style=":height: 100%; text-align: right">
+                <div class="search mxRight">
                 Поиск:
                     <div class="input-group" >
-
-
                             <input  type="text" name="keyword"/>
                             <span class="input-group-btn">
-                                    <input  class="find" type="submit" value=""/><br>
-                              </span>
-
+                                    <input  class="find" type="submit" value=""/>
+                                <br>
+                            </span>
                         </div>
-
                 </div>
 
-                <div class="searchRL" style="text-align: right">
+                <div class="searchRL mxRight">
                 <input id="radioName" type="radio" name="searchType" checked value="name"  >
                 <label for="radioName">по названию</label>
                 <input  type="radio" value="cas" name="searchType" >
@@ -65,15 +63,11 @@
                 </div>
 
             </form>
-
-
         </div>
 
         <!-- Конец поиска -->
 
             </div>
-
-        <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style=" height: 100%; background: inherit" ></div>
         </div>
 </div>
 
@@ -82,14 +76,12 @@
 
     <!-- тело -->
 
-    <div class="row " style="background:url(/img/bg.gif)" >
+    <div class="row mxContentBack" >
         <br>
         <div class="container " >
 
             <!-- Menu -->
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 "
-                 style=" background-color: rgba(48,48,48,0.46) ;border: 10px solid inherit;
-                  border-top-left-radius: 10px;" >
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 mxMenu">
 
                 <div class="row slim " id="leftSide" >
                     <ul id="leftMenu" class="nav">
@@ -105,33 +97,27 @@
                     </ul>
                 </div>
 
-
-
             </div>
             <!-- end menu -->
 
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-8 main col-lg-9   " style=" height: 100%;border:
-            10px solid inherit;  border-top-right-radius: 10px;" >
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-9 main col-lg-9 mxContent"  >
 
             <div class="row" >
-
-
 
                 <div id="rightSide"   th:style="${color}" >
 
                     <div id="rightSideHat">
 
-                        <div class="leftPart" style="width:100%;">
+                        <div class="leftPart" >
                             <p id="h1" th:text="${page.getTitle()}"></p>
                         </div>
 
                     </div>
 
-
                     <div id="rightSideBody">
 
                         <div class="fix"></div>
-                        <div id="content" style="padding-left: 10px">
+                        <div id="content" class="pL20">
 
                             <span th:utext="${page.getContent()}"></span>
 
@@ -140,14 +126,10 @@
                     </div>
                 </div>
 
-
-
-
             </div>
 
             </div>
-
-
+            
         </div>
     </div>
 
