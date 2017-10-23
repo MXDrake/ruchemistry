@@ -331,6 +331,23 @@ public class UserController {
         emailService.sendEmail("arcas.llc@yandex.ru","proberka","Тексттписьма");
     }
 
+    @RequestMapping(value = {"/temp"}, method = RequestMethod.GET)
+    public ModelAndView css(HttpServletRequest request) throws IOException, ServletException, MessagingException {
+        ModelAndView model = new ModelAndView("test");
+        request.setAttribute("menu", pageService.getMenu("main"));
+        request.setAttribute("page", pageService.getByName("main") );
+        return   model;
+
+    }
+
+    @RequestMapping(value = {"/max"}, method = RequestMethod.GET)
+    public ModelAndView maxtemplate(HttpServletRequest request) throws IOException, ServletException, MessagingException {
+        ModelAndView model = new ModelAndView("max");
+        request.setAttribute("menu", pageService.getMenu("main"));
+        request.setAttribute("page", pageService.getByName("main") );
+        return   model;
+
+    }
 
 
 
