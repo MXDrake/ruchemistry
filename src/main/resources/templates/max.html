@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org" style="height: 100%">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -16,18 +16,18 @@
 
     <link rel="stylesheet" href="/css/maxstyle.css" type="text/css">
 </head>
-<body style="height: 100%">
+<body >
 
-<div class="container-fluid rounded" style="background: inherit;height: 100%">
+<div class="container-fluid rounded" style="background: inherit;">
 
     <!--Шапка -->
 
 
-<div class="row " style="height: 10%; background-color: #0b9600">
-        <div class="container"style="height: 100%" >
-        <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style=" height: 100%" >hatright</div>
+<div class="row " style="height: 10%; background:url(/img/hatTexture.gif) ">
+        <div class="container"style="height: 100%;" >
+        <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style=" height: 100%; background: inherit" ></div>
 
-            <div style="background:url(/img/hatTexture.gif);height: 100%"
+            <div style="height: 100%"
                  class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-10 ">
         <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-6  " style="height: 100%; background:
         inherit" >
@@ -74,30 +74,27 @@
 
             </div>
 
-        <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style=" height: 100%" >hatleft</div>
+        <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style=" height: 100%; background: inherit" ></div>
         </div>
 </div>
 
 
     <!-- конец Шапки -->
 
-    <br>
     <!-- тело -->
 
-    <div class="row " style="height: 80%">
-        <div class="container "style="height: 100%; background:url(/img/bg.gif);" >
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="height: 100%; background: inherit"  >1111</div>
+    <div class="row " style="background:url(/img/bg.gif)" >
+        <br>
+        <div class="container " >
 
             <!-- Menu -->
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2  "
-                 style="height: 100%; background-color: rgba(48,48,48,0.46) ;border: 10px solid inherit;
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 "
+                 style=" background-color: rgba(48,48,48,0.46) ;border: 10px solid inherit;
                   border-top-left-radius: 10px;" >
 
                 <div class="row slim " id="leftSide" >
                     <ul id="leftMenu" class="nav">
 
-
-                        
                         <li th:each ="element: ${menu}">
 
                             <span th:utext="${element}" > </span>
@@ -114,11 +111,44 @@
             </div>
             <!-- end menu -->
 
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-8 main col-lg-8   " style="background-color:
-            orange; height: 100%;border: 10px solid inherit;  border-top-right-radius: 10px;" >
-                Content</div>
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-8 main col-lg-9   " style=" height: 100%;border:
+            10px solid inherit;  border-top-right-radius: 10px;" >
 
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style=" height: 100%" >1111</div>
+            <div class="row" >
+
+
+
+                <div id="rightSide"   th:style="${color}" >
+
+                    <div id="rightSideHat">
+
+                        <div class="leftPart" style="width:100%;">
+                            <p id="h1" th:text="${page.getTitle()}"></p>
+                        </div>
+
+                    </div>
+
+
+                    <div id="rightSideBody">
+
+                        <div class="fix"></div>
+                        <div id="content" style="padding-left: 10px">
+
+                            <span th:utext="${page.getContent()}"></span>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            </div>
+
+
         </div>
     </div>
 
@@ -127,14 +157,10 @@
 
     <!-- Footer -->
 
-    <div class="row " style="height: 10%">
-        <div class="container"style="height: 100%" >
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="background-color: black; height: 100%" >1111</div>
-
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-10  " style="background-color: red;
-            height: 100%" >Footer</div>
-
-            <div class="hidden-xs hidden-sm col-md-1 col-lg-1" style="background-color: black; height: 100%" >1111</div>
+    <div class="row ">
+        <div id="basement">
+            <a href="/" id="baseLogo"></a>
+            <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
         </div>
     </div>
     <!-- конец Footer -->
