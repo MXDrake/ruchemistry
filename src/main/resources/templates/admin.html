@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="/css/dashboard.css" media="all">
+
+<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+
+
+
+   <head>
+
+
+    <title>Title</title>
+</head>
+
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Project</a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav navbar-right">
+                <form class="form-group" th:action="@{/logout}" method="post">
+                    <input class="form-control" type="submit" value="LOGOUT"></input>
+                </form>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="/admin">Reagent</a></li>
+                <li><a href="/admin/page">Page</a></li>\
+            </ul>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Admin Panel</h1>
+
+            <div clas="tabs">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#e_reagent" data-toggle="tab">Edit Reagent</a></li>
+                    <li ><a href="#table" data-toggle="tab">New Reagent</a></li>
+
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane " id="table">
+
+
+
+
+                        <form role="form" action="/admin/addreagent" method="post">
+
+                            <div class="form-group">
+
+                                <label th:text="${message}"></label>
+
+                                <label for="name">name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="name" >
+
+                                <label for="sinonim">sinonim</label>
+                                <input type="text" class="form-control" id="sinonim" name="sinonim" placeholder="sinonim" >
+
+                                <label for="engName">engName</label>
+                                <input type="text" class="form-control" id="engName" name="engName" placeholder="engName" >
+
+                                <label for="cas">cas</label>
+                                <input type="text" class="form-control" id="cas" name="cas" placeholder="cas" >
+
+                                <label for="link">link</label>
+                                <input type="text" class="form-control" id="link" name="link" placeholder="link" >
+
+                                <label for="image">image</label>
+                                <input type="text" class="form-control" id="image" name="image" placeholder="image" >
+
+
+                                <label for="content">content</label>
+                                <textarea rows="1" class="form-control" id="content" name="content" placeholder="content" >
+                                </textarea>
+
+                                <label for="wDissolubility">wDissolubility</label>
+                                <input type="text" class="form-control" id="wDissolubility" name="wDissolubility" placeholder="wDissolubility" >
+
+
+                                <label for="vDissolubility">vDissolubility</label>
+                                <input type="text" class="form-control" id="vDissolubility" name="vDissolubility" placeholder="vDissolubility" >
+
+
+                                <label for="weight">weight</label>
+                                <input type="text" class="form-control" id="weight" name="weight" placeholder="weight" >
+
+                                <label for="tmp_p">tmp_p</label>
+                                <input type="text" class="form-control" id="tmp_p" name="tmp_p" placeholder="tmp_p" >
+
+                                <label for="tmp_k">tmp_k</label>
+                                <input type="text" class="form-control" id="tmp_k" name="tmp_k" placeholder="tmp_k" >
+
+                                <label for="d204">d204</label>
+                                <input type="text" class="form-control" id="d204" name="d204" placeholder="d204" >
+
+
+                                <button type="submit" class="btn btn-default">Создать</button>
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+                    <div class="tab-pane active" id="e_reagent">
+                        <form role="form" action="/admin/getreagent" method="post">
+                            <label for="get_id">id</label>
+                            <input type="text" class="form-control" id="get_id" name="get_id" placeholder="id" >
+                            <button type="submit" class="btn btn-default">Показать</button>
+                        </form>
+
+                        <form role="form" action="/admin/editreagent" method="post">
+
+                            <label th:text="${message}"></label>
+
+                            <div class="form-group">
+
+
+                                <label for="r_id">id</label>
+                                <input type="text" class="form-control" id="r_id" name="r_id" placeholder="id" th:value="${r_id}" readonly>
+
+
+
+                                <label for="r_name">name</label>
+                                <input type="text" class="form-control" id="r_name" name="r_name" placeholder="name" th:value="${r_name}">
+
+                                <label for="r_eng">eng</label>
+                                <input type="text" class="form-control" id="r_eng" name="r_eng" placeholder="eng" th:value="${r_eng}">
+
+                                <label for="r_formula">М. формула</label>
+                                <input type="text" class="form-control" id="r_formula" name="r_formula" placeholder="cas" th:value="${r_formula}">
+
+
+                                <label for="r_cas">cas</label>
+                                <input type="text" class="form-control" id="r_cas" name="r_cas" placeholder="cas" th:value="${r_cas}">
+
+                                <label for="r_type">type</label>
+                                <input type="text" class="form-control" id="r_type" name="r_type" placeholder="r_type" th:value="${r_type}">
+
+
+                                <label for="r_weight">Мол. вес</label>
+                                <input type="text" class="form-control" id="r_weight" name="r_weight" placeholder="r_weight" th:value="${r_weight}">
+
+                                <label for="r_k">Темп. кип.</label>
+                                <input type="text" class="form-control" id="r_k" name="r_k" placeholder="r_k" th:value="${r_k}">
+
+                                <label for="r_p">Темп. плав.</label>
+                                <input type="text" class="form-control" id="r_p" name="r_p" placeholder="r_p" th:value="${r_p}">
+
+                                <label for="r_d204">D204</label>
+                                <input type="text" class="form-control" id="r_d204" name="r_d204" placeholder="r_d204" th:value="${r_d204}">
+
+
+                                <label for="r_wDissolubility">Раствор. в воде</label>
+                                <input type="text" class="form-control" id="r_wDissolubility" name="r_wDissolubility" placeholder="r_wDissolubility" th:value="${r_wDissolubility}">
+
+
+                                <label for="r_vDissolubility">Раствор. в растворителях</label>
+                                <input type="text" class="form-control" id="r_vDissolubility" name="r_vDissolubility" placeholder="r_vDissolubility" th:value="${r_vDissolubility}">
+
+
+                                <label for="r_has_t">токсичен</label>
+                                <input type="text" class="form-control" id="r_has_t" name="r_has_t" placeholder="r_has_t" th:value="${r_has_t}">
+
+                                <label for="r_has_c">едкое ожоги</label>
+                                <input type="text" class="form-control" id="r_has_c" name="r_has_c" placeholder="r_has_c" th:value="${r_has_c}">
+
+                                <label for="r_has_xn">вредное</label>
+                                <input type="text" class="form-control" id="r_has_xn" name="r_has_xn" placeholder="r_has_xn" th:value="${r_has_xn}">
+
+                                <label for="r_has_xi">раздражающие</label>
+                                <input type="text" class="form-control" id="r_has_xi" name="r_has_xi" placeholder="r_has_xi" th:value="${r_has_xi}">
+
+                                <label for="r_has_t_plus">Очень токсичен</label>
+                                <input type="text" class="form-control" id="r_has_t_plus" name="r_has_t_plus" placeholder="r_has_t_plus" th:value="${r_has_t_plus}">
+
+                                <label for="r_has_e">Взрывоопасен</label>
+                                <input type="text" class="form-control" id="r_has_e" name="r_has_e" placeholder="r_has_e" th:value="${r_has_e}">
+
+
+                                <label for="r_has_n">Опасен для окр среды</label>
+                                <input type="text" class="form-control" id="r_has_n" name="r_has_n" placeholder="r_has_n" th:value="${r_has_n}">
+
+                                <label for="r_has_f">легко воспламеняется</label>
+                                <input type="text" class="form-control" id="r_has_f" name="r_has_f" placeholder="r_has_f" th:value="${r_has_f}">
+
+                                <label for="r_has_f_plus">черезвычайно воспламеняется</label>
+                                <input type="text" class="form-control" id="r_has_f_plus" name="r_has_f_plus" placeholder="r_has_f_plus" th:value="${r_has_f_plus}">
+
+
+                                <label for="r_has_o">сильный окислитель</label>
+                                <input type="text" class="form-control" id="r_has_o" name="r_has_o" placeholder="r_has_o" th:value="${r_has_o}">
+
+
+
+
+                                <label for="r_content">content</label>
+
+
+
+
+                                <script type="text/javascript">
+                                var area1;
+                                function toggleArea1() {
+                                        area1 = new nicEditor({fullPanel : true}).panelInstance('r_content',{hasPanel : true});
+                                }
+
+                                bkLib.onDomLoaded(function() { toggleArea1(); });
+                                </script>
+                                
+
+                                <textarea rows="30" class="form-control" id="r_content" name="r_content" placeholder="Text" th:text="${r_content}">
+
+                                </textarea>
+
+                                <button type="submit" class="btn btn-default">Сохранить</button>
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+

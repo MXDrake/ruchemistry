@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:th="http://www.thymeleaf.org">
+
+
+    <url th:each ="element: ${pages}">
+
+        <loc th:text="'http://www.russian-chemistry.ru/page/'+${element.getName()}">  </loc>
+
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url th:each ="element: ${reagents}">
+
+        <loc th:text="'http://www.russian-chemistry.ru/reagents/'+${element.getId()}">  </loc>
+
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+
+    <url th:each ="element: ${medications}">
+
+        <loc th:text="'http://www.russian-chemistry.ru/medications/'+${element.getId()}">  </loc>
+
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+
+
+
+
+</urlset>
