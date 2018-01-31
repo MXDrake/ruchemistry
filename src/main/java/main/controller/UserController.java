@@ -1,9 +1,7 @@
 package main.controller;
 
-import main.model.Page;
 import main.model.Pagination;
 import main.model.Reagent;
-import main.model.User;
 import main.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -100,7 +98,7 @@ public class UserController {
 
             List <Reagent> list = new ArrayList <>();
 
-            list = reagentService.searchByName(search, type);
+            list = reagentService.searchBy(search, type);
             paginationModel.setRows((long) list.size());
             request.setAttribute("reagentList", list);
             request.setAttribute("page", paginationModel);

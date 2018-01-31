@@ -102,10 +102,11 @@
       <version>1.7.2</version>
     </dependency>
 
-
-
-
-    
+    <!--Spring Data-->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+    </dependency>
 
   </dependencies>
 

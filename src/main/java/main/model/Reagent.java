@@ -28,9 +28,11 @@ public class Reagent {
     @Column(name = "image")
     private String image;
 
+    @Column(name = "kind")
+    private String kind;
+
     @Column(name = "receipt")
     private String content;
-
 
     @Column(name = "water_dissolubility")
     private String wDissolubility;
