@@ -5,6 +5,8 @@ import main.model.Pagination;
 import main.model.Reagent;
 import main.model.User;
 import main.service.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Controller;
@@ -27,6 +29,9 @@ import java.util.List;
 
 @Controller
 public class UserController {
+
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private ReagentService reagentService;
 
@@ -38,7 +43,6 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
 
     @RequestMapping(value = {"/reagents"}, method = RequestMethod.GET)
     public ModelAndView mainGet(HttpServletRequest request, HttpSession session, HttpServletResponse response) throws IOException, ServletException {
@@ -74,6 +78,7 @@ public class UserController {
         }
         catch (Exception e){
             request.getRequestDispatcher("/").forward(request,response);
+            logger.error("while open /reagents");
             return null;
         }
 
@@ -83,9 +88,10 @@ public class UserController {
     @RequestMapping(value = {"/reagents/search"}, method = RequestMethod.GET)
     public ModelAndView search(HttpServletRequest request, HttpSession session, HttpServletResponse response) throws IOException, ServletException {
         ModelAndView model = new ModelAndView("search");
+        String search = null;
         try {
             String type = request.getParameter("searchType");
-            String search = request.getParameter("keyword");
+            search = request.getParameter("keyword");
             if ( type == null| search == null) {
                 response.sendRedirect("/reagents");
                 return null;
@@ -120,6 +126,7 @@ public class UserController {
         }
         catch (Exception e) {
             request.getRequestDispatcher("/reagents").forward(request,response);
+            logger.error("while search = {}", search);
             return null;
         }
     }
@@ -142,6 +149,7 @@ public class UserController {
         }
         catch (Exception e) {
             request.getRequestDispatcher("/reagents").forward(request, response);
+            logger.error("while getting page id = {}", id_str);
             return null;
         }
 
@@ -158,6 +166,7 @@ public class UserController {
         catch (Exception e){
 
             request.getRequestDispatcher("/reagents").forward(request, response);
+            logger.error("while opened home page");
             return null;
         }
 
@@ -183,6 +192,7 @@ public class UserController {
         }
         catch (Exception e) {
             request.getRequestDispatcher("/reagents").forward(request, response);
+            logger.error("while singin");
             return null;
         }
     }
@@ -207,6 +217,7 @@ public class UserController {
         }
         catch (Exception e) {
             request.getRequestDispatcher("/reagents").forward(request, response);
+            logger.error("while opened page = {}", name);
             return null;
         }
 
@@ -248,6 +259,7 @@ public class UserController {
         }
         catch (Exception e){
             request.getRequestDispatcher("/").forward(request,response);
+            logger.error("while opened medicaments ");
             return null;
         }
 
@@ -269,6 +281,7 @@ public class UserController {
         }
         catch (Exception e) {
             request.getRequestDispatcher("/reagents").forward(request, response);
+            logger.error("while opened id = {}", id_str);
             return null;
         }
 
@@ -292,13 +305,18 @@ public class UserController {
     public ModelAndView sitemap(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         ModelAndView model = new ModelAndView("sitemap");
 
-        List<Reagent> a = reagentService.getAll("ChemicalAgent");
+        try {
+            List<Reagent> a = reagentService.getAll("ChemicalAgent");
 
-        request.setAttribute("reagents", reagentService.getAll("ChemicalAgent"));
-        request.setAttribute("pages", pageService.getAll());
-        request.setAttribute("medications", reagentService.getAll("Medication"));
-        return model;
+            request.setAttribute("reagents", reagentService.getAll("ChemicalAgent"));
+            request.setAttribute("pages", pageService.getAll());
+            request.setAttribute("medications", reagentService.getAll("Medication"));
+            return model;
+        } catch (Exception e) {
+            logger.error("while getting sitemap");
+        }
 
+    return null;
     }
 
 
@@ -317,19 +335,20 @@ public class UserController {
         }
         catch (Exception e) {
             request.getRequestDispatcher("/reagents").forward(request, response);
+            logger.error("while getting chemical_agents");
             return null;
         }
 
     }
 
-    @Autowired
-    EmailServiceImpl emailService;
-
-    @RequestMapping(value = {"/admin/sendmail"}, method = RequestMethod.GET)
-    public void test() throws IOException, ServletException, MessagingException {
-        ModelAndView model = new ModelAndView("test");
-        emailService.sendEmail("arcas.llc@yandex.ru","proberka","Тексттписьма");
-    }
+//    @Autowired
+//    EmailServiceImpl emailService;
+//
+//    @RequestMapping(value = {"/admin/sendmail"}, method = RequestMethod.GET)
+//    public void test() throws IOException, ServletException, MessagingException {
+//        ModelAndView model = new ModelAndView("test");
+//        emailService.sendEmail("arcas.llc@yandex.ru","proberka","Тексттписьма");
+//    }
 
 
 

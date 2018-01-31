@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <link type="image/x-icon" href="/favicon.gif" rel="icon">
+    <title th:text="${reagent.getName()}">Реактивы </title>
+    <meta name="keywords" th:content="${reagent.getName()} + @{ ; } + ${reagent.getSinonim()}">
+    <meta name="description" th:content="${reagent.getName()} + @{ ; } +${reagent.getSinonim()}">
+
+    <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/maxstyle.css" type="text/css">
+
+
+</head>
+<body>
+
+<div class="container-fluid rounded inheritBack">
+
+    <!--Шапка -->
+    <div class="row  mxHat">
+        <div class="container">
+
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-12 ">
+                <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-5 inheritBack ">
+
+                    <a href="http://russian-chemistry.ru"> <img src="/img/logo.png"></a>
+                    <b><p class="mxLogo">info@russian-chemistry.ru</p></b>
+
+                </div>
+
+                <!-- Правая сторона поиск -->
+                <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6 inheritBack">
+
+                    <form method="get" action="/reagents/search">
+                        <div class="search mxRight">
+                            Поиск:
+                            <div class="input-group">
+                                <input type="text" name="keyword"/>
+                                <span class="input-group-btn">
+                                    <input class="find" type="submit" value=""/>
+                                <br>
+                            </span>
+                            </div>
+                        </div>
+
+                        <div class="searchRL mxRight">
+                            <input id="radioName" type="radio" name="searchType" checked value="name">
+                            <label for="radioName">по названию</label>
+                            <input type="radio" value="cas" name="searchType">
+                            <label>по CAS</label>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- Конец поиска -->
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- конец Шапки -->
+
+    <!-- тело -->
+
+    <div class="row mxContentBack">
+        <br>
+        <div class="container ">
+
+            <!-- Menu -->
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 mxMenu">
+
+                <div class="row slim " id="leftSide">
+                    <ul id="leftMenu" class="nav">
+
+                        <li th:each="element: ${menu}">
+
+                            <span th:utext="${element}"> </span>
+
+                        </li>
+
+
+                        </li>
+                    </ul>
+                    <!-- Yandex.RTB R-A-252178-1 -->
+                    <div id="yandex_rtb_R-A-252178-3" class="col-xs-12 col-sm-12  hidden-md hidden-lg"></div>
+                    <!-- Yandex.RTB R-A-252178-3 -->
+                    <script type="text/javascript">
+                        (function(w, d, n, s, t) {
+                            w[n] = w[n] || [];
+                            w[n].push(function() {
+                                Ya.Context.AdvManager.render({
+                                    blockId: "R-A-252178-3",
+                                    renderTo: "yandex_rtb_R-A-252178-3",
+                                    async: true
+                                });
+                            });
+                            t = d.getElementsByTagName("script")[0];
+                            s = d.createElement("script");
+                            s.type = "text/javascript";
+                            s.src = "//an.yandex.ru/system/context.js";
+                            s.async = true;
+                            t.parentNode.insertBefore(s, t);
+                        })(this, this.document, "yandexContextAsyncCallbacks");
+                    </script>
+
+
+                    <!-- Yandex.RTB R-A-252178-2 -->
+                    <div id="yandex_rtb_R-A-252178-2" class=" container-fluid hidden-xs hidden-sm"></div>
+                    <script type="text/javascript">
+                        (function (w, d, n, s, t) {
+                            w[n] = w[n] || [];
+                            w[n].push(function () {
+                                Ya.Context.AdvManager.render({
+                                    blockId: "R-A-252178-2",
+                                    renderTo: "yandex_rtb_R-A-252178-2",
+                                    async: true
+                                });
+                            });
+                            t = d.getElementsByTagName("script")[0];
+                            s = d.createElement("script");
+                            s.type = "text/javascript";
+                            s.src = "//an.yandex.ru/system/context.js";
+                            s.async = true;
+                            t.parentNode.insertBefore(s, t);
+                        })(this, this.document, "yandexContextAsyncCallbacks");
+                    </script>
+
+
+                </div>
+            </div>
+            <!-- end menu -->
+
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-9 main col-lg-9 mxContent">
+
+                <div class="row">
+
+                    <div id="rightSide" th:style="${color}">
+
+                        <div id="rightSideHat">
+
+
+                            <div class="leftPart">
+                                <p id="h1">Реактивы</p>
+                            </div>
+
+
+                        </div>
+
+                        <div id="rightSideBody">
+
+                            <div class="fix"></div>
+                            <div id="content">
+
+                                <div class="row">
+                                    <div class="container-fluid">
+                                        <h1 th:text="${reagent.getName()}"> Name </h1>
+
+                                        <h3 th:text="${reagent.getSinonim()}">Sinonim </h3>
+                                        <h3 th:text="${reagent.getEngName()}">Sinonim </h3>
+                                    </div>
+                                </div>
+
+                                <div class="formula">
+                                    <img th:src="@{/media/} + ${reagent.getImage()}" alt=" ??? ">
+                                </div>
+
+
+                                <table id="pagePanel" cellpadding=0 cellspacing=0 class="table">
+                                    <tr>
+                                        <td class="parameters">
+                                            <table cellspacing=0 cellpadding=0 class="table">
+                                                <tr th:if="${reagent.getCas() != ''}">
+                                                    <td>CAS номер:</td>
+                                                    <td><b th:text="${reagent.getCas()}">- </b></td>
+                                                </tr>
+
+                                                <tr th:if="${reagent.getFormula()}">
+                                                    <td>Молекулярная формула</td>
+                                                    <td th:utext="${reagent.getFormula()}"><b></b></td>
+                                                </tr>
+
+                                                <tr th:if="${reagent.getOrg() != ''}">
+                                                    <td>
+                                                        Литературная ссылка:
+                                                    </td>
+                                                    <td>
+                                                        <b th:text="${reagent.getOrg()}"
+                                                           title='ссылка в "Указатель препаративных синтезов неорганических, комплексных и элементорганических соединений" Лернер И.М'>
+                                                            - </b>
+                                                        <b th:text="${reagent.getLink()}"
+                                                           title='ссылка в "указателе препаративных синтезов органических соединений" Лернер И.М'>
+                                                        </b>
+                                                    </td>
+                                                </tr>
+                                                <tr th:if="${reagent.getSs()}">
+                                                    <td>Условия эксплуатации</td>
+                                                    <td><b th:text="${reagent.getSs()}"></b></td>
+                                                </tr>
+
+                                                <tr th:if="${reagent.getRs()}">
+                                                    <td>Риск при использовании</td>
+                                                    <td th:text="${reagent.getRs()}"><b></b></td>
+                                                </tr>
+                                                <tr>
+
+
+                                                    <td>Знаки особого риска:</td>
+                                                    <td>
+
+                                                        <div th:if="${reagent.getHas_t()}"><p><img
+                                                                src="/img/signs/t.gif"></p>
+                                                            <p>ТОКСИЧЕН, МОЖЕТ ВЫЗЫВАТЬ НЕОБРАТИМЫЕ ПОСЛЕДСТВИЯ, В Т.Ч.
+                                                                КУМУЛЯТИВНЫЕ, МУТАГЕННЫЕ, ТЕРАТОГЕННЫЕ,
+                                                                КАНЦЕРОГЕННЫЕ.</p></div>
+
+                                                        <div th:if="${reagent.getHas_c()}"><p><img
+                                                                src="/img/signs/c.gif"></p>
+                                                            <p>ВРЕДНО, ОКАЗЫВАЕТ ОБЩЕЕ НЕГАТИВНОЕ ВОЗДЕЙСТВИЕ НА
+                                                                ОРГАНИЗМ.</p></div>
+
+                                                        <div th:if="${reagent.getHas_xn()}"><p><img
+                                                                src="/img/signs/xn.gif"></p>
+                                                            <p>РАЗДРАЖАЮЩИЙ, ГИПЕРАЛЛИРГЕН, МОЖЕТ ВЫЗЫВАТЬ СЕРЬЕЗНЫЕ
+                                                                КОЖНЫЕ ЗАБОЛЕВАНИЯ.</p></div>
+
+                                                        <div th:if="${reagent.getHas_xi()}"><p><img
+                                                                src="/img/signs/xi.gif"></p>
+                                                            <p>ТОКСИЧЕН, МОЖЕТ ВЫЗЫВАТЬ НЕОБРАТИМЫЕ ПОСЛЕДСТВИЯ, В Т.Ч.
+                                                                КУМУЛЯТИВНЫЕ, МУТАГЕННЫЕ, ТЕРАТОГЕННЫЕ,
+                                                                КАНЦЕРОГЕННЫЕ.</p></div>
+
+                                                        <div th:if="${reagent.getHas_t_plus()}"><p><img
+                                                                src="/img/signs/t_plus.gif"></p>
+                                                            <p>ЧРЕЗВЫЧАЙНО ТОКСИЧЕН, ИМЕЕТ НИЗКУЮ ЛЕТАЛЬНУЮ ДОЗУ! </p>
+                                                        </div>
+
+                                                        <div th:if="${reagent.getHas_e()}"><p><img
+                                                                src="/img/signs/e.gif"></p>
+                                                            <p>ВЗРЫВООПАСЕН</p></div>
+
+
+                                                        <div th:if="${reagent.getHas_n()}"><p><img
+                                                                src="/img/signs/n.gif"></p>
+                                                            <p>ОПАСЕН ДЛЯ ОКРУЖАЮЩЕЙ СРЕДЫ. ДАННЫЙ ВИД ВЕЩЕСТВ
+                                                                КАТЕГОРИЧЕСКИ ЗАПРЕЩАЕТСЯ УТИЛИЗИРОВАТЬ В ОБЩУЮ
+                                                                КАНАЛИЗАЦИЮ</p></div>
+
+                                                        <div th:if="${reagent.getHas_f()}"><p><img
+                                                                src="/img/signs/f.gif"></p>
+                                                            <p>ЛЕГКО ВОСПЛАМЕНЯЕМ.</p></div>
+
+                                                        <div th:if="${reagent.getHas_o()}"><p><img
+                                                                src="/img/signs/o.gif"></p>
+                                                            <p>СИЛЬНЫЙ ОКИСЛИТЕЛЬ. КАТЕГОРИЧЕСКИ ЗАПРЕЩАЕТСЯ ХРАНЕНИЕ
+                                                                РЯДОМ С ВЕЩЕСТВАМИ КЛАССА F, F+</p></div>
+
+                                                        <div th:if="${reagent.getHas_f_plus()}"><p><img
+                                                                src="/img/signs/f_plus.gif"></p>
+                                                            <p>ЧРЕЗВЫЧАЙНО ЛЕГКО ВОСПЛАМЕНЯЕМ.</p></div>
+
+                                                    </td>
+
+                                                </tr>
+                                            </table>
+
+
+                                        </td>
+
+
+                                    </tr>
+
+                                </table>
+
+
+                                <div class="container-fluid">
+                                    <table class="table-responsive" id="features" cellpadding=0 cellspacing=0>
+                                        <tr>
+                                            <th>Молекулярный вес:</th>
+                                            <th>t<sub>пл</sub> °C:</th>
+                                            <th>t<sub>кип</sub> °C:</th>
+                                            <th>d<sup>20</sup><sub>4</sub></th>
+                                            <th>Растворимость в воде, гр/100мл, при 20°C:</th>
+                                            <th>Растворимость в других растворителях</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p th:text="${reagent.getWeight()}"> - </p></td>
+                                            <td>
+                                                <p th:text="${reagent.getTmp_p()}">-</p>
+                                            </td>
+                                            <td>
+                                                <p th:text="${reagent.getTmp_k()}">-</p>
+                                            </td>
+                                            <td>
+                                                <p th:text="${reagent.getD204()}"> - </p>
+                                            </td>
+                                            <td>
+                                                <p th:text="${reagent.getwDissolubility()}"> - </p>
+                                            </td>
+                                            <td>
+                                                <p th:text="${reagent.getvDissolubility()}"> - </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+
+                                <!-- Yandex.RTB R-A-252178-1 -->
+                                <div id="yandex_rtb_R-A-252178-1"></div>
+                                <script type="text/javascript">
+                                    (function (w, d, n, s, t) {
+                                        w[n] = w[n] || [];
+                                        w[n].push(function () {
+                                            Ya.Context.AdvManager.render({
+                                                blockId: "R-A-252178-1",
+                                                renderTo: "yandex_rtb_R-A-252178-1",
+                                                async: true
+                                            });
+                                        });
+                                        t = d.getElementsByTagName("script")[0];
+                                        s = d.createElement("script");
+                                        s.type = "text/javascript";
+                                        s.src = "//an.yandex.ru/system/context.js";
+                                        s.async = true;
+                                        t.parentNode.insertBefore(s, t);
+                                    })(this, this.document, "yandexContextAsyncCallbacks");
+                                </script>
+
+
+                                <br>
+
+                                <div class="yashare-auto-init" data-yashareType="button"
+                                     data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir"></div>
+
+
+                                <h4>Общая характеристика:</h4>
+
+
+                                <p oncopy="return false" th:utext="${reagent.getContent()}"></p>
+                                <p oncopy="return false" th:utext="${reagent.getDescription()}"></p>
+
+
+                                <div th:if="${reagent.getType()}">
+                                    <b style="color: red">ВНИМАНИЕ! Данный химреактив является прекурсором, оборот
+                                        которых в Российской Федерации ограничен и в отношении которых устанавливаются
+                                        особые меры контроля </b>
+                                    <p><b><a href="/page/precursor">Смотреть списки прекурсоров --> </a></b></p>
+                                </div>
+
+                                <div id="links">
+                                    <p class="copy">Данная страница сайта <a href="/">Российская Химия</a> посвящена
+                                        описанию вещества <strong th:text="${reagent.getName()}"> - </strong>. Частичное
+                                        или полное копирование запрещено.</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- конец тела -->
+
+
+        <!-- Footer -->
+
+        <div class="row ">
+            <div id="basement">
+                <a href="/" id="baseLogo"></a>
+                <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
+            </div>
+        </div>
+        <!-- конец Footer -->
+    </div>
+
+</div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter46046490 = new Ya.Metrika({
+                    id: 46046490,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
+                });
+            } catch (e) {
+            }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () {
+                n.parentNode.insertBefore(s, n);
+            };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

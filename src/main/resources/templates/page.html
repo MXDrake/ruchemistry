@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <link type="image/x-icon" href="/favicon.gif" rel="icon">
+    <title th:text="${page.getTitle()}"> </title>
+    <meta name="keywords" th:content="${page.getKeywords()}">
+    <meta name="description" th:content="${page.getDescription()}">
+    <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/maxstyle.css" type="text/css">
+
+
+</head>
+<body >
+
+<div class="container-fluid rounded inheritBack">
+
+    <!--Шапка -->
+<div class="row  mxHat" >
+        <div class="container" >
+
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-12 ">
+        <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-5 inheritBack "  >
+
+            <a href="http://russian-chemistry.ru"> <img src="/img/logo.png" ></a>
+         <b> <p class="mxLogo">info@russian-chemistry.ru</p></b>
+
+        </div>
+
+        <!-- Правая сторона поиск -->
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6 inheritBack">
+
+            <form method="get" action="/reagents/search"  >
+                <div class="search mxRight">
+                Поиск:
+                    <div class="input-group" >
+                            <input  type="text" name="keyword"/>
+                            <span class="input-group-btn">
+                                    <input  class="find" type="submit" value=""/>
+                                <br>
+                            </span>
+                        </div>
+                </div>
+
+                <div class="searchRL mxRight">
+                <input id="radioName" type="radio" name="searchType" checked value="name"  >
+                <label for="radioName">по названию</label>
+                <input  type="radio" value="cas" name="searchType" >
+                <label>по CAS</label>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Конец поиска -->
+
+            </div>
+        </div>
+</div>
+
+
+    <!-- конец Шапки -->
+
+    <!-- тело -->
+
+    <div class="row mxContentBack" >
+        <br>
+        <div class="container " >
+
+            <!-- Menu -->
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 mxMenu">
+
+                <div class="row slim " id="leftSide" >
+                    <ul id="leftMenu" class="nav">
+
+                        <li th:each ="element: ${menu}">
+
+                            <span th:utext="${element}" > </span>
+
+                        </li>
+
+
+                        </li>
+
+
+                    </ul>
+                    <!-- Yandex.RTB R-A-252178-1 -->
+                    <div id="yandex_rtb_R-A-252178-3" class="col-xs-12 col-sm-12  hidden-md hidden-lg"></div>
+                    <!-- Yandex.RTB R-A-252178-3 -->
+                    <script type="text/javascript">
+                        (function(w, d, n, s, t) {
+                            w[n] = w[n] || [];
+                            w[n].push(function() {
+                                Ya.Context.AdvManager.render({
+                                    blockId: "R-A-252178-3",
+                                    renderTo: "yandex_rtb_R-A-252178-3",
+                                    async: true
+                                });
+                            });
+                            t = d.getElementsByTagName("script")[0];
+                            s = d.createElement("script");
+                            s.type = "text/javascript";
+                            s.src = "//an.yandex.ru/system/context.js";
+                            s.async = true;
+                            t.parentNode.insertBefore(s, t);
+                        })(this, this.document, "yandexContextAsyncCallbacks");
+                    </script>
+
+
+
+
+                    <!-- Yandex.RTB R-A-252178-2 -->
+                    <div id="yandex_rtb_R-A-252178-2" class=" container-fluid hidden-xs hidden-sm"></div>
+                    <script type="text/javascript">
+                        (function(w, d, n, s, t) {
+                            w[n] = w[n] || [];
+                            w[n].push(function() {
+                                Ya.Context.AdvManager.render({
+                                    blockId: "R-A-252178-2",
+                                    renderTo: "yandex_rtb_R-A-252178-2",
+                                    async: true
+                                });
+                            });
+                            t = d.getElementsByTagName("script")[0];
+                            s = d.createElement("script");
+                            s.type = "text/javascript";
+                            s.src = "//an.yandex.ru/system/context.js";
+                            s.async = true;
+                            t.parentNode.insertBefore(s, t);
+                        })(this, this.document, "yandexContextAsyncCallbacks");
+                    </script>
+                </div>
+
+            </div>
+            <!-- end menu -->
+
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-9 main col-lg-9 mxContent"  >
+
+            <div class="row" >
+
+                <div id="rightSide"   th:style="${color}" >
+
+                    <div id="rightSideHat">
+
+                        <div class="leftPart" >
+                            <p id="h1" th:text="${page.getTitle()}"></p>
+                        </div>
+
+                    </div>
+
+                    <div id="rightSideBody">
+
+                        <div class="fix"></div>
+                        <div id="content" class="pL20">
+                            <div><!-- Yandex.RTB R-A-252178-1 -->
+                                <div id="yandex_rtb_R-A-252178-1"></div>
+                                <script type="text/javascript">
+                                    (function(w, d, n, s, t) {
+                                        w[n] = w[n] || [];
+                                        w[n].push(function() {
+                                            Ya.Context.AdvManager.render({
+                                                blockId: "R-A-252178-1",
+                                                renderTo: "yandex_rtb_R-A-252178-1",
+                                                async: true
+                                            });
+                                        });
+                                        t = d.getElementsByTagName("script")[0];
+                                        s = d.createElement("script");
+                                        s.type = "text/javascript";
+                                        s.src = "//an.yandex.ru/system/context.js";
+                                        s.async = true;
+                                        t.parentNode.insertBefore(s, t);
+                                    })(this, this.document, "yandexContextAsyncCallbacks");
+                                </script></div>
+                            <span th:utext="${page.getContent()}"></span>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- конец тела -->
+
+
+    <!-- Footer -->
+
+    <div class="row ">
+        <div id="basement">
+            <a href="/" id="baseLogo"></a>
+            <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
+        </div>
+    </div>
+    <!-- конец Footer -->
+</div>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46046490 = new Ya.Metrika({
+                    id:46046490,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

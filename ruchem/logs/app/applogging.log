@@ -1,0 +1,4 @@
+2018-01-31 15:56:23.152  INFO 999 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 999 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-01-31 15:56:23.157  INFO 999 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-01-31 15:56:30.612  INFO 999 --- [main] main.Appllication                        : Started Appllication in 8.584 seconds (JVM running for 9.828)
+2018-01-31 15:56:30.612  INFO 999 --- [main] main.Appllication                        : Application "Ruchemistry" started

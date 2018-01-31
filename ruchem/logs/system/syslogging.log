@@ -1,0 +1,136 @@
+2018-01-31 15:56:23.726  INFO 999 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c33f1a9: startup date [Wed Jan 31 15:56:23 MSK 2018]; root of context hierarchy
+2018-01-31 15:56:26.376  INFO 999 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-01-31 15:56:26.391  INFO 999 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-31 15:56:26.392  INFO 999 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-01-31 15:56:26.511  INFO 999 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-01-31 15:56:26.512  INFO 999 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2792 ms
+2018-01-31 15:56:26.707  INFO 999 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-31 15:56:26.708  INFO 999 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-31 15:56:26.709  INFO 999 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-31 15:56:26.709  INFO 999 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-31 15:56:26.711  INFO 999 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-01-31 15:56:26.712  INFO 999 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-31 15:56:27.426  INFO 999 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-01-31 15:56:27.444  INFO 999 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-01-31 15:56:27.596  INFO 999 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-01-31 15:56:27.598  INFO 999 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-01-31 15:56:27.600  INFO 999 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-01-31 15:56:27.669  INFO 999 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-01-31 15:56:27.918  INFO 999 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-01-31 15:56:28.694  INFO 999 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-01-31 15:56:29.893  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5c33f1a9: startup date [Wed Jan 31 15:56:23 MSK 2018]; root of context hierarchy
+2018-01-31 15:56:29.966  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-01-31 15:56:29.968  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-01-31 15:56:29.968  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-01-31 15:56:29.968  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-01-31 15:56:29.968  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-01-31 15:56:29.969  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-01-31 15:56:29.969  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-01-31 15:56:29.969  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-01-31 15:56:29.973  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.974  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/search],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.search(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.975  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{id_str}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(javax.servlet.http.HttpServletRequest,java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.975  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/pars],methods=[GET]}" onto public void main.controller.UserController.pars() throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.976  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.978  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest) throws javax.servlet.ServletException,java.io.IOException
+2018-01-31 15:56:29.979  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(javax.servlet.http.HttpServletRequest,java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.980  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.980  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{id_str}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(javax.servlet.http.HttpServletRequest,java.lang.String,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.981  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.981  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-01-31 15:56:29.985  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-31 15:56:29.986  INFO 999 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-31 15:56:30.020  INFO 999 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-31 15:56:30.020  INFO 999 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-31 15:56:30.065  INFO 999 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-31 15:56:30.507  INFO 999 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-31 15:56:30.602  INFO 999 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-01-31 15:56:34.142  INFO 999 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-31 15:56:34.143  INFO 999 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-31 15:56:34.165  INFO 999 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-01-31 15:56:34.465  INFO 999 --- [http-nio-8081-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-01-31 15:56:34.756 DEBUG 999 --- [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    select
+        count(*) as col_0_0_ 
+    from
+        reagents reagent0_ 
+    where
+        kind like ?
+2018-01-31 15:56:34.794 TRACE 999 --- [http-nio-8081-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%Medication%]
+2018-01-31 15:56:34.858 DEBUG 999 --- [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    select
+        reagent0_.id as id1_2_,
+        reagent0_.cas as cas2_2_,
+        reagent0_.receipt as receipt3_2_,
+        reagent0_.d204 as d4_2_,
+        reagent0_.description as descript5_2_,
+        reagent0_.english_name as english_6_2_,
+        reagent0_.formula as formula7_2_,
+        reagent0_.has_c as has_c8_2_,
+        reagent0_.has_e as has_e9_2_,
+        reagent0_.has_f as has_f10_2_,
+        reagent0_.has_f_plus as has_f_p11_2_,
+        reagent0_.has_n as has_n12_2_,
+        reagent0_.has_o as has_o13_2_,
+        reagent0_.has_t as has_t14_2_,
+        reagent0_.has_t_plus as has_t_p15_2_,
+        reagent0_.has_xi as has_xi16_2_,
+        reagent0_.has_xn as has_xn17_2_,
+        reagent0_.image as image18_2_,
+        reagent0_.neorg as neorg19_2_,
+        reagent0_.name as name20_2_,
+        reagent0_.org as org21_2_,
+        reagent0_.rs as rs22_2_,
+        reagent0_.sinonim_name as sinonim23_2_,
+        reagent0_.ss as ss24_2_,
+        reagent0_.t_kp as t_kp25_2_,
+        reagent0_.t_pl as t_pl26_2_,
+        reagent0_.type as type27_2_,
+        reagent0_.vehicle_dissolubility as vehicle28_2_,
+        reagent0_.water_dissolubility as water_d29_2_,
+        reagent0_.molecular_weight as molecul30_2_ 
+    from
+        reagents reagent0_ 
+    where
+        kind like ? 
+    order by
+        reagent0_.name limit ?,
+        ?
+2018-01-31 15:56:34.859 TRACE 999 --- [http-nio-8081-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%Medication%]
+2018-01-31 15:56:34.996 DEBUG 999 --- [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    select
+        page0_.id as id1_0_,
+        page0_.content as content2_0_,
+        page0_.deleted as deleted3_0_,
+        page0_.description as descript4_0_,
+        page0_.keywords as keywords5_0_,
+        page0_.menu as menu6_0_,
+        page0_.name as name7_0_,
+        page0_.path as path8_0_,
+        page0_.title as title9_0_ 
+    from
+        pages page0_ 
+    where
+        page0_.menu=? 
+        and page0_.deleted=0 
+    order by
+        page0_.name
+2018-01-31 15:56:35.000 TRACE 999 --- [http-nio-8081-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [INTEGER] - [1]
+2018-01-31 15:56:35.023 DEBUG 999 --- [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    select
+        page0_.id as id1_0_,
+        page0_.content as content2_0_,
+        page0_.deleted as deleted3_0_,
+        page0_.description as descript4_0_,
+        page0_.keywords as keywords5_0_,
+        page0_.menu as menu6_0_,
+        page0_.name as name7_0_,
+        page0_.path as path8_0_,
+        page0_.title as title9_0_ 
+    from
+        pages page0_ 
+    where
+        page0_.name=?
+2018-01-31 15:56:35.025 TRACE 999 --- [http-nio-8081-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [medications]

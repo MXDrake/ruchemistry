@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:pages="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form role="form" action="/shop" method="post">
+
+<input type="text" class="form-control" id="item" name="item" placeholder="item" >
+
+<button type="submit" class="btn btn-default">В корзину</button>
+</form>
+
+
+
+<div th:if="${shopcart}">
+
+    <table>
+        <tr>
+            <td>Название</td>
+            <td>Чистота</td>
+            <td>Фасовка</td>
+            <td>ЕИ</td>
+            <td>Кол-во</td>
+            <td>Цена</td>
+            <td>Итого</td>
+        </tr>
+        <tr th:each ="element: ${shopcart.getShopCart()}">
+            <td th:text="${  element.getName()}"></td>
+
+        </tr>
+
+
+    </table>
+
+
+
+</div>
+
+</body>
+</html>
