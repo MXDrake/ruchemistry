@@ -285,18 +285,18 @@
     <!-- конец тела -->
 
 
-    <!-- Footer -->
 
-    <div class="row ">
-        <div id="basement">
-            <a href="/" id="baseLogo"></a>
-            <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
-        </div>
-    </div>
-    <!-- конец Footer -->
 </div>
 
+<!-- Footer -->
 
+<div class="navbar-fixed-bottom row-fluid">
+    <div id="basement">
+        <a href="/" id="baseLogo"></a>
+        <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
+    </div>
+</div>
+<!-- конец Footer -->
 
 
 <!-- Yandex.Metrika counter -->
@@ -328,72 +328,6 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
-
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/cr-1.4.1/kt-2.3.2/r-2.2.0/rg-1.0.2/rr-1.2.3/sl-1.2.3/datatables.min.css"/>
-
-
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/cr-1.4.1/kt-2.3.2/r-2.2.0/rg-1.0.2/rr-1.2.3/sl-1.2.3/datatables.min.js"></script>
-
-<script>
-
-    $(document).ready(function() {
-
-
-        $('#reagentTable').DataTable( {
-
-
-
-            language: {
-                "processing": "Подождите...",
-                "search": "Поиск:",
-                "lengthMenu": "Показать _MENU_ записей",
-                "info": "Записи с _START_ до _END_ из _TOTAL_ записей",
-                "infoEmpty": "Записи с 0 до 0 из 0 записей",
-                "infoFiltered": "(отфильтровано из _MAX_ записей)",
-                "infoPostFix": "",
-                "loadingRecords": "Загрузка записей...",
-                "zeroRecords": "Записи отсутствуют.",
-                "emptyTable": "В таблице отсутствуют данные",
-                "paginate": {
-                    "first": "Первая",
-                    "previous": "Предыдущая",
-                    "next": "Следующая",
-                    "last": "Последняя"
-                },
-                "aria": {
-                    "sortAscending": ": активировать для сортировки столбца по возрастанию",
-                    "sortDescending": ": активировать для сортировки столбца по убыванию"
-                }
-            }
-
-
-        });
-
-
-
-        var dataTable = $('#reagentTable').dataTable();
-        $("#NewPaginationContainer").append($(".dataTables_paginate"));
-
-        $("#searchbox").keyup(function() {
-            dataTable.fnFilter(this.value);
-        });
-        $("#searchbox").on("", function() {
-            dataTable.search(this.value).draw();
-        });
-
-
-    } );
-
-
-
-
-</script>
-
-<style>
-
-    .dataTables_filter, .dataTables_info { display: none; }
-</style>
 
 </body>
 </html>
