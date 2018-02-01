@@ -5,7 +5,6 @@ import main.model.Reagent;
 import main.repository.ReagentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -58,6 +57,26 @@ public class ReagentServiceImp implements ReagentService {
 	}
 
 	@Override
+	public Page<Reagent> search(String value, String type, String kind, Pageable pageable) {
+		switch (type) {
+			case "name": {
+				value = "%" + value + "%";
+				return reagentRepository.findByNameSinonimEng(value, kind, pageable);
+			}
+			case "cas": {
+				value = "%" + value + "%";
+				return reagentRepository.findAllByCasLikeAndKindOrderByName(value, kind, pageable);
+			}
+			case "alph": {
+				value = value + "%";
+				return reagentRepository.findAllByNameLikeAndKindLikeOrderByName(value, kind, pageable);
+			}
+		}
+		return null;
+
+	}
+
+	@Override
 	public Long getCount(String kind) {
 		return reagentDao.getCount(kind);
 	}
@@ -72,8 +91,8 @@ public class ReagentServiceImp implements ReagentService {
 		reagentRepository.save(reagent);
 	}
 
-	public Page<Reagent> getPage(String kind,Pageable pageable){
-		return  reagentRepository.findAllByKindLikeOrderByName(kind, pageable);
+	public Page<Reagent> getPage(String kind, Pageable pageable) {
+		return reagentRepository.findAllByKindLikeOrderByName(kind, pageable);
 	}
 
 }

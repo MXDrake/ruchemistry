@@ -12,6 +12,7 @@ public interface ReagentService {
 	Page<Reagent> getPage(String kind, Pageable page);
 	List<Reagent> getPage(int firstResult, String kind);
 	List<Reagent> searchBy(String value, String type);
+	Page<Reagent> search(String value, String type, String kind, Pageable pageable);
 	Long getCount(String kind);
 	void update(Reagent reagent);
 	void add(Reagent reagent);

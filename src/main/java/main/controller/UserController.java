@@ -14,10 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -54,10 +51,8 @@ public class UserController {
 
 			Page<Reagent> page = reagentService.getPage(kind, new PageRequest(0, 50));
 
-			//paginationModel.setRows(reagentService.getCount(kind));
-			paginationModel.setRows(Long.valueOf(page.getTotalElements()));
+			paginationModel.setRows(page.getTotalElements());
 
-			//paginationModel.setPage(request.getParameter("page"));
 			paginationModel.setPage(request.getParameter("page"));
 
 			paginationModel.setNumber(request.getParameter("number"));
@@ -65,7 +60,6 @@ public class UserController {
 			if (paginationModel.getPage() > paginationModel.getPagesize()) {
 				paginationModel.setPage(String.valueOf(paginationModel.getPagesize()));
 			}
-			// request.setAttribute("reagentList", reagentService.getPage(paginationModel.getNumber() * 50, kind));
 			request.setAttribute("reagentList", page);
 
 			if (paginationModel.getPage() < 20) {
@@ -105,22 +99,32 @@ public class UserController {
 	}
 
 	@RequestMapping(value = {"/reagents/"}, method = RequestMethod.POST)
-	public String getPage(int pageNumber, Model model) throws ServletException, IOException {
-		// ModelAndView model = new ModelAndView("reagents");
+	public String getPage(int pageNumber, String search, String type, Model model, String kind, HttpSession session)
+			throws
+			ServletException, IOException {
 
-		String kind = "%ChemicalAgent%";
+		session.setAttribute("pageNumber", pageNumber);
+		//String kind = "%ChemicalAgent%";
+		Page<Reagent> page;
 
-		Page<Reagent> page = reagentService.getPage(kind, new PageRequest(pageNumber - 1, 50));
+		if (pageNumber != 0) {
+			PageRequest pageRequest = new PageRequest(pageNumber - 1, 50);
+		} else {
+			PageRequest pageRequest = new PageRequest(0, 50);
+		}
+
+		if (search != null & type !=null) {
+			page = reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
+		} else {
+			page = reagentService.getPage(kind, new PageRequest(pageNumber - 1, 50));
+		}
 
 		try {
 			//Pagination variables
 			int current = page.getNumber() + 1;
-
 			int totalPageCount = page.getTotalPages();
-
 			int begin = Helper.getBeginPage(totalPageCount, current);
 			int end = Helper.getEndPage(totalPageCount, begin);
-
 
 			model.addAttribute("page", page);
 			model.addAttribute("beginIndex", begin);
@@ -130,7 +134,6 @@ public class UserController {
 			model.addAttribute("reagentList", page);
 
 			return "reagents :: reagentTable";
-
 		} catch (Exception e) {
 			logger.error("while open /reagents");
 			return null;
@@ -138,14 +141,13 @@ public class UserController {
 
 	}
 
-	@RequestMapping(value = {"/reagents/search"}, method = RequestMethod.GET)
-	public ModelAndView search(HttpServletRequest request, HttpSession session, HttpServletResponse response)
+	@RequestMapping(value = {"/reagents/search"}, method = RequestMethod.POST)
+	public String search(String search, String type,Model model, HttpServletRequest request, HttpSession session,
+						 HttpServletResponse
+			response)
 			throws IOException, ServletException {
-		ModelAndView model = new ModelAndView("search");
-		String search = null;
+
 		try {
-			String type = request.getParameter("searchType");
-			search = request.getParameter("keyword");
 			if (type == null | search == null) {
 				response.sendRedirect("/reagents");
 				return null;
@@ -155,14 +157,12 @@ public class UserController {
 				return null;
 			}
 
-			List<Reagent> list = new ArrayList<>();
-
-			list = reagentService.searchBy(search, type);
+			List<Reagent> list = reagentService.searchBy(search, type);
 			paginationModel.setRows((long) list.size());
-			request.setAttribute("reagentList", list);
-			request.setAttribute("page", paginationModel);
-			request.setAttribute("menu", pageService.getMenu("main"));
-			request.setAttribute("keyword", search);
+			model.addAttribute("reagentList", list);
+			model.addAttribute("page", paginationModel);
+			model.addAttribute("menu", pageService.getMenu("main"));
+			model.addAttribute("keyword", search);
 			if (request.getParameter("letter") != null) {
 				request.setAttribute("letter", request.getParameter("letter"));
 			}
@@ -175,7 +175,8 @@ public class UserController {
 				request.setAttribute("name", 1);
 			}
 
-			return model;
+			return "reagents :: reagentTable";
+
 		} catch (Exception e) {
 			request.getRequestDispatcher("/reagents").forward(request, response);
 			logger.error("while search = {}", search);
@@ -275,22 +276,28 @@ public class UserController {
 	public ModelAndView medications(HttpServletRequest request, HttpSession session, HttpServletResponse response)
 			throws IOException, ServletException {
 		ModelAndView model = new ModelAndView("reagents");
-		try {
-			String kind = "Medication";
-			paginationModel.setRows(reagentService.getCount(kind));
-			paginationModel.setPage(request.getParameter("page"));
-			paginationModel.setNumber(request.getParameter("number"));
 
+		try {
+
+			String kind = "%Medication%";
+
+			Page<Reagent> page = reagentService.getPage(kind, new PageRequest(0, 50));
+
+			paginationModel.setRows(page.getTotalElements());
+
+			paginationModel.setPage(request.getParameter("page"));
+
+			paginationModel.setNumber(request.getParameter("number"));
+			model.addObject("title", "Лекарства");
 			if (paginationModel.getPage() > paginationModel.getPagesize()) {
 				paginationModel.setPage(String.valueOf(paginationModel.getPagesize()));
 			}
-			request.setAttribute("reagentList", reagentService.getPage(paginationModel.getNumber() * 50, kind));
+			model.addObject("reagentList", page);
 
 			if (paginationModel.getPage() < 20) {
 				paginationModel.setPage("20");
 			}
-			request.setAttribute("page", paginationModel);
-			request.setAttribute("title", "Лекарства");
+			model.addObject("page", paginationModel);
 
 			List list = pageService.getMenu("medications");
 			if (pageService.getByName("medications") != null) {
@@ -300,6 +307,19 @@ public class UserController {
 			} else {
 				request.getRequestDispatcher("/").forward(request, response);
 			}
+
+			//Pagination variables
+			int current = page.getNumber() + 1;
+			int totalPageCount = page.getTotalPages();
+			int begin = Helper.getBeginPage(totalPageCount, current);
+			int end = Helper.getEndPage(totalPageCount, begin);
+
+			model.addObject("page", page);
+			model.addObject("beginIndex", begin);
+			model.addObject("endIndex", end);
+			model.addObject("currentIndex", current);
+			model.addObject("totalPageCount", totalPageCount);
+
 			return model;
 		} catch (Exception e) {
 			request.getRequestDispatcher("/").forward(request, response);

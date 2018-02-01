@@ -12,6 +12,9 @@ public class Helper {
 	}
 
 	public static int getEndPage(int totalPageCount, int begin){
+		if (totalPageCount<begin) {
+			return begin;
+		}
 		if (totalPageCount > 5) {
 
 			return Math.min(begin + 5, totalPageCount);
