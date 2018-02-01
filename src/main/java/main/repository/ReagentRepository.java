@@ -1,6 +1,8 @@
 package main.repository;
 
 import main.model.Reagent;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 public interface ReagentRepository extends JpaRepository<Reagent, Long> {
@@ -12,4 +14,6 @@ public interface ReagentRepository extends JpaRepository<Reagent, Long> {
 	List<Reagent> findAllByCasLikeOrderByName(String cas);
 
 	List<Reagent> findAllByNameLikeOrderByName(String name);
+
+	Page<Reagent> findAllByKindLikeOrderByName(String kind, Pageable pageable);
 }

@@ -1,42 +1,320 @@
-2018-02-01 01:54:51.398  INFO 2315 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2315 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 01:54:51.403  INFO 2315 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 01:55:00.331  INFO 2315 --- [main] main.Appllication                        : Started Appllication in 10.081 seconds (JVM running for 12.35)
-2018-02-01 01:55:00.332  INFO 2315 --- [main] main.Appllication                        : Application "Ruchemistry" started
-2018-02-01 01:58:51.234  INFO 2447 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2447 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 01:58:51.240  INFO 2447 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 01:59:58.982  INFO 2489 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2489 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 01:59:58.989  INFO 2489 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:00:52.168  INFO 2493 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2493 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:00:52.173  INFO 2493 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:01:13.551  INFO 2504 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2504 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:01:13.559  INFO 2504 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:03:23.988  INFO 2524 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2524 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:03:23.995  INFO 2524 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:05:34.502  INFO 2535 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2535 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:05:34.519  INFO 2535 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:06:24.244  INFO 2632 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2632 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:06:24.268  INFO 2632 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:06:32.192  INFO 2632 --- [main] main.Appllication                        : Started Appllication in 8.747 seconds (JVM running for 9.875)
-2018-02-01 02:06:32.192  INFO 2632 --- [main] main.Appllication                        : Application "Ruchemistry" started
-2018-02-01 02:07:56.254  INFO 2648 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2648 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:07:56.262  INFO 2648 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:08:08.356  INFO 2648 --- [main] main.Appllication                        : Started Appllication in 13.413 seconds (JVM running for 15.112)
-2018-02-01 02:08:08.357  INFO 2648 --- [main] main.Appllication                        : Application "Ruchemistry" started
-2018-02-01 02:16:45.496  INFO 2662 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2662 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:16:45.504  INFO 2662 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:17:41.317  INFO 2666 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2666 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:17:41.323  INFO 2666 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:17:50.075  INFO 2666 --- [main] main.Appllication                        : Started Appllication in 9.54 seconds (JVM running for 10.698)
-2018-02-01 02:17:50.076  INFO 2666 --- [main] main.Appllication                        : Application "Ruchemistry" started
-2018-02-01 02:24:07.519  INFO 2684 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2684 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:24:07.526  INFO 2684 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:24:15.239  INFO 2684 --- [main] main.Appllication                        : Started Appllication in 8.795 seconds (JVM running for 10.234)
-2018-02-01 02:24:15.239  INFO 2684 --- [main] main.Appllication                        : Application "Ruchemistry" started
-2018-02-01 02:27:33.618  INFO 2714 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2714 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:27:33.623  INFO 2714 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:27:42.540  INFO 2714 --- [main] main.Appllication                        : Started Appllication in 10.201 seconds (JVM running for 11.676)
-2018-02-01 02:27:42.541  INFO 2714 --- [main] main.Appllication                        : Application "Ruchemistry" started
-2018-02-01 02:31:02.705  INFO 2733 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 2733 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
-2018-02-01 02:31:02.713  INFO 2733 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
-2018-02-01 02:31:11.749  INFO 2733 --- [main] main.Appllication                        : Started Appllication in 11.101 seconds (JVM running for 12.638)
-2018-02-01 02:31:11.749  INFO 2733 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:03:07.171  INFO 959 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 959 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:03:07.179  INFO 959 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:03:19.660  INFO 959 --- [main] main.Appllication                        : Started Appllication in 14.139 seconds (JVM running for 18.218)
+2018-02-01 14:03:19.661  INFO 959 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:06:53.053  INFO 974 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 974 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:06:53.072  INFO 974 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:06:58.755  INFO 976 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 976 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:06:58.767  INFO 976 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:07:09.758  INFO 974 --- [main] main.Appllication                        : Started Appllication in 17.676 seconds (JVM running for 19.313)
+2018-02-01 14:07:09.759  INFO 974 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:07:22.084  INFO 981 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 981 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:07:22.091  INFO 981 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:07:31.633  INFO 981 --- [main] main.Appllication                        : Started Appllication in 10.662 seconds (JVM running for 13.002)
+2018-02-01 14:07:31.633  INFO 981 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:08:18.975  INFO 988 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 988 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:08:18.982  INFO 988 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:08:27.779  INFO 988 --- [main] main.Appllication                        : Started Appllication in 9.732 seconds (JVM running for 11.161)
+2018-02-01 14:08:27.782  INFO 988 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:10:01.167  INFO 995 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 995 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:10:01.174  INFO 995 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:10:10.652  INFO 995 --- [main] main.Appllication                        : Started Appllication in 10.511 seconds (JVM running for 11.861)
+2018-02-01 14:10:10.653  INFO 995 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:10:31.344  INFO 1005 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1005 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:10:31.349  INFO 1005 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:10:40.878  INFO 1005 --- [main] main.Appllication                        : Started Appllication in 10.183 seconds (JVM running for 11.664)
+2018-02-01 14:10:40.879  INFO 1005 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:10:48.138  INFO 1010 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1010 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:10:48.144  INFO 1010 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:10:58.040  INFO 1010 --- [main] main.Appllication                        : Started Appllication in 11.477 seconds (JVM running for 13.91)
+2018-02-01 14:10:58.040  INFO 1010 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:12:53.272  INFO 1023 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1023 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:12:53.280  INFO 1023 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:13:02.250  INFO 1023 --- [main] main.Appllication                        : Started Appllication in 10.003 seconds (JVM running for 11.462)
+2018-02-01 14:13:02.251  INFO 1023 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:16:22.362  INFO 1031 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1031 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:16:22.369  INFO 1031 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:16:31.635  INFO 1031 --- [main] main.Appllication                        : Started Appllication in 10.257 seconds (JVM running for 11.628)
+2018-02-01 14:16:31.636  INFO 1031 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:19:09.030  INFO 1040 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1040 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:19:09.036  INFO 1040 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:19:16.445  INFO 1040 --- [main] main.Appllication                        : Started Appllication in 8.118 seconds (JVM running for 9.266)
+2018-02-01 14:19:16.445  INFO 1040 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:19:44.647  INFO 1047 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1047 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:19:44.652  INFO 1047 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:19:51.838  INFO 1047 --- [main] main.Appllication                        : Started Appllication in 7.753 seconds (JVM running for 9.043)
+2018-02-01 14:19:51.839  INFO 1047 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:21:05.100  INFO 1053 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1053 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:21:05.105  INFO 1053 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:21:15.244  INFO 1053 --- [main] main.Appllication                        : Started Appllication in 10.744 seconds (JVM running for 11.894)
+2018-02-01 14:21:15.245  INFO 1053 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:22:41.983  INFO 1062 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1062 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:22:41.988  INFO 1062 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:22:49.350  INFO 1062 --- [main] main.Appllication                        : Started Appllication in 7.963 seconds (JVM running for 9.018)
+2018-02-01 14:22:49.350  INFO 1062 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:24:08.622  INFO 1068 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1068 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:24:08.629  INFO 1068 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:24:15.682  INFO 1068 --- [main] main.Appllication                        : Started Appllication in 7.74 seconds (JVM running for 9.033)
+2018-02-01 14:24:15.683  INFO 1068 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:24:52.766  INFO 1074 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1074 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:24:52.772  INFO 1074 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:25:00.117  INFO 1074 --- [main] main.Appllication                        : Started Appllication in 7.943 seconds (JVM running for 9.02)
+2018-02-01 14:25:00.117  INFO 1074 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:34:12.174  INFO 1097 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1097 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:34:12.180  INFO 1097 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:34:20.183  INFO 1097 --- [main] main.Appllication                        : Started Appllication in 8.955 seconds (JVM running for 10.255)
+2018-02-01 14:34:20.184  INFO 1097 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:35:58.158  INFO 1105 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1105 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:35:58.168  INFO 1105 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:36:05.569  INFO 1105 --- [main] main.Appllication                        : Started Appllication in 7.995 seconds (JVM running for 9.135)
+2018-02-01 14:36:05.569  INFO 1105 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:36:55.037  INFO 1111 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1111 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:36:55.044  INFO 1111 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:37:06.195  INFO 1111 --- [main] main.Appllication                        : Started Appllication in 11.868 seconds (JVM running for 14.452)
+2018-02-01 14:37:06.196  INFO 1111 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:37:41.106  INFO 1120 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1120 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:37:41.114  INFO 1120 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:37:50.073  INFO 1120 --- [main] main.Appllication                        : Started Appllication in 9.893 seconds (JVM running for 12.911)
+2018-02-01 14:37:50.074  INFO 1120 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:39:07.727  INFO 1126 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1126 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:39:07.734  INFO 1126 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:39:14.748  INFO 1126 --- [main] main.Appllication                        : Started Appllication in 8.348 seconds (JVM running for 11.287)
+2018-02-01 14:39:14.748  INFO 1126 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:39:59.301  INFO 1132 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1132 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:39:59.307  INFO 1132 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:40:07.878  INFO 1132 --- [main] main.Appllication                        : Started Appllication in 9.34 seconds (JVM running for 11.271)
+2018-02-01 14:40:07.878  INFO 1132 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:41:09.099  INFO 1144 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1144 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:41:09.106  INFO 1144 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:41:16.851  INFO 1144 --- [main] main.Appllication                        : Started Appllication in 9.056 seconds (JVM running for 11.148)
+2018-02-01 14:41:16.851  INFO 1144 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:42:05.009  INFO 1150 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1150 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:42:05.014  INFO 1150 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:42:14.967  INFO 1150 --- [main] main.Appllication                        : Started Appllication in 11.247 seconds (JVM running for 13.527)
+2018-02-01 14:42:14.968  INFO 1150 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:43:01.722  INFO 1157 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1157 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:43:01.776  INFO 1157 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:43:11.061  INFO 1157 --- [main] main.Appllication                        : Started Appllication in 9.991 seconds (JVM running for 11.562)
+2018-02-01 14:43:11.061  INFO 1157 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:44:06.806  INFO 1165 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1165 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:44:06.837  INFO 1165 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:44:14.639  INFO 1165 --- [main] main.Appllication                        : Started Appllication in 9.169 seconds (JVM running for 11.232)
+2018-02-01 14:44:14.639  INFO 1165 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:45:00.739  INFO 1173 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1173 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:45:00.745  INFO 1173 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:45:09.559  INFO 1173 --- [main] main.Appllication                        : Started Appllication in 10.086 seconds (JVM running for 11.666)
+2018-02-01 14:45:09.560  INFO 1173 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:45:57.603  INFO 1183 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1183 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:45:57.609  INFO 1183 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:46:04.986  INFO 1183 --- [main] main.Appllication                        : Started Appllication in 8.091 seconds (JVM running for 9.894)
+2018-02-01 14:46:04.986  INFO 1183 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:46:44.284  INFO 1189 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1189 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:46:44.292  INFO 1189 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:46:53.506  INFO 1189 --- [main] main.Appllication                        : Started Appllication in 10.442 seconds (JVM running for 12.227)
+2018-02-01 14:46:53.506  INFO 1189 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:47:17.867  INFO 1195 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1195 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:47:17.874  INFO 1195 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:47:26.255  INFO 1195 --- [main] main.Appllication                        : Started Appllication in 9.387 seconds (JVM running for 11.242)
+2018-02-01 14:47:26.255  INFO 1195 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:47:52.218  INFO 1201 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1201 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:47:52.238  INFO 1201 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:48:01.853  INFO 1201 --- [main] main.Appllication                        : Started Appllication in 10.559 seconds (JVM running for 12.952)
+2018-02-01 14:48:01.854  INFO 1201 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:49:13.567  INFO 1211 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1211 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:49:13.573  INFO 1211 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:49:22.986  INFO 1211 --- [main] main.Appllication                        : Started Appllication in 10.23 seconds (JVM running for 12.402)
+2018-02-01 14:49:22.986  INFO 1211 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:50:17.863  INFO 1218 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1218 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:50:17.871  INFO 1218 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:51:00.376  INFO 1226 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1226 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:51:00.383  INFO 1226 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:51:08.392  INFO 1226 --- [main] main.Appllication                        : Started Appllication in 9.131 seconds (JVM running for 11.453)
+2018-02-01 14:51:08.392  INFO 1226 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:51:29.987  INFO 1231 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1231 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:51:29.992  INFO 1231 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:51:40.105  INFO 1231 --- [main] main.Appllication                        : Started Appllication in 10.839 seconds (JVM running for 13.331)
+2018-02-01 14:51:40.105  INFO 1231 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:52:05.479  INFO 1238 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1238 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:52:05.485  INFO 1238 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:52:14.006  INFO 1238 --- [main] main.Appllication                        : Started Appllication in 9.315 seconds (JVM running for 11.667)
+2018-02-01 14:52:14.006  INFO 1238 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:52:28.913  INFO 1244 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1244 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:52:28.930  INFO 1244 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:52:40.382  INFO 1244 --- [main] main.Appllication                        : Started Appllication in 12.445 seconds (JVM running for 14.402)
+2018-02-01 14:52:40.382  INFO 1244 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 14:52:53.840  INFO 1252 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1252 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 14:52:53.855  INFO 1252 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 14:53:02.424  INFO 1252 --- [main] main.Appllication                        : Started Appllication in 10.317 seconds (JVM running for 12.43)
+2018-02-01 14:53:02.424  INFO 1252 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:10:41.225  INFO 1286 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1286 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:10:41.234  INFO 1286 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:10:49.307  INFO 1286 --- [main] main.Appllication                        : Started Appllication in 9.136 seconds (JVM running for 10.728)
+2018-02-01 15:10:49.307  INFO 1286 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:12:25.942  INFO 1301 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1301 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:12:25.952  INFO 1301 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:12:34.465  INFO 1301 --- [main] main.Appllication                        : Started Appllication in 9.571 seconds (JVM running for 11.072)
+2018-02-01 15:12:34.465  INFO 1301 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:13:26.288  INFO 1312 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1312 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:13:26.295  INFO 1312 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:13:35.577  INFO 1312 --- [main] main.Appllication                        : Started Appllication in 10.349 seconds (JVM running for 11.65)
+2018-02-01 15:13:35.578  INFO 1312 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:15:25.912  INFO 1320 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1320 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:15:25.920  INFO 1320 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:16:21.429  INFO 1326 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1326 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:16:21.437  INFO 1326 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:16:30.399  INFO 1326 --- [main] main.Appllication                        : Started Appllication in 10.072 seconds (JVM running for 11.488)
+2018-02-01 15:16:30.399  INFO 1326 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:40:07.595  INFO 1350 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1350 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:40:07.603  INFO 1350 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:40:18.677  INFO 1350 --- [main] main.Appllication                        : Started Appllication in 12.811 seconds (JVM running for 14.715)
+2018-02-01 15:40:18.678  INFO 1350 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:41:15.087  INFO 1361 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1361 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:41:15.095  INFO 1361 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:41:25.709  INFO 1361 --- [main] main.Appllication                        : Started Appllication in 11.427 seconds (JVM running for 12.781)
+2018-02-01 15:41:25.710  INFO 1361 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:42:33.161  INFO 1371 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1371 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:42:33.166  INFO 1371 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:42:46.267  INFO 1371 --- [main] main.Appllication                        : Started Appllication in 13.916 seconds (JVM running for 15.232)
+2018-02-01 15:42:46.268  INFO 1371 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:43:40.089  INFO 1379 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1379 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:43:40.107  INFO 1379 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:43:49.120  INFO 1379 --- [main] main.Appllication                        : Started Appllication in 10.743 seconds (JVM running for 12.162)
+2018-02-01 15:43:49.120  INFO 1379 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:45:02.378  INFO 1385 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1385 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:45:02.403  INFO 1385 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:45:09.617  INFO 1385 --- [main] main.Appllication                        : Started Appllication in 7.897 seconds (JVM running for 9.57)
+2018-02-01 15:45:09.617  INFO 1385 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:47:10.973  INFO 1391 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1391 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:47:10.987  INFO 1391 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:47:18.616  INFO 1391 --- [main] main.Appllication                        : Started Appllication in 8.446 seconds (JVM running for 10.733)
+2018-02-01 15:47:18.616  INFO 1391 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:49:03.585  INFO 1403 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1403 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:49:03.591  INFO 1403 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:49:11.734  INFO 1403 --- [main] main.Appllication                        : Started Appllication in 9.254 seconds (JVM running for 11.696)
+2018-02-01 15:49:11.735  INFO 1403 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:51:42.880  INFO 1409 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1409 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:51:42.886  INFO 1409 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:51:50.087  INFO 1409 --- [main] main.Appllication                        : Started Appllication in 7.902 seconds (JVM running for 9.173)
+2018-02-01 15:51:50.088  INFO 1409 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 15:58:03.296  INFO 1424 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1424 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 15:58:03.302  INFO 1424 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 15:58:12.617  INFO 1424 --- [main] main.Appllication                        : Started Appllication in 10.312 seconds (JVM running for 12.62)
+2018-02-01 15:58:12.618  INFO 1424 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:06:38.212  INFO 1445 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1445 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:06:38.223  INFO 1445 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:06:46.520  INFO 1445 --- [main] main.Appllication                        : Started Appllication in 9.417 seconds (JVM running for 10.821)
+2018-02-01 16:06:46.520  INFO 1445 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:07:18.503  INFO 1451 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1451 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:07:18.508  INFO 1451 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:07:28.368  INFO 1451 --- [main] main.Appllication                        : Started Appllication in 10.864 seconds (JVM running for 13.318)
+2018-02-01 16:07:28.369  INFO 1451 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:09:21.593  INFO 1465 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1465 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:09:21.620  INFO 1465 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:09:29.182  INFO 1465 --- [main] main.Appllication                        : Started Appllication in 8.413 seconds (JVM running for 10.027)
+2018-02-01 16:09:29.182  INFO 1465 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:10:14.140  INFO 1475 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1475 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:10:14.150  INFO 1475 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:10:22.384  INFO 1475 --- [main] main.Appllication                        : Started Appllication in 8.858 seconds (JVM running for 10.004)
+2018-02-01 16:10:22.385  INFO 1475 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:11:27.161  INFO 1481 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1481 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:11:27.166  INFO 1481 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:11:34.665  INFO 1481 --- [main] main.Appllication                        : Started Appllication in 8.147 seconds (JVM running for 9.962)
+2018-02-01 16:11:34.665  INFO 1481 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:14:03.404  INFO 1489 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1489 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:14:03.429  INFO 1489 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:14:12.149  INFO 1489 --- [main] main.Appllication                        : Started Appllication in 10.089 seconds (JVM running for 12.379)
+2018-02-01 16:14:12.149  INFO 1489 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:15:49.445  INFO 1499 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1499 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:15:49.454  INFO 1499 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:15:58.946  INFO 1499 --- [main] main.Appllication                        : Started Appllication in 10.172 seconds (JVM running for 11.627)
+2018-02-01 16:15:58.947  INFO 1499 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:20:26.983  INFO 1516 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1516 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:20:27.004  INFO 1516 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:20:33.901  INFO 1516 --- [main] main.Appllication                        : Started Appllication in 7.71 seconds (JVM running for 9.625)
+2018-02-01 16:20:33.902  INFO 1516 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:21:14.443  INFO 1523 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1523 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:21:14.449  INFO 1523 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:21:22.318  INFO 1523 --- [main] main.Appllication                        : Started Appllication in 8.692 seconds (JVM running for 10.054)
+2018-02-01 16:21:22.318  INFO 1523 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:28:21.726  INFO 1536 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1536 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:28:21.732  INFO 1536 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:28:29.038  INFO 1536 --- [main] main.Appllication                        : Started Appllication in 7.978 seconds (JVM running for 9.193)
+2018-02-01 16:28:29.039  INFO 1536 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:29:11.910  INFO 1542 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1542 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:29:11.934  INFO 1542 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:30:12.546  INFO 1554 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1554 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:30:12.554  INFO 1554 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:30:20.687  INFO 1554 --- [main] main.Appllication                        : Started Appllication in 9.786 seconds (JVM running for 11.606)
+2018-02-01 16:30:20.687  INFO 1554 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:31:12.975  INFO 1565 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1565 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:31:12.981  INFO 1565 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:31:23.399  INFO 1565 --- [main] main.Appllication                        : Started Appllication in 11.608 seconds (JVM running for 12.876)
+2018-02-01 16:31:23.399  INFO 1565 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:32:39.034  INFO 1575 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1575 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:32:39.043  INFO 1575 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:32:46.808  INFO 1575 --- [main] main.Appllication                        : Started Appllication in 8.685 seconds (JVM running for 10.657)
+2018-02-01 16:32:46.808  INFO 1575 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:33:25.695  INFO 1580 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1580 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:33:25.701  INFO 1580 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:33:35.650  INFO 1580 --- [main] main.Appllication                        : Started Appllication in 10.677 seconds (JVM running for 11.77)
+2018-02-01 16:33:35.650  INFO 1580 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:34:33.032  INFO 1593 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1593 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:34:33.145  INFO 1593 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:34:42.164  INFO 1593 --- [main] main.Appllication                        : Started Appllication in 9.996 seconds (JVM running for 11.247)
+2018-02-01 16:34:42.164  INFO 1593 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:36:18.119  INFO 1602 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1602 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:36:18.124  INFO 1602 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:36:25.618  INFO 1602 --- [main] main.Appllication                        : Started Appllication in 8.088 seconds (JVM running for 9.92)
+2018-02-01 16:36:25.619  INFO 1602 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:37:24.681  INFO 1608 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1608 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:37:24.686  INFO 1608 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:37:32.304  INFO 1608 --- [main] main.Appllication                        : Started Appllication in 9.62 seconds (JVM running for 11.035)
+2018-02-01 16:37:32.304  INFO 1608 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:38:28.723  INFO 1615 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1615 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:38:28.730  INFO 1615 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:38:37.139  INFO 1615 --- [main] main.Appllication                        : Started Appllication in 9.162 seconds (JVM running for 11.025)
+2018-02-01 16:38:37.139  INFO 1615 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:42:04.632  INFO 1625 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1625 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:42:04.652  INFO 1625 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:42:11.699  INFO 1625 --- [main] main.Appllication                        : Started Appllication in 7.747 seconds (JVM running for 9.141)
+2018-02-01 16:42:11.699  INFO 1625 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:43:03.706  INFO 1632 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1632 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:43:03.715  INFO 1632 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:43:11.099  INFO 1632 --- [main] main.Appllication                        : Started Appllication in 8.173 seconds (JVM running for 9.431)
+2018-02-01 16:43:11.100  INFO 1632 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:44:47.415  INFO 1640 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1640 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:44:47.424  INFO 1640 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:44:54.864  INFO 1640 --- [main] main.Appllication                        : Started Appllication in 8.122 seconds (JVM running for 9.435)
+2018-02-01 16:44:54.864  INFO 1640 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:46:30.445  INFO 1647 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1647 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:46:30.450  INFO 1647 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:46:39.373  INFO 1647 --- [main] main.Appllication                        : Started Appllication in 9.777 seconds (JVM running for 11.716)
+2018-02-01 16:46:39.373  INFO 1647 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:55:59.615  INFO 1672 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1672 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:55:59.620  INFO 1672 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:56:08.366  INFO 1672 --- [main] main.Appllication                        : Started Appllication in 9.828 seconds (JVM running for 12.255)
+2018-02-01 16:56:08.366  INFO 1672 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:56:39.411  INFO 1678 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1678 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:56:39.416  INFO 1678 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:56:49.084  INFO 1678 --- [main] main.Appllication                        : Started Appllication in 10.644 seconds (JVM running for 12.507)
+2018-02-01 16:56:49.084  INFO 1678 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:57:27.813  INFO 1685 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1685 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:57:27.821  INFO 1685 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:57:37.347  INFO 1685 --- [main] main.Appllication                        : Started Appllication in 10.262 seconds (JVM running for 12.307)
+2018-02-01 16:57:37.348  INFO 1685 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 16:59:06.689  INFO 1691 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1691 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 16:59:06.695  INFO 1691 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 16:59:14.319  INFO 1691 --- [main] main.Appllication                        : Started Appllication in 8.238 seconds (JVM running for 10.401)
+2018-02-01 16:59:14.320  INFO 1691 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 17:00:28.280  INFO 1702 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1702 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 17:00:28.286  INFO 1702 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 17:00:35.785  INFO 1702 --- [main] main.Appllication                        : Started Appllication in 8.521 seconds (JVM running for 10.439)
+2018-02-01 17:00:35.786  INFO 1702 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 17:02:20.655  INFO 1711 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1711 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 17:02:20.661  INFO 1711 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 17:02:28.614  INFO 1711 --- [main] main.Appllication                        : Started Appllication in 9.086 seconds (JVM running for 11.524)
+2018-02-01 17:02:28.614  INFO 1711 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-01 17:10:53.960  INFO 1743 --- [main] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1743 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-01 17:10:53.966  INFO 1743 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-01 17:11:03.089  INFO 1743 --- [main] main.Appllication                        : Started Appllication in 10.21 seconds (JVM running for 11.797)
+2018-02-01 17:11:03.089  INFO 1743 --- [main] main.Appllication                        : Application "Ruchemistry" started

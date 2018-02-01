@@ -4,6 +4,9 @@ import main.dao.ReagentDao;
 import main.model.Reagent;
 import main.repository.ReagentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -67,6 +70,10 @@ public class ReagentServiceImp implements ReagentService {
 	@Override
 	public void add(Reagent reagent) {
 		reagentRepository.save(reagent);
+	}
+
+	public Page<Reagent> getPage(String kind,Pageable pageable){
+		return  reagentRepository.findAllByKindLikeOrderByName(kind, pageable);
 	}
 
 }
