@@ -65,11 +65,11 @@ public class ReagentServiceImp implements ReagentService {
 			}
 			case "cas": {
 				value = "%" + value + "%";
-				return reagentRepository.findAllByCasLikeAndKindOrderByName(value, kind, pageable);
+				return  reagentRepository.searchByCas(value, kind, pageable);
 			}
 			case "alph": {
 				value = value + "%";
-				return reagentRepository.findAllByNameLikeAndKindLikeOrderByName(value, kind, pageable);
+				return reagentRepository.searchByLetter(value, kind, pageable);
 			}
 		}
 		return null;

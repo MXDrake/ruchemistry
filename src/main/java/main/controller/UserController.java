@@ -14,14 +14,16 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -100,8 +102,7 @@ public class UserController {
 
 	@RequestMapping(value = {"/reagents/"}, method = RequestMethod.POST)
 	public String getPage(int pageNumber, String search, String type, Model model, String kind, HttpSession session)
-			throws
-			ServletException, IOException {
+			throws ServletException, IOException {
 
 		session.setAttribute("pageNumber", pageNumber);
 		//String kind = "%ChemicalAgent%";
@@ -113,7 +114,7 @@ public class UserController {
 			PageRequest pageRequest = new PageRequest(0, 50);
 		}
 
-		if (search != null & type !=null) {
+		if (search != null & type != null) {
 			page = reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
 		} else {
 			page = reagentService.getPage(kind, new PageRequest(pageNumber - 1, 50));
@@ -142,10 +143,8 @@ public class UserController {
 	}
 
 	@RequestMapping(value = {"/reagents/search"}, method = RequestMethod.POST)
-	public String search(String search, String type,Model model, HttpServletRequest request, HttpSession session,
-						 HttpServletResponse
-			response)
-			throws IOException, ServletException {
+	public String search(String search, String type, Model model, HttpServletRequest request, HttpSession session,
+						 HttpServletResponse response) throws IOException, ServletException {
 
 		try {
 			if (type == null | search == null) {
@@ -398,6 +397,7 @@ public class UserController {
 		}
 
 	}
+
 
 //    @Autowired
 //    EmailServiceImpl emailService;

@@ -43,26 +43,7 @@
         <!-- Правая сторона поиск -->
             <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6 inheritBack">
 
-            <form method="get" action="/reagents/search"  >
-                <div class="search mxRight">
-                Поиск:
-                    <div class="input-group" >
-                            <input  type="text" name="keyword"/>
-                            <span class="input-group-btn">
-                                    <input  class="find" type="submit" value=""/>
-                                <br>
-                            </span>
-                        </div>
-                </div>
 
-                <div class="searchRL mxRight">
-                <input id="radioName" type="radio" name="searchType" checked value="name"  >
-                <label for="radioName">по названию</label>
-                <input  type="radio" value="cas" name="searchType" >
-                <label>по CAS</label>
-                </div>
-
-            </form>
         </div>
 
         <!-- Конец поиска -->
@@ -161,7 +142,7 @@
 
                     </div>
 
-                    <div id="rightSideBody">
+                    <div id="rightSideBody" style="min-height: 700px">
 
                         <div class="fix"></div>
                         <div id="content" class="pL20">
@@ -201,17 +182,17 @@
 
     <!-- конец тела -->
 
-
-    <!-- Footer -->
-
-    <div class="row ">
-        <div id="basement">
-            <a href="/" id="baseLogo"></a>
-            <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
-        </div>
-    </div>
-    <!-- конец Footer -->
 </div>
+
+<!-- Footer -->
+
+<div class="navbar-fixed-bottom row-fluid">
+    <div id="basement">
+        <a href="/" id="baseLogo"></a>
+        <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
+    </div>
+</div>
+<!-- конец Footer -->
 
 
 <!-- Yandex.Metrika counter -->
