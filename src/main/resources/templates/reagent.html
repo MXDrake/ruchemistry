@@ -100,9 +100,9 @@
                     <div id="yandex_rtb_R-A-252178-3" class="col-xs-12 col-sm-12  hidden-md hidden-lg"></div>
                     <!-- Yandex.RTB R-A-252178-3 -->
                     <script type="text/javascript">
-                        (function(w, d, n, s, t) {
+                        (function (w, d, n, s, t) {
                             w[n] = w[n] || [];
-                            w[n].push(function() {
+                            w[n].push(function () {
                                 Ya.Context.AdvManager.render({
                                     blockId: "R-A-252178-3",
                                     renderTo: "yandex_rtb_R-A-252178-3",
@@ -155,7 +155,7 @@
 
 
                             <div class="leftPart">
-                                <p id="h1">Реактивы</p>
+                                <p id="h1" th:text="${title}">Реактивы</p>
                             </div>
 
 
@@ -377,23 +377,32 @@
                 </div>
 
             </div>
+
+            <a th:if="${title} == 'Реактивы'"
+                    th:href="'/reagents?search=' +${search}+'&type='+${type}+'&pageNumber='+${pageNumber}+'&kind='+ ${kind} ">back
+            </a>
+
+            <a th:if="${title} == 'Лекарства'"
+               th:href="'/reagents?search=' +${search}+'&type='+${type}+'&pageNumber='+${pageNumber}+'&kind='+ ${kind} ">back
+            </a>
+
         </div>
 
         <!-- конец тела -->
 
-
+    </div>
 
 </div>
 
-    <!-- Footer -->
 
-    <div class="navbar-fixed-bottom row-fluid">
-        <div id="basement">
-            <a href="/" id="baseLogo"></a>
-            <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
-        </div>
+<!-- Footer -->
+<div class="navbar-fixed-bottom row-fluid">
+    <div id="basement">
+        <a href="/" id="baseLogo"></a>
+        <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
     </div>
-    <!-- конец Footer -->
+</div>
+<!-- конец Footer -->
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
@@ -429,6 +438,7 @@
     <div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
 <!-- /Yandex.Metrika counter -->
+
 
 </body>
 </html>

@@ -1,14 +1,12 @@
-
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
 
     <link type="image/x-icon" href="/favicon.gif" rel="icon">
     <title th:title="${title}" th:text="${title}">Реактивы</title>
-
 
 
     <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
@@ -19,26 +17,27 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/css/style.css" type="text/css">
     <link rel="stylesheet" href="/css/maxstyle.css" type="text/css">
 
 
 </head>
-<body >
+<body>
 
 <div class="container-fluid rounded inheritBack">
 
     <!--Шапка -->
-    <div class="row  mxHat" >
-        <div class="container" >
+    <div class="row  mxHat">
+        <div class="container">
 
             <div class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-12 ">
-                <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-5 inheritBack "  >
+                <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-5 inheritBack ">
 
-                    <a href="http://russian-chemistry.ru"> <img src="/img/logo.png" ></a>
-                    <b> <p class="mxLogo">info@russian-chemistry.ru</p></b>
+                    <a href="http://russian-chemistry.ru"> <img src="/img/logo.png"></a>
+                    <b><p class="mxLogo">info@russian-chemistry.ru</p></b>
 
                 </div>
 
@@ -46,24 +45,25 @@
                 <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6 inheritBack">
 
                     <!--<form method="get" action="/reagents/search"  >-->
-                        <div class="search mxRight">
-                            Поиск:
-                            <div class="input-group" >
-                                <input  type="text" name="keyword" id="searchbox" onchange="filterSearch()"/>
-                                <span class="input-group-btn">
+                    <div class="search mxRight">
+                        Поиск:
+                        <div class="input-group">
+                            <input type="text" name="keyword" th:value="${search}" id="searchbox"
+                                   onchange="filterSearch()"/>
+                            <span class="input-group-btn">
                                     <input class="find" type="button" value="" onclick="filterSearch()"/>
                                 <br>
                                 </span>
 
-                            </div>
                         </div>
+                    </div>
 
-                        <div class="searchRL mxRight">
-                            <input id="radioName" type="radio" name="searchType" checked value="name"  >
-                            <label for="radioName">по названию</label>
-                            <input  type="radio" value="cas" id="cas" name="searchType">
-                            <label>по CAS</label>
-                        </div>
+                    <div class="searchRL mxRight">
+                        <input id="radioName" type="radio" name="searchType" checked value="name">
+                        <label for="radioName">по названию</label>
+                        <input type="radio" value="cas" id="cas" name="searchType">
+                        <label>по CAS</label>
+                    </div>
 
                     <!--</form>-->
                 </div>
@@ -81,23 +81,23 @@
 
     <div class="row mxContentBack">
         <br>
-        <div class="container " >
+        <div class="container ">
 
             <!-- Menu -->
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 mxMenu" >
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 mxMenu">
 
-                <div class="row slim " id="leftSide" >
+                <div class="row slim " id="leftSide">
                     <ul id="leftMenu" class="nav">
 
-                        <li th:each ="element: ${menu}">
+                        <li th:each="element: ${menu}">
 
-                            <span th:utext="${element}" > </span>
+                            <span th:utext="${element}"> </span>
 
                         </li>
 
                         <div class="col-xs-12 col-sm-12  hidden-md hidden-lg">
                             <!-- Yandex.RTB R-A-252178-1 -->
-                            <div id="yandex_rtb_R-A-252178-1" ></div>
+                            <div id="yandex_rtb_R-A-252178-1"></div>
                             <script type="text/javascript">
                                 (function (w, d, n, s, t) {
                                     w[n] = w[n] || [];
@@ -120,14 +120,14 @@
                         </div>
 
 
-                        <div class=" container-fluid hidden-xs hidden-sm" >
+                        <div class=" container-fluid hidden-xs hidden-sm">
 
                             <!-- Yandex.RTB R-A-252178-2 -->
-                            <div id="yandex_rtb_R-A-252178-2" > </div>
+                            <div id="yandex_rtb_R-A-252178-2"></div>
                             <script type="text/javascript">
-                                (function(w, d, n, s, t) {
+                                (function (w, d, n, s, t) {
                                     w[n] = w[n] || [];
-                                    w[n].push(function() {
+                                    w[n].push(function () {
                                         Ya.Context.AdvManager.render({
                                             blockId: "R-A-252178-2",
                                             renderTo: "yandex_rtb_R-A-252178-2",
@@ -148,7 +148,7 @@
                     </ul>
 
 
-            </div>
+                </div>
 
                 <div clas="container-fluid">
 
@@ -157,30 +157,30 @@
             </div>
             <!-- end menu -->
 
-            <div class="container-fluid col-xs-12 col-sm-12  col-md-9 main col-lg-9 mxContent"  >
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-9 main col-lg-9 mxContent">
 
-                <div class="row" >
+                <div class="row">
 
-                    <div id="rightSide"   th:style="${color}"  >
+                    <div id="rightSide" th:style="${color}">
 
 
                         <div id="rightSideHat">
                             <div class="row">
                                 <div class="container-fluid col-xs-12 col-sm-12  col-md-5 main col-lg-5">
                                     <div class="leftPart">
-                                        <p id="h1" th:text="${title}" >Реактивы</p>
+                                        <p id="h1" th:text="${title}">Реактивы</p>
                                     </div>
                                 </div>
 
                                 <div class="container-fluid col-xs-12 col-sm-12  col-md-5 main col-lg-7">
                                     <div class="rightPart " th:style="${color}">
-                                        <div class="letter"  >
+                                        <div class="letter">
                                             <p id="letter">?</p>
                                         </div>
-                                        <div id="letterSelect" ></div>
-                                        <div class="letterBlock"  >
-                                            <div id="letterList" th:style="${color}"  >
-                                                <div class="alphabet cyr" th:style="${color}" >
+                                        <div id="letterSelect"></div>
+                                        <div class="letterBlock">
+                                            <div id="letterList" th:style="${color}">
+                                                <div class="alphabet cyr" th:style="${color}">
                                                     <a onclick="searchBy('а')">а</a>
                                                     <a onclick="searchBy('б')">б</a>
                                                     <a onclick="searchBy('в')">в</a>
@@ -212,213 +212,219 @@
                                             </div>
                                             <div id="chooseLetter">Поиск по алфавиту</div>
                                         </div>
-                                    </div></div>
+                                    </div>
                                 </div>
-
                             </div>
 
-                        <div class="row" >
+                        </div>
+
+                        <div class="row">
                             <div class="container-fluid col-xs-12 col-sm-12  col-md-12 main col-lg-12">
-                        <div id="rightSideBody" style="min-height: 700px">
-                            <div class="" >
-                                <div class=" container-fluid text-primary " style="text-align: center;font:13px
+                                <div id="rightSideBody" style="min-height: 700px">
+                                    <div class="">
+                                        <div class=" container-fluid text-primary " style="text-align: center;font:13px
                                 Tahoma;">
 
+                                        </div>
+                                    </div>
+                                    <div class="pageScroll">
+                                        <a href="#" class="slider"></a>
+                                    </div>
+
+
+                                    <div class="fix"></div>
+                                    <div id="content">
+
+                                        <ul class="searchList">
+
+
+                                            <table id="reagentTable" th:fragment="reagentTable" style="width: 100%">
+
+
+                                                <thead>
+                                                <tr>
+                                                    <td>
+                                                        <div class="qtty">всего <b
+                                                                th:text="${page?.getTotalElements()}"></b> элементов
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+                                                <tr class="tableHead">
+                                                    <td>
+                                                        <th:block th:if="${page != null}">
+                                                            <div class="row">
+                                                                <div class="text-center">
+                                                                    <div class='pagination pagination-centered'
+                                                                         style="margin-bottom: 5px;padding: 0px">
+                                                                        <ul class="pagination"
+                                                                            style="margin: 0px;padding: 0px;">
+                                                                            <li th:class="${currentIndex == 1}? 'disabled' : ''">
+                                                                                <span th:if='${currentIndex == 1}'>Начало</span>
+                                                                                <a th:if='${currentIndex != 1}'
+                                                                                   th:onclick="'filterSearch('+${1}+')'">Начало</a>
+                                                                            </li>
+                                                                            <li th:class="${currentIndex != 1}? '' : 'disabled'">
+                                                                                <span th:if='${currentIndex == 1}'>«</span>
+                                                                                <a th:if='${currentIndex != 1}'
+                                                                                   th:onclick="'filterSearch('+${currentIndex - 1}+')' "
+                                                                                   title='Назад'>«</a>
+                                                                            </li>
+
+                                                                            <li th:if="${beginIndex != null}"
+                                                                                th:each="item : ${#numbers.sequence(beginIndex,endIndex)}"
+                                                                                th:class="${item == currentIndex ? 'active' : '' }">
+                                                                                <span th:if='${item == currentIndex}'
+                                                                                      th:text='${item}'>1</span>
+                                                                                <a th:if='${item != currentIndex}'
+                                                                                   th:onclick="'filterSearch('+${item}+')' ">
+                                                                                    <span th:text='${item}'>1</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <th:block th:if="${totalPageCount == 0}">
+                                                                                <li class="disabled">
+                                                                                    <span>»</span>
+                                                                                </li>
+                                                                            </th:block>
+
+                                                                            <th:block th:if="${totalPageCount > 0}">
+                                                                                <li th:class="${currentIndex != totalPageCount }? '' : 'disabled'">
+                                                                                    <span th:if='${currentIndex == totalPageCount}'>»</span>
+                                                                                    <a th:if='${currentIndex != totalPageCount}'
+                                                                                       th:onclick="'filterSearch('+${currentIndex+1}+')' "
+                                                                                       title='Вперед'>»</a>
+                                                                                </li>
+                                                                            </th:block>
+
+
+                                                                            <th:block th:if="${totalPageCount > 0}">
+                                                                                <li th:class="${currentIndex == totalPageCount}? 'disabled' : ''">
+                                                                                    <span th:if='${currentIndex == totalPageCount}'>Конец</span>
+                                                                                    <a th:if='${currentIndex != totalPageCount}'
+                                                                                       th:onclick="'filterSearch('+${totalPageCount}+')'">Конец</a>
+                                                                                </li>
+                                                                            </th:block>
+
+                                                                            <th:block th:if="${totalPageCount == 0}">
+                                                                                <li class="disabled">
+                                                                                    <span>Конец</span>
+                                                                                </li>
+                                                                            </th:block>
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </th:block>
+                                                    </td>
+
+                                                </tr>
+                                                </thead>
+
+                                                <tr th:each="element: ${reagentList}">
+                                                    <td>
+                                                        <a th:href="@{/reagents/} + ${element.getId()}"
+                                                           th:text="${element.getName()}" style="color: black"></a>
+                                                        <p th:text="${element.getSinonim()}+ ${element.getEngName()}+${element.getName()}"
+                                                           style="color: grey"></p>
+                                                    </td>
+                                                </tr>
+
+
+                                                <tfoot>
+                                                <tr class="tableHead">
+                                                    <td>
+                                                        <th:block th:if="${page != null}">
+                                                            <div class="row">
+                                                                <div class="text-center">
+                                                                    <div class='pagination pagination-centered'
+                                                                         style="margin-bottom: 5px;padding: 0px">
+                                                                        <ul class="pagination"
+                                                                            style="margin: 0px;padding: 0px;">
+                                                                            <li th:class="${currentIndex == 1}? 'disabled' : ''">
+                                                                                <span th:if='${currentIndex == 1}'>Начало</span>
+                                                                                <a th:if='${currentIndex != 1}'
+                                                                                   th:onclick="'filterSearch('+${1}+')'">Начало</a>
+                                                                            </li>
+                                                                            <li th:class="${currentIndex != 1}? '' : 'disabled'">
+                                                                                <span th:if='${currentIndex == 1}'>«</span>
+                                                                                <a th:if='${currentIndex != 1}'
+                                                                                   th:onclick="'filterSearch('+${currentIndex - 1}+')' "
+                                                                                   title='Назад'>«</a>
+                                                                            </li>
+
+                                                                            <li th:if="${beginIndex != null}"
+                                                                                th:each="item : ${#numbers.sequence(beginIndex,endIndex)}"
+                                                                                th:class="${item == currentIndex ? 'active' : '' }">
+                                                                                <span th:if='${item == currentIndex}'
+                                                                                      th:text='${item}'>1</span>
+                                                                                <a th:if='${item != currentIndex}'
+                                                                                   th:onclick="'filterSearch('+${item}+')' ">
+                                                                                    <span th:text='${item}'>1</span>
+                                                                                </a>
+                                                                            </li>
+
+                                                                            <th:block th:if="${totalPageCount == 0}">
+                                                                                <li class="disabled">
+                                                                                    <span>»</span>
+                                                                                </li>
+                                                                            </th:block>
+
+                                                                            <th:block th:if="${totalPageCount > 0}">
+                                                                                <li th:class="${currentIndex != totalPageCount }? '' : 'disabled'">
+                                                                                    <span th:if='${currentIndex == totalPageCount}'>»</span>
+                                                                                    <a th:if='${currentIndex != totalPageCount}'
+                                                                                       th:onclick="'filterSearch('+${currentIndex+1}+')' "
+                                                                                       title='Вперед'>»</a>
+                                                                                </li>
+                                                                            </th:block>
+
+
+                                                                            <th:block th:if="${totalPageCount > 0}">
+                                                                                <li th:class="${currentIndex == totalPageCount}? 'disabled' : ''">
+                                                                                    <span th:if='${currentIndex == totalPageCount}'>Конец</span>
+                                                                                    <a th:if='${currentIndex != totalPageCount}'
+                                                                                       th:onclick="'filterSearch('+${totalPageCount}+')'">Конец</a>
+                                                                                </li>
+                                                                            </th:block>
+
+                                                                            <th:block th:if="${totalPageCount == 0}">
+                                                                                <li class="disabled">
+                                                                                    <span>Конец</span>
+                                                                                </li>
+                                                                            </th:block>
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </th:block>
+                                                    </td>
+
+                                                </tr>
+                                                </tfoot>
+                                            </table>
+
+                                        </ul>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="pageScroll">
-                                <a href="#" class="slider"></a>
-                            </div>
-
-
-                            <div class="fix"></div>
-                            <div id="content">
-
-                                <ul class="searchList">
-
-
-                                <table id="reagentTable" th:fragment="reagentTable" style="width: 100%">
-
-
-
-                                    <thead >
-                                    <tr>
-                                        <td>
-                                            <div class="qtty">всего <b th:text="${page?.getTotalElements()}"></b> элементов</div>
-
-                                        </td>
-                                    </tr>
-                                    <tr class="tableHead">
-                                        <td>
-                                            <th:block th:if="${page != null}">
-                                                <div class="row"  >
-                                                    <div class="text-center">
-                                                        <div class='pagination pagination-centered'
-                                                             style="margin-bottom: 5px;padding: 0px">
-                                                            <ul class="pagination" style="margin: 0px;padding: 0px;">
-                                                                <li th:class="${currentIndex == 1}? 'disabled' : ''">
-                                                                    <span th:if='${currentIndex == 1}'>Начало</span>
-                                                                    <a th:if='${currentIndex != 1}'
-                                                                       th:onclick="'filterSearch('+${1}+')'">Начало</a>
-                                                                </li>
-                                                                <li th:class="${currentIndex != 1}? '' : 'disabled'">
-                                                                    <span th:if='${currentIndex == 1}'>«</span>
-                                                                    <a th:if='${currentIndex != 1}'  th:onclick="'filterSearch('+${currentIndex - 1}+')' "
-                                                                       title='Назад'>«</a>
-                                                                </li>
-
-                                                                <li th:if="${beginIndex != null}" th:each="item : ${#numbers.sequence(beginIndex,endIndex)}"
-                                                                    th:class="${item == currentIndex ? 'active' : '' }">
-                                                                    <span th:if='${item == currentIndex}' th:text='${item}'>1</span>
-                                                                    <a th:if='${item != currentIndex}'
-                                                                       th:onclick="'filterSearch('+${item}+')' ">
-                                                                        <span th:text='${item}'>1</span>
-                                                                    </a>
-                                                                </li>
-
-                                                                <th:block th:if="${totalPageCount == 0}">
-                                                                    <li class="disabled">
-                                                                        <span>»</span>
-                                                                    </li>
-                                                                </th:block>
-
-                                                                <th:block th:if="${totalPageCount > 0}">
-                                                                    <li th:class="${currentIndex != totalPageCount }? '' : 'disabled'">
-                                                                        <span th:if='${currentIndex == totalPageCount}'>»</span>
-                                                                        <a th:if='${currentIndex != totalPageCount}'
-                                                                           th:onclick="'filterSearch('+${currentIndex+1}+')' "
-                                                                           title='Вперед'>»</a>
-                                                                    </li>
-                                                                </th:block>
-
-
-                                                                <th:block th:if="${totalPageCount > 0}">
-                                                                    <li th:class="${currentIndex == totalPageCount}? 'disabled' : ''">
-                                                                        <span th:if='${currentIndex == totalPageCount}'>Конец</span>
-                                                                        <a th:if='${currentIndex != totalPageCount}'
-                                                                           th:onclick="'filterSearch('+${totalPageCount}+')'">Конец</a>
-                                                                    </li>
-                                                                </th:block>
-
-                                                                <th:block th:if="${totalPageCount == 0}">
-                                                                    <li class="disabled">
-                                                                        <span>Конец</span>
-                                                                    </li>
-                                                                </th:block>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </th:block>
-                                        </td>
-
-                                    </tr>
-                                    </thead>
-
-                                    <tr th:each ="element: ${reagentList}"  >
-                                        <td>
-                                            <a th:href="@{/reagents/} + ${element.getId()}"
-                                               th:text="${element.getName()}" style="color: black"></a>
-                                            <p
-                                                    th:text="${element.getSinonim()}+ ${element.getEngName()}+${element.getName()}" style="color: grey"></p>
-                                        </td>
-                                    </tr>
-
-
-                                    <tfoot>
-                                    <tr class="tableHead">
-                                        <td>
-                                            <th:block th:if="${page != null}">
-                                                <div class="row"  >
-                                                    <div class="text-center">
-                                                        <div class='pagination pagination-centered'
-                                                             style="margin-bottom: 5px;padding: 0px">
-                                                            <ul class="pagination" style="margin: 0px;padding: 0px;">
-                                                                <li th:class="${currentIndex == 1}? 'disabled' : ''">
-                                                                    <span th:if='${currentIndex == 1}'>Начало</span>
-                                                                    <a th:if='${currentIndex != 1}'
-                                                                       th:onclick="'filterSearch('+${1}+')'">Начало</a>
-                                                                </li>
-                                                                <li th:class="${currentIndex != 1}? '' : 'disabled'">
-                                                                    <span th:if='${currentIndex == 1}'>«</span>
-                                                                    <a th:if='${currentIndex != 1}'  th:onclick="'filterSearch('+${currentIndex - 1}+')' "
-                                                                       title='Назад'>«</a>
-                                                                </li>
-
-                                                                <li th:if="${beginIndex != null}" th:each="item : ${#numbers.sequence(beginIndex,endIndex)}"
-                                                                    th:class="${item == currentIndex ? 'active' : '' }">
-                                                                    <span th:if='${item == currentIndex}' th:text='${item}'>1</span>
-                                                                    <a th:if='${item != currentIndex}'
-                                                                       th:onclick="'filterSearch('+${item}+')' ">
-                                                                        <span th:text='${item}'>1</span>
-                                                                    </a>
-                                                                </li>
-
-                                                                <th:block th:if="${totalPageCount == 0}">
-                                                                    <li class="disabled">
-                                                                        <span>»</span>
-                                                                    </li>
-                                                                </th:block>
-
-                                                                <th:block th:if="${totalPageCount > 0}">
-                                                                    <li th:class="${currentIndex != totalPageCount }? '' : 'disabled'">
-                                                                        <span th:if='${currentIndex == totalPageCount}'>»</span>
-                                                                        <a th:if='${currentIndex != totalPageCount}'
-                                                                           th:onclick="'filterSearch('+${currentIndex+1}+')' "
-                                                                           title='Вперед'>»</a>
-                                                                    </li>
-                                                                </th:block>
-
-
-                                                                <th:block th:if="${totalPageCount > 0}">
-                                                                    <li th:class="${currentIndex == totalPageCount}? 'disabled' : ''">
-                                                                        <span th:if='${currentIndex == totalPageCount}'>Конец</span>
-                                                                        <a th:if='${currentIndex != totalPageCount}'
-                                                                           th:onclick="'filterSearch('+${totalPageCount}+')'">Конец</a>
-                                                                    </li>
-                                                                </th:block>
-
-                                                                <th:block th:if="${totalPageCount == 0}">
-                                                                    <li class="disabled">
-                                                                        <span>Конец</span>
-                                                                    </li>
-                                                                </th:block>
-
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </th:block>
-                                        </td>
-
-                                    </tr>
-                                    </tfoot>
-                                </table>
-
-                                </ul>
-                                </ul>
-                            </div>
-                        </div>
-                        </div>
                         </div>
                     </div>
 
-
-
-
-
-                    </div>
 
                 </div>
 
             </div>
 
         </div>
+
     </div>
+</div>
 
-    <!-- конец тела -->
-
+<!-- конец тела -->
 
 
 </div>
@@ -435,32 +441,39 @@
 
 
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script type="text/javascript">
     (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
+        (w[c] = w[c] || []).push(function () {
             try {
                 w.yaCounter46046490 = new Ya.Metrika({
-                    id:46046490,
-                    clickmap:true,
-                    trackLinks:true,
-                    accurateTrackBounce:true
+                    id: 46046490,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
                 });
-            } catch(e) { }
+            } catch (e) {
+            }
         });
 
         var n = d.getElementsByTagName("script")[0],
             s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
+            f = function () {
+                n.parentNode.insertBefore(s, n);
+            };
         s.type = "text/javascript";
         s.async = true;
         s.src = "https://mc.yandex.ru/metrika/watch.js";
 
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
+        } else {
+            f();
+        }
     })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript>
 <!-- /Yandex.Metrika counter -->
 <script src="/js/paggination.js"></script>
 

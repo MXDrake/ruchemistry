@@ -331,4 +331,120 @@ public class Reagent {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String getKind() {
+        return kind;
+    }
+
+    public void setKind(String kind) {
+        this.kind = kind;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        Reagent reagent = (Reagent) o;
+
+        if (has_t != reagent.has_t)
+            return false;
+        if (has_c != reagent.has_c)
+            return false;
+        if (has_xn != reagent.has_xn)
+            return false;
+        if (has_xi != reagent.has_xi)
+            return false;
+        if (has_t_plus != reagent.has_t_plus)
+            return false;
+        if (has_e != reagent.has_e)
+            return false;
+        if (has_n != reagent.has_n)
+            return false;
+        if (has_f != reagent.has_f)
+            return false;
+        if (has_o != reagent.has_o)
+            return false;
+        if (has_f_plus != reagent.has_f_plus)
+            return false;
+        if (type != reagent.type)
+            return false;
+        if (id != null ? !id.equals(reagent.id) : reagent.id != null)
+            return false;
+        if (name != null ? !name.equals(reagent.name) : reagent.name != null)
+            return false;
+        if (sinonim != null ? !sinonim.equals(reagent.sinonim) : reagent.sinonim != null)
+            return false;
+        if (engName != null ? !engName.equals(reagent.engName) : reagent.engName != null)
+            return false;
+        if (cas != null ? !cas.equals(reagent.cas) : reagent.cas != null)
+            return false;
+        if (link != null ? !link.equals(reagent.link) : reagent.link != null)
+            return false;
+        if (image != null ? !image.equals(reagent.image) : reagent.image != null)
+            return false;
+        if (kind != null ? !kind.equals(reagent.kind) : reagent.kind != null)
+            return false;
+        if (content != null ? !content.equals(reagent.content) : reagent.content != null)
+            return false;
+        if (wDissolubility != null ? !wDissolubility.equals(reagent.wDissolubility) : reagent.wDissolubility != null)
+            return false;
+        if (vDissolubility != null ? !vDissolubility.equals(reagent.vDissolubility) : reagent.vDissolubility != null)
+            return false;
+        if (weight != null ? !weight.equals(reagent.weight) : reagent.weight != null)
+            return false;
+        if (tmp_p != null ? !tmp_p.equals(reagent.tmp_p) : reagent.tmp_p != null)
+            return false;
+        if (tmp_k != null ? !tmp_k.equals(reagent.tmp_k) : reagent.tmp_k != null)
+            return false;
+        if (d204 != null ? !d204.equals(reagent.d204) : reagent.d204 != null)
+            return false;
+        if (org != null ? !org.equals(reagent.org) : reagent.org != null)
+            return false;
+        if (ss != null ? !ss.equals(reagent.ss) : reagent.ss != null)
+            return false;
+        if (rs != null ? !rs.equals(reagent.rs) : reagent.rs != null)
+            return false;
+        if (description != null ? !description.equals(reagent.description) : reagent.description != null)
+            return false;
+        return formula != null ? formula.equals(reagent.formula) : reagent.formula == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (sinonim != null ? sinonim.hashCode() : 0);
+        result = 31 * result + (engName != null ? engName.hashCode() : 0);
+        result = 31 * result + (cas != null ? cas.hashCode() : 0);
+        result = 31 * result + (link != null ? link.hashCode() : 0);
+        result = 31 * result + (image != null ? image.hashCode() : 0);
+        result = 31 * result + (kind != null ? kind.hashCode() : 0);
+        result = 31 * result + (content != null ? content.hashCode() : 0);
+        result = 31 * result + (wDissolubility != null ? wDissolubility.hashCode() : 0);
+        result = 31 * result + (vDissolubility != null ? vDissolubility.hashCode() : 0);
+        result = 31 * result + (weight != null ? weight.hashCode() : 0);
+        result = 31 * result + (tmp_p != null ? tmp_p.hashCode() : 0);
+        result = 31 * result + (tmp_k != null ? tmp_k.hashCode() : 0);
+        result = 31 * result + (d204 != null ? d204.hashCode() : 0);
+        result = 31 * result + (org != null ? org.hashCode() : 0);
+        result = 31 * result + has_t;
+        result = 31 * result + has_c;
+        result = 31 * result + has_xn;
+        result = 31 * result + has_xi;
+        result = 31 * result + has_t_plus;
+        result = 31 * result + has_e;
+        result = 31 * result + has_n;
+        result = 31 * result + has_f;
+        result = 31 * result + has_o;
+        result = 31 * result + has_f_plus;
+        result = 31 * result + (ss != null ? ss.hashCode() : 0);
+        result = 31 * result + (rs != null ? rs.hashCode() : 0);
+        result = 31 * result + (description != null ? description.hashCode() : 0);
+        result = 31 * result + (formula != null ? formula.hashCode() : 0);
+        result = 31 * result + type;
+        return result;
+    }
 }

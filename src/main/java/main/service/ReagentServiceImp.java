@@ -1,6 +1,5 @@
 package main.service;
 
-import main.dao.ReagentDao;
 import main.model.Reagent;
 import main.repository.ReagentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,14 +11,11 @@ import java.util.List;
 @Service
 public class ReagentServiceImp implements ReagentService {
 
-	private ReagentDao reagentDao;
-
 	private ReagentRepository reagentRepository;
 
 	@Autowired
-	public ReagentServiceImp(ReagentDao reagentDao, ReagentRepository reagentRepository) {
+	public ReagentServiceImp(ReagentRepository reagentRepository) {
 		this.reagentRepository = reagentRepository;
-		this.reagentDao = reagentDao;
 	}
 
 	@Override
@@ -33,29 +29,6 @@ public class ReagentServiceImp implements ReagentService {
 		return reagentRepository.findAllByKindLikeOrderByName(kind);
 	}
 
-	public List<Reagent> getPage(int firstResult, String kind) {
-		return reagentDao.getPage(firstResult, kind);
-	}
-
-	@Override
-	public List<Reagent> searchBy(String value, String type) {
-		switch (type) {
-			case "name": {
-				value = "%" + value + "%";
-				return reagentRepository.findAllByNameLikeOrSinonimLikeOrEngNameLikeOrderByName(value, value, value);
-			}
-			case "cas": {
-				value = "%" + value + "%";
-				return reagentRepository.findAllByCasLikeOrderByName(value);
-			}
-			case "alph": {
-				value = value + "%";
-				return reagentRepository.findAllByNameLikeOrderByName(value);
-			}
-		}
-		return null;
-	}
-
 	@Override
 	public Page<Reagent> search(String value, String type, String kind, Pageable pageable) {
 		switch (type) {
@@ -65,7 +38,7 @@ public class ReagentServiceImp implements ReagentService {
 			}
 			case "cas": {
 				value = "%" + value + "%";
-				return  reagentRepository.searchByCas(value, kind, pageable);
+				return reagentRepository.searchByCas(value, kind, pageable);
 			}
 			case "alph": {
 				value = value + "%";
@@ -73,12 +46,6 @@ public class ReagentServiceImp implements ReagentService {
 			}
 		}
 		return null;
-
-	}
-
-	@Override
-	public Long getCount(String kind) {
-		return reagentDao.getCount(kind);
 	}
 
 	@Override

@@ -1,15 +1,14 @@
 package main.controller;
 
 import main.Helper;
-import main.model.Pagination;
 import main.model.Reagent;
 import main.service.PageService;
 import main.service.Pars;
 import main.service.ReagentService;
-import main.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -19,71 +18,86 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.util.List;
 
 @Controller
-public class UserController {
+public class UserController implements ErrorController {
 
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-	@Autowired
-	private ReagentService reagentService;
+	private final ReagentService reagentService;
+
+	private final PageService pageService;
 
 	@Autowired
-	private Pagination paginationModel;
-
-	@Autowired
-	private PageService pageService;
-
-	@Autowired
-	private UserService userService;
+	public UserController(PageService pageService, ReagentService reagentService, Pars pars) {
+		this.pageService = pageService;
+		this.reagentService = reagentService;
+	}
 
 	@RequestMapping(value = {"/reagents"}, method = RequestMethod.GET)
-	public ModelAndView mainGet(String search, String type, HttpServletRequest request, HttpSession session,
-								HttpServletResponse response) throws IOException, ServletException {
+	public ModelAndView mainGet(String search, String type, Integer pageNumber, String kind) {
 		ModelAndView model = new ModelAndView("reagents");
 		try {
-
+			//Reagents
 			Page<Reagent> page;
-			String kind;
 			if (search != null && type != null) {
-				kind = "%%";
-				page = reagentService.search(search, type, kind, new PageRequest(0, 50));
+				if (kind == null) {
+					kind = "%%";
+				} else {
+					kind = "%" + kind + "%";
+				}
 
+				if (pageNumber == null || pageNumber <= 0) {
+					pageNumber = 1;
+				}
+				page = reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
+				model.addObject("search", search);
 			} else {
 				kind = "%ChemicalAgent%";
 				page = reagentService.getPage(kind, new PageRequest(0, 50));
 			}
 
-			paginationModel.setRows(page.getTotalElements());
+			model.addObject("reagentList", page);
 
-			paginationModel.setPage(request.getParameter("page"));
-
-			paginationModel.setNumber(request.getParameter("number"));
-
-			if (paginationModel.getPage() > paginationModel.getPagesize()) {
-				paginationModel.setPage(String.valueOf(paginationModel.getPagesize()));
+			//Menu
+			model = Helper.getMenu(model, "reagents");
+			if (model == null) {
+				return new ModelAndView("redirect: /");
 			}
-			request.setAttribute("reagentList", page);
 
-			if (paginationModel.getPage() < 20) {
-				paginationModel.setPage("20");
-			}
-			request.setAttribute("page", paginationModel);
+			//Pagination variables
+			int current = page.getNumber() + 1;
+			int totalPageCount = page.getTotalPages();
+			int begin = Helper.getBeginPage(totalPageCount, current);
+			int end = Helper.getEndPage(totalPageCount, begin);
+			model.addObject("page", page);
+			model.addObject("beginIndex", begin);
+			model.addObject("endIndex", end);
+			model.addObject("currentIndex", current);
+			model.addObject("totalPageCount", totalPageCount);
+			model.addObject("title", "Реактивы");
+			return model;
+		} catch (Exception e) {
+			logger.error("while open /reagents");
+			return new ModelAndView("redirect: /");
+		}
+	}
 
-			String pageName = "reagents";
-			List list = pageService.getMenu(pageName);
-			if (pageService.getByName(pageName) != null) {
-				request.setAttribute("color", list.get(list.size() - 1));
-				list.remove(list.size() - 1);
-				request.setAttribute("menu", list);
-			} else {
-				request.getRequestDispatcher("/").forward(request, response);
+	@RequestMapping(value = {"/medications"}, method = RequestMethod.GET)
+	public ModelAndView medications() {
+		ModelAndView model = new ModelAndView("reagents");
+		try {
+			String kind = "%Medication%";
+			Page<Reagent> page = reagentService.getPage(kind, new PageRequest(0, 50));
+			model.addObject("reagentList", page);
+
+			//Menu
+			model = Helper.getMenu(model, "medications");
+			if (model == null) {
+				return new ModelAndView("redirect: /");
 			}
 
 			//Pagination variables
@@ -97,36 +111,29 @@ public class UserController {
 			model.addObject("endIndex", end);
 			model.addObject("currentIndex", current);
 			model.addObject("totalPageCount", totalPageCount);
-			model.addObject("title", "Реактивы");
+			model.addObject("title", "Лекарства");
 			return model;
 		} catch (Exception e) {
-			request.getRequestDispatcher("/").forward(request, response);
-			logger.error("while open /reagents");
-			return null;
+			logger.error("while opened medicaments ");
+			return new ModelAndView("redirect: /");
 		}
-
 	}
 
+	//Table Reagents and Medical
 	@RequestMapping(value = {"/reagents/"}, method = RequestMethod.POST)
-	public String getPage(int pageNumber, String search, String type, Model model, String kind, HttpSession session)
-			throws ServletException, IOException {
+	public String getPage(int pageNumber, String search, String type, Model model, String kind, HttpSession session) {
 		try {
+			session.setAttribute("pageNumber", pageNumber);
+			Page<Reagent> page;
 
-		session.setAttribute("pageNumber", pageNumber);
-		Page<Reagent> page;
-
-		if (pageNumber != 0) {
-			PageRequest pageRequest = new PageRequest(pageNumber - 1, 50);
-		} else {
-			PageRequest pageRequest = new PageRequest(0, 50);
-		}
-
-		if (search != null & type != null) {
-			page = reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
-		} else {
-			page = reagentService.getPage(kind, new PageRequest(pageNumber - 1, 50));
-		}
-
+			if (search != null & type != null) {
+				if (pageNumber <= 0) {
+					pageNumber = 1;
+				}
+				page = reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
+			} else {
+				page = reagentService.getPage(kind, new PageRequest(pageNumber - 1, 50));
+			}
 
 			//Pagination variables
 			int current = page.getNumber() + 1;
@@ -141,102 +148,101 @@ public class UserController {
 			model.addAttribute("totalPageCount", totalPageCount);
 			model.addAttribute("reagentList", page);
 
+			//Session parametrs
+			session.setAttribute("pageNumber", pageNumber);
+			session.setAttribute("search", search);
+			session.setAttribute("type", type);
+			session.setAttribute("kind", kind.replaceAll("%", ""));
+
 			return "reagents :: reagentTable";
 		} catch (Exception e) {
 			logger.error("while open /reagents");
 			return null;
 		}
-
 	}
 
-	@RequestMapping(value = {"/reagents/search"}, method = RequestMethod.POST)
-	public String search(String search, String type, Model model, HttpServletRequest request, HttpSession session,
-						 HttpServletResponse response) throws IOException, ServletException {
-
-		try {
-			if (type == null | search == null) {
-				response.sendRedirect("/reagents");
-				return null;
-			}
-			if (search.equals("") | type.equals("")) {
-				response.sendRedirect("/reagents");
-				return null;
-			}
-
-			List<Reagent> list = reagentService.searchBy(search, type);
-			paginationModel.setRows((long) list.size());
-			model.addAttribute("reagentList", list);
-			model.addAttribute("page", paginationModel);
-			model.addAttribute("menu", pageService.getMenu("main"));
-			model.addAttribute("keyword", search);
-			if (request.getParameter("letter") != null) {
-				request.setAttribute("letter", request.getParameter("letter"));
-			}
-
-			if (type.equals("cas")) {
-				request.setAttribute("cas", 1);
-				request.setAttribute("name", 0);
-			} else {
-				request.setAttribute("cas", 0);
-				request.setAttribute("name", 1);
-			}
-
-			return "reagents :: reagentTable";
-
-		} catch (Exception e) {
-			request.getRequestDispatcher("/reagents").forward(request, response);
-			logger.error("while search = {}", search);
-			return null;
-		}
-	}
-
-	@RequestMapping(value = {"/reagents/{id_str}"}, method = RequestMethod.GET)
-	public ModelAndView reagent(HttpServletRequest request, @PathVariable String id_str, HttpServletResponse response)
-			throws IOException, ServletException {
-		ModelAndView model = new ModelAndView("reagent");
-		try {
-			Long id = Long.parseLong(id_str);
-			request.setAttribute("menu", pageService.getMenu("main"));
-			Reagent reagent = reagentService.get(id);
-			if (reagent != null) {
-				request.setAttribute("reagent", reagent);
-			} else {
-				request.getRequestDispatcher("/reagents").forward(request, response);
-			}
-
-			return model;
-		} catch (Exception e) {
-			request.getRequestDispatcher("/reagents").forward(request, response);
-			logger.error("while getting page id = {}", id_str);
-			return null;
-		}
-
-	}
-
-	@RequestMapping(value = {"/"}, method = RequestMethod.GET)
-	public ModelAndView main(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {
+	//Static Pages
+	@RequestMapping(value = {"/page/{name}"}, method = RequestMethod.GET)
+	public ModelAndView pages(@PathVariable String name) {
 		ModelAndView model = new ModelAndView("page");
 		try {
-			request.setAttribute("menu", pageService.getMenu("main"));
-			request.setAttribute("page", pageService.getByName("main"));
+
+			model = Helper.getMenu(model, name);
+			if (model == null) {
+				return new ModelAndView("redirect: /");
+			}
+			model.addObject("page", pageService.getByName(name));
+
 			return model;
 		} catch (Exception e) {
+			logger.error("while opened page = {}", name);
+			return new ModelAndView("redirect: /");
+		}
+	}
 
-			request.getRequestDispatcher("/reagents").forward(request, response);
+	//Reagent page
+	@RequestMapping(value = {"/reagents/{reagentId}"}, method = RequestMethod.GET)
+	public ModelAndView reagent(@PathVariable Long reagentId, HttpSession session) {
+		ModelAndView model = new ModelAndView("reagent");
+		try {
+			model.addObject("menu", pageService.getMenu("main"));
+			Reagent reagent = reagentService.get(reagentId);
+			if (reagent != null) {
+				model.addObject("reagent", reagent);
+			} else {
+				return new ModelAndView("redirect: /reagents/");
+			}
+
+			//Session
+			model.addObject("search", session.getAttribute("search"));
+			model.addObject("type", session.getAttribute("type"));
+			model.addObject("pageNumber", session.getAttribute("pageNumber"));
+			model.addObject("kind", session.getAttribute("kind"));
+			model = Helper.getTitle(model,reagent.getKind());
+
+			return model;
+		} catch (Exception e) {
+			logger.error("while getting page id = {}", reagentId);
+			return new ModelAndView("redirect: /reagents/");
+		}
+	}
+
+	//Medication Page
+	@RequestMapping(value = {"/medications/{medicId}"}, method = RequestMethod.GET)
+	public ModelAndView medication(@PathVariable Long medicId) {
+		ModelAndView model = new ModelAndView("reagent");
+		try {
+			model.addObject("menu", pageService.getMenu("main"));
+			if (reagentService.get(medicId) != null) {
+				model.addObject("reagent", reagentService.get(medicId));
+			} else {
+				return new ModelAndView("redirect: /medications");
+			}
+			return model;
+		} catch (Exception e) {
+			logger.error("while opened id = {}", medicId);
+			return new ModelAndView("redirect: /medications");
+		}
+	}
+
+	//Main Page
+	@RequestMapping(value = {"/"}, method = RequestMethod.GET)
+	public ModelAndView main() {
+		ModelAndView model = new ModelAndView("page");
+		try {
+			model.addObject("menu", pageService.getMenu("main"));
+			model.addObject("page", pageService.getByName("main"));
+			return model;
+		} catch (Exception e) {
 			logger.error("while opened home page");
 			return null;
 		}
-
 	}
 
 	@RequestMapping(value = {"/login"}, method = RequestMethod.GET)
 	public ModelAndView login(@RequestParam(value = "error", required = false) String error,
-							  @RequestParam(value = "logout", required = false) String logout,
-							  HttpServletResponse response, HttpServletRequest request)
-			throws ServletException, IOException {
+							  @RequestParam(value = "logout", required = false) String logout) {
 		try {
-
 			ModelAndView model = new ModelAndView();
 			if (error != null) {
 				model.addObject("error", "Invalid username and password!");
@@ -248,161 +254,64 @@ public class UserController {
 			model.setViewName("login");
 			return model;
 		} catch (Exception e) {
-			request.getRequestDispatcher("/reagents").forward(request, response);
 			logger.error("while singin");
-			return null;
+			return new ModelAndView("redirect: /");
 		}
 	}
 
-	@RequestMapping(value = {"/page/{name}"}, method = RequestMethod.GET)
-	public ModelAndView pages(HttpServletRequest request, @PathVariable String name, HttpServletResponse response)
-			throws IOException, ServletException {
-		ModelAndView model = new ModelAndView("page");
-		try {
-			List list = pageService.getMenu(name);
-			if (pageService.getByName(name) != null) {
-				request.setAttribute("color", list.get(list.size() - 1));
-				list.remove(list.size() - 1);
-				request.setAttribute("menu", list);
-				request.setAttribute("page", pageService.getByName(name));
-			} else {
-				request.getRequestDispatcher("/").forward(request, response);
-			}
-
-			return model;
-		} catch (Exception e) {
-			request.getRequestDispatcher("/reagents").forward(request, response);
-			logger.error("while opened page = {}", name);
-			return null;
-		}
-
-	}
-
-	@RequestMapping(value = {"/medications"}, method = RequestMethod.GET)
-	public ModelAndView medications(HttpServletRequest request, HttpSession session, HttpServletResponse response)
-			throws IOException, ServletException {
-		ModelAndView model = new ModelAndView("reagents");
-
-		try {
-
-			String kind = "%Medication%";
-
-			Page<Reagent> page = reagentService.getPage(kind, new PageRequest(0, 50));
-
-			paginationModel.setRows(page.getTotalElements());
-
-			paginationModel.setPage(request.getParameter("page"));
-
-			paginationModel.setNumber(request.getParameter("number"));
-			model.addObject("title", "Лекарства");
-			if (paginationModel.getPage() > paginationModel.getPagesize()) {
-				paginationModel.setPage(String.valueOf(paginationModel.getPagesize()));
-			}
-			model.addObject("reagentList", page);
-
-			if (paginationModel.getPage() < 20) {
-				paginationModel.setPage("20");
-			}
-			model.addObject("page", paginationModel);
-
-			List list = pageService.getMenu("medications");
-			if (pageService.getByName("medications") != null) {
-				request.setAttribute("color", list.get(list.size() - 1));
-				list.remove(list.size() - 1);
-				request.setAttribute("menu", list);
-			} else {
-				request.getRequestDispatcher("/").forward(request, response);
-			}
-
-			//Pagination variables
-			int current = page.getNumber() + 1;
-			int totalPageCount = page.getTotalPages();
-			int begin = Helper.getBeginPage(totalPageCount, current);
-			int end = Helper.getEndPage(totalPageCount, begin);
-
-			model.addObject("page", page);
-			model.addObject("beginIndex", begin);
-			model.addObject("endIndex", end);
-			model.addObject("currentIndex", current);
-			model.addObject("totalPageCount", totalPageCount);
-
-			return model;
-		} catch (Exception e) {
-			request.getRequestDispatcher("/").forward(request, response);
-			logger.error("while opened medicaments ");
-			return null;
-		}
-
-	}
-
-	@RequestMapping(value = {"/medications/{id_str}"}, method = RequestMethod.GET)
-	public ModelAndView medication(HttpServletRequest request, @PathVariable String id_str,
-								   HttpServletResponse response) throws IOException, ServletException {
-		ModelAndView model = new ModelAndView("reagent");
-		try {
-			Long id = Long.parseLong(id_str);
-			request.setAttribute("menu", pageService.getMenu("main"));
-			if (reagentService.get(id) != null) {
-				request.setAttribute("reagent", reagentService.get(id));
-			} else {
-				request.getRequestDispatcher("/reagents").forward(request, response);
-			}
-			return model;
-		} catch (Exception e) {
-			request.getRequestDispatcher("/reagents").forward(request, response);
-			logger.error("while opened id = {}", id_str);
-			return null;
-		}
-
-	}
-
-	@Autowired
-	Pars pars;
-
-	@RequestMapping(value = {"/pars"}, method = RequestMethod.GET)
-	public void pars() throws IOException, ServletException {
-		ModelAndView model = new ModelAndView("pars");
-		pars.pars();
-	}
-
+	//Sitemap generator
 	@RequestMapping(value = {"/sitemap.xml"}, method = RequestMethod.GET)
-	public ModelAndView sitemap(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {
+	public ModelAndView sitemap() {
 		ModelAndView model = new ModelAndView("sitemap");
-
 		try {
 			List<Reagent> a = reagentService.getAll("ChemicalAgent");
 
-			request.setAttribute("reagents", reagentService.getAll("ChemicalAgent"));
-			request.setAttribute("pages", pageService.getAll());
-			request.setAttribute("medications", reagentService.getAll("Medication"));
+			model.addObject("reagents", reagentService.getAll("ChemicalAgent"));
+			model.addObject("pages", pageService.getAll());
+			model.addObject("medications", reagentService.getAll("Medication"));
 			return model;
 		} catch (Exception e) {
 			logger.error("while getting sitemap");
+			return new ModelAndView("redirect: /");
 		}
-
-		return null;
 	}
 
+	// Pages for old links
 	@RequestMapping(value = {"/chemical_agents"}, method = RequestMethod.GET)
-	public ModelAndView chemical_agents(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {
+	public ModelAndView chemical_agents(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("reagent");
 		try {
-			Long id = Long.parseLong(request.getParameter("id"));
+			Long reagentId = Long.parseLong(request.getParameter("id"));
 			request.setAttribute("menu", pageService.getMenu("main"));
-			if (reagentService.get(id) != null) {
-				request.setAttribute("reagent", reagentService.get(id));
+			Reagent reagent = reagentService.get(reagentId);
+			if (reagent != null) {
+				model.addObject("reagent", reagent);
 			} else {
-				request.getRequestDispatcher("/reagents").forward(request, response);
+				return new ModelAndView("redirect: /reagents/");
 			}
 			return model;
 		} catch (Exception e) {
-			request.getRequestDispatcher("/reagents").forward(request, response);
-			logger.error("while getting chemical_agents");
-			return null;
+			logger.error("while getting chemical_agents ");
+			return new ModelAndView("redirect: /reagents/");
 		}
-
 	}
 
+	@Override
+	public String getErrorPath() {
+		return "/error";
+	}
+
+	@RequestMapping("/error")
+	public ModelAndView error(HttpServletRequest request) {
+		logger.error("WhiteLabelError ");
+		return new ModelAndView("redirect:/");
+	}
+
+	//	final Pars pars;
+//
+//	@RequestMapping(value = {"/pars"}, method = RequestMethod.GET)
+//	public void pars() throws IOException, ServletException {
+//		ModelAndView model = new ModelAndView("pars");
+//		pars.pars();
+//	}
 }
