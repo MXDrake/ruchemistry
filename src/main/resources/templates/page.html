@@ -42,7 +42,26 @@
 
         <!-- Правая сторона поиск -->
             <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6 inheritBack">
+                <form method="get" action="/reagents">
+                    <div class="search mxRight">
+                        Поиск:
+                        <div class="input-group">
+                            <input type="text" name="search"/>
+                            <span class="input-group-btn">
+                                    <input class="find" type="submit" value=""/>
+                                <br>
+                            </span>
+                        </div>
+                    </div>
 
+                    <div class="searchRL mxRight">
+                        <input id="radioName" type="radio" name="type" checked value="name">
+                        <label for="radioName">по названию</label>
+                        <input type="radio" value="cas" name="type">
+                        <label>по CAS</label>
+                    </div>
+
+                </form>
 
         </div>
 

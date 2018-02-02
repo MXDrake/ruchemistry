@@ -44,21 +44,28 @@ public class UserController {
 	private UserService userService;
 
 	@RequestMapping(value = {"/reagents"}, method = RequestMethod.GET)
-	public ModelAndView mainGet(HttpServletRequest request, HttpSession session, HttpServletResponse response)
-			throws IOException, ServletException {
+	public ModelAndView mainGet(String search, String type, HttpServletRequest request, HttpSession session,
+								HttpServletResponse response) throws IOException, ServletException {
 		ModelAndView model = new ModelAndView("reagents");
 		try {
 
-			String kind = "%ChemicalAgent%";
+			Page<Reagent> page;
+			String kind;
+			if (search != null && type != null) {
+				kind = "%%";
+				page = reagentService.search(search, type, kind, new PageRequest(0, 50));
 
-			Page<Reagent> page = reagentService.getPage(kind, new PageRequest(0, 50));
+			} else {
+				kind = "%ChemicalAgent%";
+				page = reagentService.getPage(kind, new PageRequest(0, 50));
+			}
 
 			paginationModel.setRows(page.getTotalElements());
 
 			paginationModel.setPage(request.getParameter("page"));
 
 			paginationModel.setNumber(request.getParameter("number"));
-			request.setAttribute("title", "Реактивы");
+
 			if (paginationModel.getPage() > paginationModel.getPagesize()) {
 				paginationModel.setPage(String.valueOf(paginationModel.getPagesize()));
 			}
@@ -90,7 +97,7 @@ public class UserController {
 			model.addObject("endIndex", end);
 			model.addObject("currentIndex", current);
 			model.addObject("totalPageCount", totalPageCount);
-
+			model.addObject("title", "Реактивы");
 			return model;
 		} catch (Exception e) {
 			request.getRequestDispatcher("/").forward(request, response);
@@ -103,9 +110,9 @@ public class UserController {
 	@RequestMapping(value = {"/reagents/"}, method = RequestMethod.POST)
 	public String getPage(int pageNumber, String search, String type, Model model, String kind, HttpSession session)
 			throws ServletException, IOException {
+		try {
 
 		session.setAttribute("pageNumber", pageNumber);
-		//String kind = "%ChemicalAgent%";
 		Page<Reagent> page;
 
 		if (pageNumber != 0) {
@@ -120,7 +127,7 @@ public class UserController {
 			page = reagentService.getPage(kind, new PageRequest(pageNumber - 1, 50));
 		}
 
-		try {
+
 			//Pagination variables
 			int current = page.getNumber() + 1;
 			int totalPageCount = page.getTotalPages();
@@ -397,15 +404,5 @@ public class UserController {
 		}
 
 	}
-
-
-//    @Autowired
-//    EmailServiceImpl emailService;
-//
-//    @RequestMapping(value = {"/admin/sendmail"}, method = RequestMethod.GET)
-//    public void test() throws IOException, ServletException, MessagingException {
-//        ModelAndView model = new ModelAndView("test");
-//        emailService.sendEmail("arcas.llc@yandex.ru","proberka","Тексттписьма");
-//    }
 
 }
