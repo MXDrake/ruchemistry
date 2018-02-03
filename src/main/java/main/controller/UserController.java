@@ -32,34 +32,21 @@ public class UserController implements ErrorController {
 	private final PageService pageService;
 
 	@Autowired
-	public UserController(PageService pageService, ReagentService reagentService, Pars pars) {
+	public UserController(PageService pageService, ReagentService reagentService) {
 		this.pageService = pageService;
 		this.reagentService = reagentService;
 	}
 
 	@RequestMapping(value = {"/reagents"}, method = RequestMethod.GET)
-	public ModelAndView mainGet(String search, String type, Integer pageNumber, String kind) {
+	public ModelAndView mainGet(String search, String type, Integer pageNumber, String kind, HttpSession session) {
 		ModelAndView model = new ModelAndView("reagents");
 		try {
 			//Reagents
-			Page<Reagent> page;
-			if (search != null && type != null) {
-				if (kind == null) {
-					kind = "%%";
-				} else {
-					kind = "%" + kind + "%";
-				}
-
-				if (pageNumber == null || pageNumber <= 0) {
-					pageNumber = 1;
-				}
-				page = reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
+			type = Helper.checkType(type, search);
+			Page<Reagent> page = Helper.checkSearchParametrs(search, type, kind, pageNumber);
+			if (search != null){
 				model.addObject("search", search);
-			} else {
-				kind = "%ChemicalAgent%";
-				page = reagentService.getPage(kind, new PageRequest(0, 50));
 			}
-
 			model.addObject("reagentList", page);
 
 			//Menu
@@ -79,6 +66,8 @@ public class UserController implements ErrorController {
 			model.addObject("currentIndex", current);
 			model.addObject("totalPageCount", totalPageCount);
 			model.addObject("title", "Реактивы");
+			model.addObject("type", type);
+
 			return model;
 		} catch (Exception e) {
 			logger.error("while open /reagents");
@@ -87,13 +76,30 @@ public class UserController implements ErrorController {
 	}
 
 	@RequestMapping(value = {"/medications"}, method = RequestMethod.GET)
-	public ModelAndView medications() {
+	public ModelAndView medications(String search, String type, Integer pageNumber, String kind, HttpSession session) {
 		ModelAndView model = new ModelAndView("reagents");
 		try {
-			String kind = "%Medication%";
-			Page<Reagent> page = reagentService.getPage(kind, new PageRequest(0, 50));
-			model.addObject("reagentList", page);
+			//Medicals
+			Page<Reagent> page;
+			if (search != null && type != null) {
+				if (kind == null) {
+					kind = "%%";
+				} else {
+					kind = "%" + kind + "%";
+				}
 
+				if (pageNumber == null || pageNumber <= 0) {
+					pageNumber = 1;
+				}
+				type = Helper.checkType(type, search);
+				page = reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
+				model.addObject("search", search);
+			} else {
+				kind = "%Medication%";
+				page = reagentService.getPage(kind, new PageRequest(0, 50));
+			}
+
+			model.addObject("reagentList", page);
 			//Menu
 			model = Helper.getMenu(model, "medications");
 			if (model == null) {
@@ -112,6 +118,8 @@ public class UserController implements ErrorController {
 			model.addObject("currentIndex", current);
 			model.addObject("totalPageCount", totalPageCount);
 			model.addObject("title", "Лекарства");
+			model.addObject("type", type);
+
 			return model;
 		} catch (Exception e) {
 			logger.error("while opened medicaments ");
@@ -123,13 +131,14 @@ public class UserController implements ErrorController {
 	@RequestMapping(value = {"/reagents/"}, method = RequestMethod.POST)
 	public String getPage(int pageNumber, String search, String type, Model model, String kind, HttpSession session) {
 		try {
-			session.setAttribute("pageNumber", pageNumber);
 			Page<Reagent> page;
 
 			if (search != null & type != null) {
 				if (pageNumber <= 0) {
 					pageNumber = 1;
 				}
+				type = Helper.checkType(type, search);
+				search = Helper.checkSearch(search);
 				page = reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
 			} else {
 				page = reagentService.getPage(kind, new PageRequest(pageNumber - 1, 50));

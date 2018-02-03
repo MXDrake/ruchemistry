@@ -158,7 +158,6 @@
                                 <p id="h1" th:text="${title}">Реактивы</p>
                             </div>
 
-
                         </div>
 
                         <div id="rightSideBody">
@@ -168,6 +167,33 @@
 
                                 <div class="row">
                                     <div class="container-fluid">
+
+
+                                        <h2 style="text-align: right">
+                                            <th:block
+                                                    th:if="${search} != null AND ${type} != null AND ${pageNumber} != null AND ${kind} != null">
+                                                <a th:if="${title} == 'Реактивы'"
+                                                   th:href="'/reagents?search=' +${search}+'&type='+${type}+'&pageNumber='+${pageNumber}+'&kind='+ ${kind} ">Назад
+                                                </a>
+
+                                                <a th:if="${title} == 'Лекарства'"
+                                                   th:href="'/medications?search=' +${search}+'&type='+${type}+'&pageNumber='+${pageNumber}+'&kind='+ ${kind} ">Назад
+                                                </a>
+                                            </th:block>
+
+                                            <th:block
+                                                    th:if="${search} == null AND ${type}==null AND ${pageNumber}==null AND ${kind}==null">
+                                                <a th:if="${title} == 'Реактивы'"
+                                                   href="/reagents">Назад
+                                                </a>
+
+                                                <a th:if="${title} == 'Лекарства'"
+                                                   href="/medications">Назад
+                                                </a>
+                                            </th:block>
+                                        </h2>
+
+
                                         <h1 th:text="${reagent.getName()}"> Name </h1>
 
                                         <h3 th:text="${reagent.getSinonim()}">Sinonim </h3>
@@ -377,14 +403,6 @@
                 </div>
 
             </div>
-
-            <a th:if="${title} == 'Реактивы'"
-                    th:href="'/reagents?search=' +${search}+'&type='+${type}+'&pageNumber='+${pageNumber}+'&kind='+ ${kind} ">back
-            </a>
-
-            <a th:if="${title} == 'Лекарства'"
-               th:href="'/reagents?search=' +${search}+'&type='+${type}+'&pageNumber='+${pageNumber}+'&kind='+ ${kind} ">back
-            </a>
 
         </div>
 

@@ -25,7 +25,7 @@
 
 
 </head>
-<body>
+<body th:onload="'chekedFilter('+${session.type} +')'">
 
 <div class="container-fluid rounded inheritBack">
 
@@ -59,10 +59,31 @@
                     </div>
 
                     <div class="searchRL mxRight">
-                        <input id="radioName" type="radio" name="searchType" checked value="name">
-                        <label for="radioName">по названию</label>
-                        <input type="radio" value="cas" id="cas" name="searchType">
-                        <label>по CAS</label>
+
+                        <th:block th:if="${type}=='name' OR ${type} == null">
+                            <input id="radioName" type="radio" name="searchType" checked value="name">
+                            <label for="radioName">по названию</label>
+                            <input type="radio" value="cas" id="cas" name="searchType">
+                            <label for="cas">по CAS</label>
+                        </th:block>
+
+                        <th:block th:if="${type}=='cas'">
+                            <input id="radioName" type="radio" name="searchType" value="name">
+                            <label for="radioName">по названию</label>
+                            <input type="radio" value="cas" id="cas" checked name="searchType">
+                            <label for="cas">по CAS</label>
+                        </th:block>
+
+                        <th:block th:if="${type}=='alph'">
+                            <input id="radioName" type="radio" name="searchType" value="name">
+                            <label for="radioName">по названию</label>
+                            <input type="radio" value="cas" id="cas" name="searchType">
+                            <label for="cas">по CAS</label>
+                        </th:block>
+
+
+
+
                     </div>
 
                     <!--</form>-->
@@ -181,7 +202,7 @@
                                         <div class="letterBlock">
                                             <div id="letterList" th:style="${color}">
                                                 <div class="alphabet cyr" th:style="${color}">
-                                                    <a onclick="searchBy('а')">а</a>
+                                                    <a onclick="searchBy('1')">а</a>
                                                     <a onclick="searchBy('б')">б</a>
                                                     <a onclick="searchBy('в')">в</a>
                                                     <a onclick="searchBy('г')">г</a>
