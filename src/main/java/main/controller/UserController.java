@@ -209,6 +209,8 @@ public class UserController implements ErrorController {
 			model.addObject("kind", session.getAttribute("kind"));
 			model = Helper.getTitle(model,reagent.getKind());
 
+
+
 			return model;
 		} catch (Exception e) {
 			logger.error("while getting page id = {}", reagentId);

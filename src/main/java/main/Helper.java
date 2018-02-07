@@ -63,9 +63,11 @@ public class Helper {
 		}
 		switch (kind) {
 			case "CatalogObject|ChemicalAgent|": {
+				model.addObject("color", "#0097c3");
 				return model.addObject("title", "Реактивы");
 			}
 			case "CatalogObject|Medication|": {
+				model.addObject("color", "#c53a99");
 				return model.addObject("title", "Лекарства");
 			}
 			default:
