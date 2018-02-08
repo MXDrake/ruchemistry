@@ -214,9 +214,8 @@
                                         t.parentNode.insertBefore(s, t);
                                     })(this, this.document, "yandexContextAsyncCallbacks");
                                 </script></div>
-                            <p th:if="${error}" class="error" style="color: red; text-align: center">Wrong user or password</p>
-                            <p th:if="${msg}" class="error" style="color: forestgreen; text-align: center">You've been logged
-                                out successfully.</p>
+                            <p th:if="${error}" class="error" style="color: red; text-align: center">Неверное имя или пароль</p>
+                            <p th:if="${msg}" class="error" style="color: forestgreen; text-align: center">Вы успешно вышли из системы.</p>
                             <span th:utext="${page.getContent()}"></span>
 
                         </div>
