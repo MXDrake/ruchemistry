@@ -34,11 +34,29 @@
         <div class="container">
 
             <div class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-12 ">
-                <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-5 inheritBack ">
-
+                <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-5 inheritBack row">
+                    <div class="row">
                     <a href="http://russian-chemistry.ru"> <img src="/img/logo.png"></a>
-                    <b><p class="mxLogo">info@russian-chemistry.ru</p></b>
+                    <th:block th:if="${#authorization.expression('isAuthenticated()')}">
+                        <div class="inline">
+                            <form class="form-group" th:action="@{/logout}" method="post">
+                                <span class="glyphicon glyphicon-user" th:text="${#authentication.principal.name}"
+                                      style="color: white; margin-right: 10px">Name
+                                </span>
+                                <button type="submit" value="LOGOUT" class="btn btn-default btn-sm"><span
+                                        class="glyphicon glyphicon-log-out"
+                                        aria-hidden="true"></span>Выход
+                                </button>
+                            </form>
+                        </div>
+                    </th:block>
 
+                    <th:block th:if="${!#authorization.expression('isAuthenticated()')}" >
+                        <a href="/login" class="btn btn-default btn-sm" style="margin-bottom: 5px">
+                            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Вход
+                        </a>
+                    </th:block>
+                    </div>
                 </div>
 
                 <!-- Правая сторона поиск -->

@@ -239,15 +239,18 @@ public class UserController implements ErrorController {
 	public ModelAndView login(@RequestParam(value = "error", required = false) String error,
 							  @RequestParam(value = "logout", required = false) String logout) {
 		try {
-			ModelAndView model = new ModelAndView();
+			ModelAndView model = new ModelAndView("page");
+			model = Helper.getMenu(model, "login");
+			model.addObject("page", pageService.getByName("login"));
 			if (error != null) {
-				model.addObject("error", "Invalid username and password!");
+				model.addObject("error", "Неверное имя или пароль");
 			}
 
 			if (logout != null) {
-				model.addObject("msg", "You've been logged out successfully.");
+				model.addObject("msg", "Вы успешно вышли из системы.");
+				logger.info("logged out successfully.");
 			}
-			model.setViewName("login");
+			//model.setViewName("login");
 			return model;
 		} catch (Exception e) {
 			logger.error("while singin");
