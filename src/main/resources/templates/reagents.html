@@ -25,7 +25,7 @@
 
 
 </head>
-<body th:onload="'chekedFilter('+${session.type} +')'">
+<body>
 
 <div class="container-fluid rounded inheritBack">
 
@@ -80,9 +80,6 @@
                             <input type="radio" value="cas" id="cas" name="searchType">
                             <label for="cas">по CAS</label>
                         </th:block>
-
-
-
 
                     </div>
 
@@ -171,9 +168,6 @@
 
                 </div>
 
-                <div clas="container-fluid">
-
-                </div>
 
             </div>
             <!-- end menu -->
@@ -344,7 +338,10 @@
                                                 </thead>
 
                                                 <tr th:each="element: ${reagentList}">
+
+
                                                     <td>
+
                                                         <a th:href="@{/reagents/} + ${element.getId()}"
                                                            th:text="${element.getName()}" style="color: black"></a>
                                                         <p th:text="${element.getSinonim()}+ ${element.getEngName()}+${element.getName()}"

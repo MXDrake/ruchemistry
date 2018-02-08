@@ -84,19 +84,23 @@ public class Helper {
 	}
 
 	public static Page<Reagent> checkSearchParametrs(String search, String type, String kind, Integer pageNumber) {
-		if (search != null && type != null) {
+
+		if (pageNumber != null && type != null) {
+			search = Helper.checkSearch(search);
 			if (kind == null) {
 				kind = "%%";
 			} else {
 				kind = "%" + kind + "%";
 			}
 
-			if (pageNumber == null || pageNumber <= 0) {
+			if (pageNumber <= 0) {
 				pageNumber = 1;
 			}
 			return reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
 		} else {
-			kind = "%ChemicalAgent%";
+			if (kind == null) {
+				kind = "%ChemicalAgent%";
+			}
 			return reagentService.getPage(kind, new PageRequest(0, 50));
 		}
 	}
@@ -108,7 +112,11 @@ public class Helper {
 		if (!type.equals("name") && !type.equals("cas") && !type.equals("alph")) {
 			return "name";
 		}
-		if (type.equals("alph") & search.length() > 1) {
+
+		if (search == null) {
+			return "name";
+		}
+		if (type.equals("alph") &  search.length() > 1) {
 			return "name";
 		}
 		return type;
@@ -116,6 +124,9 @@ public class Helper {
 	}
 
 	public static String checkSearch(String search){
+		if (search == null){
+			return "%%";
+		}
 		search = search.trim();
 		if (search.equals("")) {
 			search = "%%";

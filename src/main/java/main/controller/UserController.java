@@ -3,7 +3,6 @@ package main.controller;
 import main.Helper;
 import main.model.Reagent;
 import main.service.PageService;
-import main.service.Pars;
 import main.service.ReagentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,7 +43,7 @@ public class UserController implements ErrorController {
 			//Reagents
 			type = Helper.checkType(type, search);
 			Page<Reagent> page = Helper.checkSearchParametrs(search, type, kind, pageNumber);
-			if (search != null){
+			if (search != null) {
 				model.addObject("search", search);
 			}
 			model.addObject("reagentList", page);
@@ -67,7 +66,6 @@ public class UserController implements ErrorController {
 			model.addObject("totalPageCount", totalPageCount);
 			model.addObject("title", "Реактивы");
 			model.addObject("type", type);
-
 			return model;
 		} catch (Exception e) {
 			logger.error("while open /reagents");
@@ -80,26 +78,16 @@ public class UserController implements ErrorController {
 		ModelAndView model = new ModelAndView("reagents");
 		try {
 			//Medicals
-			Page<Reagent> page;
-			if (search != null && type != null) {
-				if (kind == null) {
-					kind = "%%";
-				} else {
-					kind = "%" + kind + "%";
-				}
-
-				if (pageNumber == null || pageNumber <= 0) {
-					pageNumber = 1;
-				}
-				type = Helper.checkType(type, search);
-				page = reagentService.search(search, type, kind, new PageRequest(pageNumber - 1, 50));
-				model.addObject("search", search);
-			} else {
+			if (kind == null) {
 				kind = "%Medication%";
-				page = reagentService.getPage(kind, new PageRequest(0, 50));
 			}
-
+			type = Helper.checkType(type, search);
+			Page<Reagent> page = Helper.checkSearchParametrs(search, type, kind, pageNumber);
+			if (search != null) {
+				model.addObject("search", search);
+			}
 			model.addObject("reagentList", page);
+
 			//Menu
 			model = Helper.getMenu(model, "medications");
 			if (model == null) {
@@ -119,7 +107,6 @@ public class UserController implements ErrorController {
 			model.addObject("totalPageCount", totalPageCount);
 			model.addObject("title", "Лекарства");
 			model.addObject("type", type);
-
 			return model;
 		} catch (Exception e) {
 			logger.error("while opened medicaments ");
@@ -207,9 +194,7 @@ public class UserController implements ErrorController {
 			model.addObject("type", session.getAttribute("type"));
 			model.addObject("pageNumber", session.getAttribute("pageNumber"));
 			model.addObject("kind", session.getAttribute("kind"));
-			model = Helper.getTitle(model,reagent.getKind());
-
-
+			model = Helper.getTitle(model, reagent.getKind());
 
 			return model;
 		} catch (Exception e) {
