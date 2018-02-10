@@ -22,8 +22,8 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-public class UserController implements ErrorController {
-
+public class UserController {
+//implements ErrorController
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
 	private final ReagentService reagentService;
@@ -295,16 +295,16 @@ public class UserController implements ErrorController {
 		}
 	}
 
-	@Override
-	public String getErrorPath() {
-		return "/error";
-	}
-
-	@RequestMapping("/error")
-	public ModelAndView error(HttpServletRequest request) {
-		logger.error("WhiteLabelError ");
-		return new ModelAndView("redirect:/");
-	}
+//	@Override
+//	public String getErrorPath() {
+//		return "/error";
+//	}
+//
+//	@RequestMapping("/error")
+//	public ModelAndView error(HttpServletRequest request) {
+//		logger.error("WhiteLabelError ");
+//		return new ModelAndView("redirect:/");
+//	}
 
 	//	final Pars pars;
 //
