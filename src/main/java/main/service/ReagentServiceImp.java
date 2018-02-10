@@ -20,7 +20,7 @@ public class ReagentServiceImp implements ReagentService {
 
 	@Override
 	public Reagent get(long id) {
-		return reagentRepository.getOne(id);
+		return reagentRepository.getAllById(id);
 	}
 
 	@Override
@@ -56,6 +56,11 @@ public class ReagentServiceImp implements ReagentService {
 	@Override
 	public void add(Reagent reagent) {
 		reagentRepository.save(reagent);
+	}
+
+	@Override
+	public void save(Reagent reagent) {
+		reagentRepository.saveAndFlush(reagent);
 	}
 
 	public Page<Reagent> getPage(String kind, Pageable pageable) {

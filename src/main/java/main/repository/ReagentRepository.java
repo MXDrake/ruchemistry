@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 public interface ReagentRepository extends JpaRepository<Reagent, Long> {
 
+	Reagent getAllById(Long id);
+
 	List<Reagent> findAllByKindLikeOrderByName(String kind);
 
 	List<Reagent> findAllByNameLikeOrSinonimLikeOrEngNameLikeOrderByName(String name, String sinonim, String engName);

@@ -193,7 +193,7 @@
                     <div id="rightSideBody" style="min-height: 700px">
 
                         <div class="fix"></div>
-                        <div id="content" class="pL20">
+                        <div id="content" class="pL20 ">
                             <div><!-- Yandex.RTB R-A-252178-1 -->
                                 <div id="yandex_rtb_R-A-252178-1"></div>
                                 <script type="text/javascript">
@@ -216,28 +216,73 @@
                                 </script></div>
 
 
-                            <table id="cartTable"   >
-                                <thead>
-                                <tr>
-                                    <td>Название</td>
+                            <table id="cartTable" class="table table-responsive" style="text-align:
+                            center" >
+                                <thead  class="thead-inverse">
+                                <tr style="background-color: lightgrey">
+                                    <td>№</td>
+                                   <td>Название</td>
+                                   <td>Квалиф.</td>
+                                   <td>Упаковка</td>
                                     <td>Кол-во</td>
+                                    <td>На складе</td>
+                                    <td>Цена/упак</td>
+                                    <td>Сумма</td>
+
                                 </tr>
                                 </thead>
-                                <tr th:each="element:${session.cart?.basket}">
+                                <form method="post" action="/user/cart/position/update">
+                                <tr th:each="element, stat:${session.cart?.basket}">
+                                    <td th:text="${stat.count}">
+
+                                    </td>
                                     <td th:text="${element?.key?.name}"></td>
-                                    <td th:text="${element?.value}"></td>
+                                    <td th:text="${element?.key?.type}"></td>
+                                    <td th:text="${element?.key?.getPackage()}"></td>
+                                    <td>
+                                    <input style="width: 70px" oninput="showUpdateBtn()" th:value="${element?.value}"
+                                           name="count"
+                                            type="number"
+                                           pattern="[0-9]">
+                                        <button id="changeBtn" type="submit" name="positionId"
+                                                th:value="${element?.key?.id}"
+                                                hidden>
+                                            Пересчитать</button>
+                                    </td>
+                                    <td th:text="${element?.key?.inStock()}"></td>
                                     <td th:text="${element?.key?.price}"></td>
                                     <td th:text="${element?.key?.price} * ${element?.value} "></td>
                                 </tr>
+                                </form>
+                                <tfoot style="text-align: right">
                                 <tr>
-                                    <td>
-                    <span>Итого: <span
-                            th:text="${session.cart?.amount}"></span></span>
-                                        <br>
-                                        <span>Итого с НДС: <span
-                                                th:text="${session.cart?.amountAndTax}"></span></span>
+
+                                    <td colspan="8">
+                                        <th:block th:if="${session.cart?.amount} != null">
+                                          <span>Итого: <span
+                                                  th:text="${session.cart?.amount}"></span></span>
+                                        </th:block>
+
+                                        <th:block th:if="${session.cart?.amount} == null">
+                                          <span>Итого: <span>0</span></span>
+                                        </th:block>
                                     </td>
                                 </tr>
+                                <tr>
+
+                                    <td colspan="8">
+                                        <th:block th:if="${session.cart?.amount} != null">
+                                        <span>Итого с НДС: <span
+                                                th:text="${session.cart?.amountAndTax}"></span></span>
+                                        </th:block>
+
+                                        <th:block th:if="${session.cart?.amount} == null">
+                                        <span>Итого с НДС: <span>0</span></span>
+                                        </th:block>
+
+                                    </td>
+                                </tr>
+                                </tfoot>
                             </table>
 
                         </div>
@@ -295,6 +340,6 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
+<script src="/js/cartUpdate.js"></script>
 </body>
 </html>

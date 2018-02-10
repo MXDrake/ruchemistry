@@ -13,4 +13,5 @@ public interface ReagentService {
 	Page<Reagent> search(String value, String type, String kind, Pageable pageable);
 	void update(Reagent reagent);
 	void add(Reagent reagent);
+	void save( Reagent reagent);
 }

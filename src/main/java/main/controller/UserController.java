@@ -1,6 +1,7 @@
 package main.controller;
 
 import main.Helper;
+import main.model.Goods;
 import main.model.Reagent;
 import main.service.PageService;
 import main.service.ReagentService;
@@ -185,6 +186,8 @@ public class UserController {
 			Reagent reagent = reagentService.get(reagentId);
 			if (reagent != null) {
 				model.addObject("reagent", reagent);
+				List<Goods> fvv =reagent.getGoods();
+				model.addObject("goods", reagent.getGoods());
 			} else {
 				return new ModelAndView("redirect: /reagents/");
 			}

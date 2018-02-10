@@ -234,10 +234,42 @@
                                 </div>
 
 
-                                <table id="pagePanel" cellpadding=0 cellspacing=0 class="table">
+
+
+                                <th:block th:if="${goods} != null">
+                                    <table class=" table-responsive" th:style="'width: 100%;text-align:center;border-style: solid;border-color:' +${color}" >
+                                        <thead>
+                                        <td><h2>Квалиф.</h2></td>
+                                        <td><h2>Упаковка</h2></td>
+                                        <td><h2>Цена/упак.</h2></td>
+                                        <td><h2>на складе</h2></td>
+                                        <td><h2>Кол-во</h2></td>
+                                        </thead>
+                                        <tr th:each="element : ${goods}">
+                                            <td th:text="${element?.getType()}"> </td>
+                                            <td th:text="${element?.getPackage()}"> </td>
+                                            <td th:text="${element?.getPrice()}"></td>
+                                            <td th:text="${element?.inStock()}"></td>
+
+                                            <td style="padding-bottom: 15px">
+                                                <input style="width:60px" type="number" value="1" id ="count">
+                                                <button class="btn btn-default btn-sm" type="submit"
+                                                        name="reagentId"
+                                                        th:onclick="'addReagentToCart(' + ${element?.getId()} +')' ">
+                                                    в корзину
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+
+                                </th:block>
+
+
+                                <table id="pagePanel" cellpadding=0 cellspacing=0 class="table-responsive">
                                     <tr>
                                         <td class="parameters">
-                                            <table cellspacing=0 cellpadding=0 class="table">
+                                            <table cellspacing=0 cellpadding=0 class="table-responsive">
                                                 <tr th:if="${reagent.getCas() != ''}">
                                                     <td>CAS номер:</td>
                                                     <td><b th:text="${reagent.getCas()}">- </b></td>
@@ -356,21 +388,7 @@
                                                     </td>
                                                 </tr>
 
-                                                <tr>
-                                                    <td>
-                                                        <!--<form action="/user/reagent/buy" method="post">-->
-                                                        <button type="submit" name="reagentId"
-                                                                th:value="${reagent?.id}"
-                                                                th:onclick="'addReagentToCart(' + ${reagent?.id} +')' ">
-                                                            купить
-                                                        </button>
-
-                                                        <!--</form>-->
-
-                                                    </td>
-                                                </tr>
                                             </table>
-
 
                                         </td>
 

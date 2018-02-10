@@ -1,6 +1,10 @@
 package main.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 @Entity
 @Table(name="reagents")
@@ -94,6 +98,26 @@ public class Reagent {
 
     @Column (name = "price")
     private Double price;
+
+    @OneToMany(mappedBy = "reagentId", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<GoodsReagent> goodsReagent;
+
+    public List<Goods> getGoods() {
+        if (goodsReagent.size() == 0) {
+            return null;
+        }
+        List<Goods> goodsList = new ArrayList<>();
+        goodsList.addAll(goodsReagent);
+        return goodsList;
+    }
+
+    public List<GoodsReagent> getGoodsReagent() {
+        return goodsReagent;
+    }
+
+    public void setGoodsReagent(List<GoodsReagent> goodsReagent) {
+        this.goodsReagent = goodsReagent;
+    }
 
     public int getType() {
         return type;

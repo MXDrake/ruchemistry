@@ -28,6 +28,18 @@ public class User implements UserDetails {
     @Column(name = "mail")
     private String mail;
 
+    public User(){
+
+    }
+
+    public User(String name, String password, boolean enable, String mail, Set<Role> roles) {
+        this.name = name;
+        this.password = password;
+        this.enable = enable;
+        this.mail = mail;
+        this.roles = roles;
+    }
+
     @ManyToMany(fetch = FetchType.EAGER, targetEntity = Role.class)
     @JoinTable(name = "permissions",
             joinColumns = {@JoinColumn(name = "user_id")},

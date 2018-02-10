@@ -1,6 +1,5 @@
 package main.model;
 
-import javax.persistence.*;
 import java.util.HashMap;
 
 public class Cart {
@@ -9,23 +8,24 @@ public class Cart {
 
 	static private Double TAX = 1.18d;
 
-	private HashMap<Reagent, Integer> basket;
+	private HashMap<Goods, Integer> basket;
 
 	private Double amount = 0d;
 
 	private Double amountAndTax = 0d;
 
-	public HashMap<Reagent, Integer> getBasket() {
+	public HashMap<Goods, Integer> getBasket() {
 		return basket;
 	}
 
-	public Cart(){
+	public Cart() {
 		this.basket = new HashMap<>();
 	}
-	public void setBasket(Reagent reagent, Integer count) {
-		this.basket.put(reagent, count);
-		this.amount += reagent.getPrice() * count;
-		this.amountAndTax =  this.amount * TAX;
+
+	public void setBasket(Goods Goods, Integer count) {
+		this.basket.put(Goods, count);
+		this.amount += Goods.getPrice() * count;
+		this.amountAndTax = this.amount * TAX;
 	}
 
 	public Double getAmount() {
@@ -50,6 +50,16 @@ public class Cart {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public void addPosition(Goods goods, Integer count) {
+		if (this.basket.containsKey(goods)) {
+			this.amount -= goods.getPrice() * this.basket.get(goods);
+			this.amountAndTax -= this.amount * TAX;
+		}
+		this.amount += goods.getPrice() * count;
+		this.amountAndTax = this.amount * TAX;
+		this.basket.put(goods, count);
 	}
 
 	@Override

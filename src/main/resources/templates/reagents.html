@@ -40,7 +40,7 @@
                     <th:block th:if="${#authorization.expression('isAuthenticated()')}">
                         <div class="inline">
                             <form class="form-group" th:action="@{/logout}" method="post">
-                                <span class="glyphicon glyphicon-user" th:text="${#authentication.principal.name}"
+                                <span class="glyphicon glyphicon-user" th:text="${#authentication?.principal?.name}"
                                       style="color: white; margin-right: 10px">Name
                                 </span>
                                 <button type="submit" value="LOGOUT" class="btn btn-default btn-sm"><span
@@ -361,8 +361,9 @@
                                                     <td>
 
                                                         <a th:href="@{/reagents/} + ${element.getId()}"
-                                                           th:text="${element.getName()}" style="color: black"></a>
-                                                        <p th:text="${element.getSinonim()}+ ${element.getEngName()}+${element.getName()}"
+                                                           th:text="${element?.getName()}" style="color: black"></a>
+                                                        <p
+                                                                th:text="${element?.getSinonim()}+ ${element?.getEngName()}+${element?.getName()}"
                                                            style="color: grey"></p>
                                                     </td>
                                                 </tr>
