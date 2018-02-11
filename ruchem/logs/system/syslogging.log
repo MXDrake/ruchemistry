@@ -7664,3 +7664,834 @@
 2018-02-02 00:45:01.092  INFO 3678 --- [Thread-20] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@158d2680: startup date [Fri Feb 02 00:43:25 MSK 2018]; root of context hierarchy
 2018-02-02 00:45:01.104  INFO 3678 --- [Thread-20] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
 2018-02-02 00:45:01.106  INFO 3678 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:35:06.405  INFO 1527 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@45044706: startup date [Sun Feb 11 20:35:06 MSK 2018]; root of context hierarchy
+2018-02-11 20:35:09.498  INFO 1527 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:35:09.508  INFO 1527 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:35:09.509  INFO 1527 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:35:09.602  INFO 1527 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:35:09.602  INFO 1527 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3203 ms
+2018-02-11 20:35:09.819  INFO 1527 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:35:09.820  INFO 1527 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:35:09.820  INFO 1527 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:35:09.820  INFO 1527 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:35:09.822  INFO 1527 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:35:09.822  INFO 1527 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:35:10.759  INFO 1527 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:35:10.777  INFO 1527 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:35:10.910  INFO 1527 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:35:10.913  INFO 1527 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:35:10.916  INFO 1527 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:35:10.982  INFO 1527 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:35:11.252  INFO 1527 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:35:12.282  INFO 1527 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:35:12.673  INFO 1527 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:35:13.872  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@45044706: startup date [Sun Feb 11 20:35:06 MSK 2018]; root of context hierarchy
+2018-02-11 20:35:13.966  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:35:13.968  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:35:13.968  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:35:13.968  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:35:13.969  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:35:13.969  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:35:13.970  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:35:13.970  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:35:13.971  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:35:13.972  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:35:13.972  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:35:13.973  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:35:13.976  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:35:13.977  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:35:13.978  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:35:13.978  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:35:13.979  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:35:13.979  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:35:13.979  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:35:13.980  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:35:13.980  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:35:13.980  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:35:13.984  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:35:13.986  INFO 1527 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:35:14.036  INFO 1527 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:35:14.036  INFO 1527 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:35:14.131  INFO 1527 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:35:14.921  INFO 1527 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:35:15.013  INFO 1527 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:35:15.128  INFO 1527 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:35:22.575  INFO 1527 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:35:22.576  INFO 1527 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:35:22.600  INFO 1527 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-02-11 20:35:42.497  INFO 1527 --- [Thread-32] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@45044706: startup date [Sun Feb 11 20:35:06 MSK 2018]; root of context hierarchy
+2018-02-11 20:35:42.608  INFO 1527 --- [Thread-32] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:35:42.613  INFO 1527 --- [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:40:53.953  INFO 1570 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@247a64e4: startup date [Sun Feb 11 20:40:53 MSK 2018]; root of context hierarchy
+2018-02-11 20:40:59.315  INFO 1570 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:40:59.330  INFO 1570 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:40:59.331  INFO 1570 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:40:59.427  INFO 1570 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:40:59.428  INFO 1570 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5482 ms
+2018-02-11 20:40:59.652  INFO 1570 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:40:59.652  INFO 1570 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:40:59.653  INFO 1570 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:40:59.653  INFO 1570 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:40:59.654  INFO 1570 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:40:59.654  INFO 1570 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:41:00.570  INFO 1570 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:41:00.591  INFO 1570 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:41:00.712  INFO 1570 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:41:00.715  INFO 1570 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:41:00.718  INFO 1570 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:41:00.791  INFO 1570 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:41:01.041  INFO 1570 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:41:01.967  INFO 1570 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:41:02.502  INFO 1570 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:41:03.964  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@247a64e4: startup date [Sun Feb 11 20:40:53 MSK 2018]; root of context hierarchy
+2018-02-11 20:41:04.073  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:41:04.075  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:41:04.075  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:41:04.075  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:41:04.076  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:41:04.076  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:41:04.076  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:41:04.077  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:41:04.078  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:41:04.078  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:41:04.079  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:41:04.079  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:41:04.083  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:41:04.083  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:41:04.084  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:41:04.084  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:41:04.084  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:41:04.085  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:41:04.085  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:41:04.086  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:41:04.086  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:41:04.086  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:41:04.092  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:41:04.093  INFO 1570 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:41:04.204  INFO 1570 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:41:04.205  INFO 1570 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:41:04.282  INFO 1570 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:41:05.108  INFO 1570 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:41:05.199  INFO 1570 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:41:05.294  INFO 1570 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:41:20.845  INFO 1570 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:41:20.848  INFO 1570 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:41:20.887  INFO 1570 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2018-02-11 20:41:40.395  INFO 1570 --- [Thread-38] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@247a64e4: startup date [Sun Feb 11 20:40:53 MSK 2018]; root of context hierarchy
+2018-02-11 20:41:40.401  INFO 1570 --- [Thread-38] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:41:40.403  INFO 1570 --- [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:42:46.830  INFO 1581 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6ab7a0fa: startup date [Sun Feb 11 20:42:46 MSK 2018]; root of context hierarchy
+2018-02-11 20:42:49.624  INFO 1581 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:42:49.635  INFO 1581 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:42:49.636  INFO 1581 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:42:49.731  INFO 1581 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:42:49.731  INFO 1581 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2907 ms
+2018-02-11 20:42:49.959  INFO 1581 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:42:49.960  INFO 1581 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:42:49.960  INFO 1581 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:42:49.960  INFO 1581 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:42:49.961  INFO 1581 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:42:49.962  INFO 1581 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:42:50.846  INFO 1581 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:42:50.861  INFO 1581 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:42:50.928  INFO 1581 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:42:50.929  INFO 1581 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:42:50.931  INFO 1581 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:42:50.982  INFO 1581 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:42:51.247  INFO 1581 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:42:52.131  INFO 1581 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:42:52.496  INFO 1581 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:42:53.544  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6ab7a0fa: startup date [Sun Feb 11 20:42:46 MSK 2018]; root of context hierarchy
+2018-02-11 20:42:53.632  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:42:53.633  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:42:53.633  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:42:53.633  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:42:53.633  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:42:53.634  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:42:53.634  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:42:53.634  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:42:53.635  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:42:53.636  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:42:53.636  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:42:53.637  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:42:53.640  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:42:53.641  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:42:53.641  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:42:53.642  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:42:53.642  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:42:53.642  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:42:53.643  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:42:53.643  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:42:53.643  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:42:53.644  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:42:53.648  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:42:53.648  INFO 1581 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:42:53.751  INFO 1581 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:42:53.751  INFO 1581 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:42:53.814  INFO 1581 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:42:54.568  INFO 1581 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:42:54.667  INFO 1581 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:42:54.768  INFO 1581 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:43:09.933  INFO 1581 --- [http-nio-8081-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:43:09.935  INFO 1581 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:43:09.967  INFO 1581 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2018-02-11 20:43:14.979 ERROR 1581 --- [http-nio-8081-exec-6] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8081-exec-6] Exception processing template "cart": Exception evaluating SpringEL expression: "session.cart?.amountAndTax" (cart)
+2018-02-11 20:43:14.985 ERROR 1581 --- [http-nio-8081-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "session.cart?.amountAndTax" (cart)] with root cause
+
+java.lang.ArithmeticException: Rounding necessary
+	at java.math.BigDecimal.commonNeedIncrement(BigDecimal.java:4148)
+	at java.math.BigDecimal.needIncrement(BigDecimal.java:4355)
+	at java.math.BigDecimal.divideAndRound(BigDecimal.java:4330)
+	at java.math.BigDecimal.setScale(BigDecimal.java:2470)
+	at java.math.BigDecimal.setScale(BigDecimal.java:2512)
+	at main.model.Cart.getAmountAndTax(Cart.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.expression.spel.support.ReflectivePropertyAccessor$OptimalPropertyAccessor.read(ReflectivePropertyAccessor.java:636)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:94)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:46)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:379)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:88)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:120)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:324)
+	at org.thymeleaf.spring4.expression.SpelVariableExpressionEvaluator.evaluate(SpelVariableExpressionEvaluator.java:139)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariable(VariableExpression.java:154)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:59)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:103)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:133)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:120)
+	at org.thymeleaf.standard.processor.attr.AbstractStandardTextChildModifierAttrProcessor.getText(AbstractStandardTextChildModifierAttrProcessor.java:68)
+	at org.thymeleaf.processor.attr.AbstractTextChildModifierAttrProcessor.getModifiedChildren(AbstractTextChildModifierAttrProcessor.java:59)
+	at org.thymeleaf.processor.attr.AbstractChildrenModifierAttrProcessor.processAttribute(AbstractChildrenModifierAttrProcessor.java:59)
+	at org.thymeleaf.processor.attr.AbstractAttrProcessor.doProcess(AbstractAttrProcessor.java:87)
+	at org.thymeleaf.processor.AbstractProcessor.process(AbstractProcessor.java:212)
+	at org.thymeleaf.dom.Node.applyNextProcessor(Node.java:1017)
+	at org.thymeleaf.dom.Node.processNode(Node.java:972)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.NestableNode.computeNextChild(NestableNode.java:695)
+	at org.thymeleaf.dom.NestableNode.doAdditionalProcess(NestableNode.java:668)
+	at org.thymeleaf.dom.Node.processNode(Node.java:990)
+	at org.thymeleaf.dom.Document.process(Document.java:93)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1155)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1060)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1011)
+	at org.thymeleaf.spring4.view.ThymeleafView.renderFragment(ThymeleafView.java:335)
+	at org.thymeleaf.spring4.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:105)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-02-11 20:43:27.489  INFO 1581 --- [Thread-29] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6ab7a0fa: startup date [Sun Feb 11 20:42:46 MSK 2018]; root of context hierarchy
+2018-02-11 20:43:27.543  INFO 1581 --- [Thread-29] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:43:27.547  INFO 1581 --- [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:44:58.897  INFO 1589 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bb62212: startup date [Sun Feb 11 20:44:58 MSK 2018]; root of context hierarchy
+2018-02-11 20:45:02.072  INFO 1589 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:45:02.085  INFO 1589 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:45:02.086  INFO 1589 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:45:02.174  INFO 1589 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:45:02.174  INFO 1589 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3281 ms
+2018-02-11 20:45:02.382  INFO 1589 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:45:02.383  INFO 1589 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:45:02.383  INFO 1589 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:45:02.383  INFO 1589 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:45:02.384  INFO 1589 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:45:02.385  INFO 1589 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:45:03.250  INFO 1589 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:45:03.269  INFO 1589 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:45:03.382  INFO 1589 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:45:03.384  INFO 1589 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:45:03.386  INFO 1589 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:45:03.453  INFO 1589 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:45:03.711  INFO 1589 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:45:04.593  INFO 1589 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:45:04.934  INFO 1589 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:45:05.997  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bb62212: startup date [Sun Feb 11 20:44:58 MSK 2018]; root of context hierarchy
+2018-02-11 20:45:06.069  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:45:06.070  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:45:06.071  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:45:06.071  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:45:06.071  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:45:06.071  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:45:06.072  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:45:06.072  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:45:06.073  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:45:06.074  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:45:06.074  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:45:06.074  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:45:06.079  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:45:06.079  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:45:06.079  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:45:06.079  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:45:06.080  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:45:06.080  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:45:06.080  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:45:06.081  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:45:06.081  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:45:06.081  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:45:06.085  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:45:06.085  INFO 1589 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:45:06.120  INFO 1589 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:45:06.120  INFO 1589 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:45:06.163  INFO 1589 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:45:06.897  INFO 1589 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:45:06.976  INFO 1589 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:45:07.058  INFO 1589 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:45:21.769  INFO 1589 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:45:21.770  INFO 1589 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:45:21.795  INFO 1589 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-02-11 20:45:48.630  INFO 1589 --- [Thread-29] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@bb62212: startup date [Sun Feb 11 20:44:58 MSK 2018]; root of context hierarchy
+2018-02-11 20:45:48.640  INFO 1589 --- [Thread-29] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:45:48.643  INFO 1589 --- [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:46:53.331  INFO 1600 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3eb1db74: startup date [Sun Feb 11 20:46:53 MSK 2018]; root of context hierarchy
+2018-02-11 20:46:56.230  INFO 1600 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:46:56.240  INFO 1600 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:46:56.241  INFO 1600 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:46:56.326  INFO 1600 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:46:56.326  INFO 1600 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3001 ms
+2018-02-11 20:46:56.540  INFO 1600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:46:56.541  INFO 1600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:46:56.541  INFO 1600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:46:56.541  INFO 1600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:46:56.542  INFO 1600 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:46:56.543  INFO 1600 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:46:57.521  INFO 1600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:46:57.546  INFO 1600 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:46:57.684  INFO 1600 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:46:57.687  INFO 1600 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:46:57.689  INFO 1600 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:46:57.755  INFO 1600 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:46:58.130  INFO 1600 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:46:59.028  INFO 1600 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:46:59.410  INFO 1600 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:47:00.448  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3eb1db74: startup date [Sun Feb 11 20:46:53 MSK 2018]; root of context hierarchy
+2018-02-11 20:47:00.551  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:00.552  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:00.553  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:00.553  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:00.553  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:00.554  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:00.554  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:00.555  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:00.556  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:47:00.557  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:47:00.558  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:47:00.558  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:47:00.564  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:47:00.565  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:47:00.565  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:47:00.566  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:47:00.566  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:47:00.567  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:47:00.567  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:47:00.567  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:47:00.568  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:47:00.569  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:47:00.578  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:47:00.579  INFO 1600 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:47:00.642  INFO 1600 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:47:00.642  INFO 1600 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:47:00.792  INFO 1600 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:47:02.113  INFO 1600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:47:02.236  INFO 1600 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:47:02.360  INFO 1600 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:47:04.915  INFO 1600 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:47:04.915  INFO 1600 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:47:04.936  INFO 1600 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2018-02-11 20:47:20.951  INFO 1600 --- [Thread-32] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3eb1db74: startup date [Sun Feb 11 20:46:53 MSK 2018]; root of context hierarchy
+2018-02-11 20:47:20.964  INFO 1600 --- [Thread-32] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:47:20.967  INFO 1600 --- [Thread-32] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:47:43.485  INFO 1606 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@247a64e4: startup date [Sun Feb 11 20:47:43 MSK 2018]; root of context hierarchy
+2018-02-11 20:47:46.091  INFO 1606 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:47:46.104  INFO 1606 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:47:46.104  INFO 1606 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:47:46.195  INFO 1606 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:47:46.195  INFO 1606 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2718 ms
+2018-02-11 20:47:46.406  INFO 1606 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:47:46.407  INFO 1606 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:47:46.407  INFO 1606 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:47:46.407  INFO 1606 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:47:46.409  INFO 1606 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:47:46.409  INFO 1606 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:47:47.364  INFO 1606 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:47:47.381  INFO 1606 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:47:47.461  INFO 1606 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:47:47.463  INFO 1606 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:47:47.465  INFO 1606 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:47:47.521  INFO 1606 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:47:47.796  INFO 1606 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:47:48.563  INFO 1606 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:47:48.884  INFO 1606 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:47:49.878  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@247a64e4: startup date [Sun Feb 11 20:47:43 MSK 2018]; root of context hierarchy
+2018-02-11 20:47:49.960  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:49.962  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:49.962  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:49.963  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:49.963  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:49.963  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:49.964  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:49.964  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:47:49.965  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:47:49.965  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:47:49.966  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:47:49.967  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:47:49.971  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:47:49.971  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:47:49.972  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:47:49.972  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:47:49.972  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:47:49.973  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:47:49.973  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:47:49.973  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:47:49.974  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:47:49.974  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:47:49.978  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:47:49.979  INFO 1606 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:47:50.076  INFO 1606 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:47:50.076  INFO 1606 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:47:50.193  INFO 1606 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:47:51.007  INFO 1606 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:47:51.092  INFO 1606 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:47:51.180  INFO 1606 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:47:56.745  INFO 1606 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:47:56.745  INFO 1606 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:47:56.766  INFO 1606 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-02-11 20:48:10.626  INFO 1606 --- [Thread-28] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@247a64e4: startup date [Sun Feb 11 20:47:43 MSK 2018]; root of context hierarchy
+2018-02-11 20:48:10.632  INFO 1606 --- [Thread-28] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:48:10.634  INFO 1606 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:48:21.295  INFO 1616 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ddb2196: startup date [Sun Feb 11 20:48:21 MSK 2018]; root of context hierarchy
+2018-02-11 20:48:25.788  INFO 1616 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:48:25.805  INFO 1616 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:48:25.806  INFO 1616 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:48:26.030  INFO 1616 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:48:26.030  INFO 1616 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4743 ms
+2018-02-11 20:48:26.286  INFO 1616 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:48:26.287  INFO 1616 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:48:26.288  INFO 1616 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:48:26.288  INFO 1616 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:48:26.289  INFO 1616 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:48:26.289  INFO 1616 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:48:27.407  INFO 1616 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:48:27.421  INFO 1616 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:48:27.493  INFO 1616 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:48:27.495  INFO 1616 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:48:27.497  INFO 1616 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:48:27.546  INFO 1616 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:48:27.747  INFO 1616 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:48:28.692  INFO 1616 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:48:29.042  INFO 1616 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:48:30.013  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ddb2196: startup date [Sun Feb 11 20:48:21 MSK 2018]; root of context hierarchy
+2018-02-11 20:48:30.081  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:48:30.082  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:48:30.082  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:48:30.082  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:48:30.082  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:48:30.083  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:48:30.083  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:48:30.083  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:48:30.084  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:48:30.085  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:48:30.086  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:48:30.086  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:48:30.091  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:48:30.091  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:48:30.092  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:48:30.092  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:48:30.092  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:48:30.093  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:48:30.093  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:48:30.093  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:48:30.093  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:48:30.094  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:48:30.097  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:48:30.098  INFO 1616 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:48:30.131  INFO 1616 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:48:30.131  INFO 1616 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:48:30.171  INFO 1616 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:48:30.904  INFO 1616 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:48:30.992  INFO 1616 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:48:31.101  INFO 1616 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:48:33.374  INFO 1616 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:48:33.375  INFO 1616 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:48:33.394  INFO 1616 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-02-11 20:48:53.835  INFO 1616 --- [Thread-33] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ddb2196: startup date [Sun Feb 11 20:48:21 MSK 2018]; root of context hierarchy
+2018-02-11 20:48:53.843  INFO 1616 --- [Thread-33] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:48:53.845  INFO 1616 --- [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:49:55.599  INFO 1624 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@76981def: startup date [Sun Feb 11 20:49:55 MSK 2018]; root of context hierarchy
+2018-02-11 20:49:59.040  INFO 1624 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:49:59.051  INFO 1624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:49:59.052  INFO 1624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:49:59.158  INFO 1624 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:49:59.159  INFO 1624 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3564 ms
+2018-02-11 20:49:59.400  INFO 1624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:49:59.402  INFO 1624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:49:59.402  INFO 1624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:49:59.403  INFO 1624 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:49:59.404  INFO 1624 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:49:59.404  INFO 1624 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:50:00.362  INFO 1624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:50:00.380  INFO 1624 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:50:00.507  INFO 1624 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:50:00.509  INFO 1624 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:50:00.512  INFO 1624 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:50:00.580  INFO 1624 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:50:00.836  INFO 1624 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:50:01.708  INFO 1624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:50:02.076  INFO 1624 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:50:03.237  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@76981def: startup date [Sun Feb 11 20:49:55 MSK 2018]; root of context hierarchy
+2018-02-11 20:50:03.394  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:50:03.396  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:50:03.397  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:50:03.397  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:50:03.397  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:50:03.398  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:50:03.398  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:50:03.399  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:50:03.400  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:50:03.400  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:50:03.401  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:50:03.401  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:50:03.406  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:50:03.406  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:50:03.407  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:50:03.407  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:50:03.407  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:50:03.408  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:50:03.409  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:50:03.410  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:50:03.410  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:50:03.411  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:50:03.415  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:50:03.416  INFO 1624 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:50:03.579  INFO 1624 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:50:03.579  INFO 1624 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:50:03.638  INFO 1624 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:50:04.463  INFO 1624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:50:04.547  INFO 1624 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:50:04.648  INFO 1624 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:50:08.875  INFO 1624 --- [http-nio-8081-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:50:08.875  INFO 1624 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:50:08.895  INFO 1624 --- [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2018-02-11 20:50:29.246  INFO 1624 --- [Thread-31] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@76981def: startup date [Sun Feb 11 20:49:55 MSK 2018]; root of context hierarchy
+2018-02-11 20:50:29.252  INFO 1624 --- [Thread-31] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:50:29.255  INFO 1624 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:51:16.516  INFO 1630 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2400b3f9: startup date [Sun Feb 11 20:51:16 MSK 2018]; root of context hierarchy
+2018-02-11 20:51:19.417  INFO 1630 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:51:19.428  INFO 1630 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:51:19.429  INFO 1630 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:51:19.520  INFO 1630 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:51:19.520  INFO 1630 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3017 ms
+2018-02-11 20:51:19.725  INFO 1630 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:51:19.726  INFO 1630 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:51:19.727  INFO 1630 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:51:19.727  INFO 1630 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:51:19.728  INFO 1630 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:51:19.728  INFO 1630 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:51:20.637  INFO 1630 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:51:20.654  INFO 1630 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:51:20.749  INFO 1630 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:51:20.751  INFO 1630 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:51:20.753  INFO 1630 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:51:20.808  INFO 1630 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:51:21.056  INFO 1630 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:51:21.982  INFO 1630 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:51:22.379  INFO 1630 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:51:23.376  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2400b3f9: startup date [Sun Feb 11 20:51:16 MSK 2018]; root of context hierarchy
+2018-02-11 20:51:23.516  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:51:23.517  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:51:23.517  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:51:23.517  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:51:23.517  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:51:23.517  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:51:23.518  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:51:23.518  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:51:23.519  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:51:23.519  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:51:23.520  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:51:23.520  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:51:23.524  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:51:23.524  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:51:23.524  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:51:23.525  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:51:23.525  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:51:23.526  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:51:23.526  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:51:23.526  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:51:23.526  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:51:23.527  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:51:23.530  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:51:23.531  INFO 1630 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:51:23.567  INFO 1630 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:51:23.567  INFO 1630 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:51:23.617  INFO 1630 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:51:24.301  INFO 1630 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:51:24.381  INFO 1630 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:51:24.468  INFO 1630 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:51:27.162  INFO 1630 --- [http-nio-8081-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:51:27.163  INFO 1630 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:51:27.194  INFO 1630 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2018-02-11 20:52:21.229  INFO 1630 --- [Thread-29] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2400b3f9: startup date [Sun Feb 11 20:51:16 MSK 2018]; root of context hierarchy
+2018-02-11 20:52:21.242  INFO 1630 --- [Thread-29] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:52:21.245  INFO 1630 --- [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:52:42.124  INFO 1639 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@16b36899: startup date [Sun Feb 11 20:52:42 MSK 2018]; root of context hierarchy
+2018-02-11 20:52:44.755  INFO 1639 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:52:44.767  INFO 1639 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:52:44.768  INFO 1639 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:52:44.851  INFO 1639 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:52:44.852  INFO 1639 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2780 ms
+2018-02-11 20:52:45.047  INFO 1639 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:52:45.048  INFO 1639 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:52:45.049  INFO 1639 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:52:45.049  INFO 1639 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:52:45.051  INFO 1639 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:52:45.052  INFO 1639 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:52:45.910  INFO 1639 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:52:45.923  INFO 1639 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:52:46.012  INFO 1639 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:52:46.014  INFO 1639 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:52:46.015  INFO 1639 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:52:46.064  INFO 1639 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:52:46.264  INFO 1639 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:52:47.062  INFO 1639 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:52:47.378  INFO 1639 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:52:48.325  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@16b36899: startup date [Sun Feb 11 20:52:42 MSK 2018]; root of context hierarchy
+2018-02-11 20:52:48.424  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:52:48.426  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:52:48.426  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:52:48.426  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:52:48.427  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:52:48.427  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:52:48.427  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:52:48.428  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:52:48.429  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:52:48.429  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:52:48.429  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:52:48.430  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:52:48.434  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:52:48.434  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:52:48.435  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:52:48.435  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:52:48.435  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:52:48.436  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:52:48.436  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:52:48.436  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:52:48.437  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:52:48.437  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:52:48.441  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:52:48.442  INFO 1639 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:52:48.571  INFO 1639 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:52:48.571  INFO 1639 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:52:48.646  INFO 1639 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:52:49.348  INFO 1639 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:52:49.426  INFO 1639 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:52:49.506  INFO 1639 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:52:55.117  INFO 1639 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:52:55.117  INFO 1639 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:52:55.141  INFO 1639 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2018-02-11 20:53:17.461  INFO 1639 --- [Thread-28] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@16b36899: startup date [Sun Feb 11 20:52:42 MSK 2018]; root of context hierarchy
+2018-02-11 20:53:17.472  INFO 1639 --- [Thread-28] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:53:17.474  INFO 1639 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:53:34.131  INFO 1645 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19abcdc4: startup date [Sun Feb 11 20:53:34 MSK 2018]; root of context hierarchy
+2018-02-11 20:53:37.081  INFO 1645 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8081 (http)
+2018-02-11 20:53:37.096  INFO 1645 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-11 20:53:37.097  INFO 1645 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-02-11 20:53:37.184  INFO 1645 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-11 20:53:37.185  INFO 1645 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3060 ms
+2018-02-11 20:53:37.395  INFO 1645 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-11 20:53:37.396  INFO 1645 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-11 20:53:37.396  INFO 1645 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-11 20:53:37.396  INFO 1645 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-11 20:53:37.397  INFO 1645 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-11 20:53:37.398  INFO 1645 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-11 20:53:38.246  INFO 1645 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:53:38.261  INFO 1645 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-11 20:53:38.339  INFO 1645 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-11 20:53:38.342  INFO 1645 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-11 20:53:38.344  INFO 1645 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-11 20:53:38.394  INFO 1645 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-11 20:53:38.593  INFO 1645 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-02-11 20:53:39.355  INFO 1645 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-11 20:53:39.762  INFO 1645 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-11 20:53:40.814  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19abcdc4: startup date [Sun Feb 11 20:53:34 MSK 2018]; root of context hierarchy
+2018-02-11 20:53:40.951  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:53:40.952  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admin(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:53:40.953  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addPage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:53:40.954  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/page],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.admingage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:53:40.954  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editpage],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editpage(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:53:40.955  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/getreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.getreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:53:40.955  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/editreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.editreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:53:40.955  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin/addreagent],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.AdminController.addreagent(javax.servlet.http.HttpServletRequest) throws java.io.IOException
+2018-02-11 20:53:40.958  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/reagent/buy],methods=[POST]}" onto public java.lang.String main.controller.ShoppingController.addToCart(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:53:40.958  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cart()
+2018-02-11 20:53:40.959  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/update],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartUpdatePosition(java.lang.Long,java.lang.Integer,javax.servlet.http.HttpSession)
+2018-02-11 20:53:40.959  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/cart/position/delete/{goodsId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.ShoppingController.cartDeletePosition(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:53:40.963  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.main()
+2018-02-11 20:53:40.964  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/],methods=[POST]}" onto public java.lang.String main.controller.UserController.getPage(int,java.lang.String,java.lang.String,org.springframework.ui.Model,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:53:40.965  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents/{reagentId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.reagent(java.lang.Long,javax.servlet.http.HttpSession)
+2018-02-11 20:53:40.966  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/{name}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.pages(java.lang.String)
+2018-02-11 20:53:40.966  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.login(java.lang.String,java.lang.String)
+2018-02-11 20:53:40.966  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/reagents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.mainGet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:53:40.967  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/sitemap.xml],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.sitemap()
+2018-02-11 20:53:40.967  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medications(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,javax.servlet.http.HttpSession)
+2018-02-11 20:53:40.968  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/medications/{medicId}],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.medication(java.lang.Long)
+2018-02-11 20:53:40.968  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/chemical_agents],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView main.controller.UserController.chemical_agents(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:53:40.973  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-11 20:53:40.974  INFO 1645 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-11 20:53:41.026  INFO 1645 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:53:41.026  INFO 1645 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:53:41.144  INFO 1645 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-11 20:53:41.872  INFO 1645 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-02-11 20:53:41.964  INFO 1645 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-11 20:53:42.121  INFO 1645 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8081 (http)
+2018-02-11 20:53:46.255  INFO 1645 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-11 20:53:46.257  INFO 1645 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-11 20:53:46.276  INFO 1645 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2018-02-11 20:54:14.256  INFO 1645 --- [Thread-29] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@19abcdc4: startup date [Sun Feb 11 20:53:34 MSK 2018]; root of context hierarchy
+2018-02-11 20:54:14.265  INFO 1645 --- [Thread-29] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-02-11 20:54:14.268  INFO 1645 --- [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

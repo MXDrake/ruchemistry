@@ -1,21 +1,19 @@
 package main.model;
 
-import javax.validation.constraints.Min;
+import java.math.BigDecimal;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Cart {
 
 	private long id;
 
-	static private Double TAX = 1.18d;
+	static private BigDecimal TAX = new BigDecimal(1.18);
 
 	private HashMap<Goods, Integer> basket;
 
-	@Min(0)
-	private Double amount = 0d;
+	private BigDecimal amount = new BigDecimal(0);
 
-	private Double amountAndTax = 0d;
+	private BigDecimal amountAndTax = new BigDecimal(0);
 
 	public HashMap<Goods, Integer> getBasket() {
 		return basket;
@@ -25,25 +23,25 @@ public class Cart {
 		this.basket = new HashMap<>();
 	}
 
-	public void setBasket(Goods Goods, Integer count) {
-		this.basket.put(Goods, count);
-		this.amount += Goods.getPrice() * count;
-		this.amountAndTax = this.amount * TAX;
+	public void setBasket(Goods goods, Integer count) {
+		this.basket.put(goods, count);
+		this.amount = this.amount.add(new BigDecimal(count).multiply(goods.getPrice()));
+		this.amountAndTax = this.amount.multiply(TAX);
 	}
 
-	public Double getAmount() {
-		return amount;
+	public BigDecimal getAmount() {
+		return amount.setScale(2, BigDecimal.ROUND_HALF_UP);
 	}
 
-	public void setAmount(Double amount) {
+	public void setAmount(BigDecimal amount) {
 		this.amount = amount;
 	}
 
-	public Double getAmountAndTax() {
-		return amountAndTax;
+	public BigDecimal getAmountAndTax() {
+		return this.amountAndTax.setScale(2, BigDecimal.ROUND_HALF_UP);
 	}
 
-	public void setAmountAndTax(Double amountAndTax) {
+	public void setAmountAndTax(BigDecimal amountAndTax) {
 		this.amountAndTax = amountAndTax;
 	}
 
@@ -56,23 +54,23 @@ public class Cart {
 	}
 
 	public void addPosition(Goods goods, Integer count) {
-		if (count<1) {
+		if (count < 1) {
 			return;
 		}
 
 		if (this.basket.containsKey(goods)) {
-			this.amount -= goods.getPrice() * this.basket.get(goods);
-			this.amountAndTax -= this.amount * TAX;
+			this.amount = this.amount.subtract(goods.getPrice().multiply(new BigDecimal(this.basket.get(goods))));
+			this.amountAndTax = this.amount.multiply(TAX);
 		}
-		this.amount += goods.getPrice() * count;
-		this.amountAndTax = this.amount * TAX;
+		this.amount = this.amount.add(new BigDecimal(count).multiply(goods.getPrice()));
+		this.amountAndTax = this.amount.multiply(TAX);
 		this.basket.put(goods, count);
 	}
 
-	public void deletePosition(Goods goods){
+	public void deletePosition(Goods goods) {
 		this.basket.remove(goods);
-		this.amount -= goods.getPrice() * this.basket.get(goods);
-		this.amountAndTax -= this.amount * TAX;
+		this.amount = this.amount.subtract(goods.getPrice().multiply(new BigDecimal(this.basket.get(goods))));
+		this.amountAndTax = this.amount.multiply(TAX);
 
 	}
 
@@ -102,8 +100,4 @@ public class Cart {
 		result = 31 * result + (amountAndTax != null ? amountAndTax.hashCode() : 0);
 		return result;
 	}
-
-
-
-
 }

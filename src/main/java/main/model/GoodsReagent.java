@@ -3,6 +3,7 @@ package main.model;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 @Entity
 @Table(name = "reagentsGoods")
 public class GoodsReagent implements Goods {
@@ -23,7 +24,7 @@ public class GoodsReagent implements Goods {
 	private String pack;
 
 	@Column(name = "price")
-	private Double price;
+	private BigDecimal price;
 
 	@Column(name = "stock")
 	private Integer stock;
@@ -34,8 +35,8 @@ public class GoodsReagent implements Goods {
 	}
 
 	@Override
-	public Double getPrice() {
-		return price;
+	public BigDecimal getPrice() {
+		return price.setScale(2, BigDecimal.ROUND_HALF_UP);
 	}
 
 	@Override
@@ -82,7 +83,7 @@ public class GoodsReagent implements Goods {
 		this.pack = pack;
 	}
 
-	public void setPrice(Double price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 

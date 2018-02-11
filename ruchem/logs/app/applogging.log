@@ -591,3 +591,51 @@
 2018-02-02 00:43:24.814  INFO 3678 --- [main] main.Appllication                        : No active profile set, falling back to default profiles: default
 2018-02-02 00:43:31.953  INFO 3678 --- [main] main.Appllication                        : Started Appllication in 7.799 seconds (JVM running for 8.908)
 2018-02-02 00:43:31.953  INFO 3678 --- [main] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:35:05.714  INFO 1527 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1527 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:35:05.717  INFO 1527 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:35:15.148  INFO 1527 --- [restartedMain] main.Appllication                        : Started Appllication in 10.978 seconds (JVM running for 12.622)
+2018-02-11 20:35:15.148  INFO 1527 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:40:53.020  INFO 1570 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1570 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:40:53.022  INFO 1570 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:41:05.304  INFO 1570 --- [restartedMain] main.Appllication                        : Started Appllication in 13.932 seconds (JVM running for 15.739)
+2018-02-11 20:41:05.305  INFO 1570 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:41:21.310 ERROR 1570 --- [http-nio-8081-exec-1] main.controller.ShoppingController       : while updating cart count
+2018-02-11 20:42:46.215  INFO 1581 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1581 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:42:46.217  INFO 1581 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:42:54.778  INFO 1581 --- [restartedMain] main.Appllication                        : Started Appllication in 9.162 seconds (JVM running for 10.548)
+2018-02-11 20:42:54.863  INFO 1581 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:44:58.406  INFO 1589 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1589 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:44:58.408  INFO 1589 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:45:07.068  INFO 1589 --- [restartedMain] main.Appllication                        : Started Appllication in 9.611 seconds (JVM running for 11.329)
+2018-02-11 20:45:07.068  INFO 1589 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:46:52.735  INFO 1600 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1600 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:46:52.737  INFO 1600 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:47:02.371  INFO 1600 --- [restartedMain] main.Appllication                        : Started Appllication in 10.709 seconds (JVM running for 12.088)
+2018-02-11 20:47:02.371  INFO 1600 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:47:05.167 ERROR 1600 --- [http-nio-8081-exec-1] main.controller.ShoppingController       : while updating cart count
+2018-02-11 20:47:42.921  INFO 1606 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1606 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:47:42.923  INFO 1606 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:47:51.194  INFO 1606 --- [restartedMain] main.Appllication                        : Started Appllication in 8.798 seconds (JVM running for 10.387)
+2018-02-11 20:47:51.194  INFO 1606 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:48:20.571  INFO 1616 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1616 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:48:20.573  INFO 1616 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:48:31.123  INFO 1616 --- [restartedMain] main.Appllication                        : Started Appllication in 11.155 seconds (JVM running for 12.655)
+2018-02-11 20:48:31.126  INFO 1616 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:49:55.068  INFO 1624 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1624 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:49:55.071  INFO 1624 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:50:04.659  INFO 1624 --- [restartedMain] main.Appllication                        : Started Appllication in 10.513 seconds (JVM running for 11.827)
+2018-02-11 20:50:04.660  INFO 1624 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:51:15.978  INFO 1630 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1630 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:51:15.984  INFO 1630 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:51:24.481  INFO 1630 --- [restartedMain] main.Appllication                        : Started Appllication in 9.25 seconds (JVM running for 10.488)
+2018-02-11 20:51:24.482  INFO 1630 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:52:41.514  INFO 1639 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1639 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:52:41.516  INFO 1639 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:52:49.516  INFO 1639 --- [restartedMain] main.Appllication                        : Started Appllication in 8.723 seconds (JVM running for 10.136)
+2018-02-11 20:52:49.517  INFO 1639 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:52:55.334 ERROR 1639 --- [http-nio-8081-exec-1] main.controller.ShoppingController       : while updating cart count
+2018-02-11 20:53:33.551  INFO 1645 --- [restartedMain] main.Appllication                        : Starting Appllication on MacBook-Air-Max.local with PID 1645 (/Users/Max/Documents/ruchemistry/target/classes started by Max in /Users/Max/Documents/ruchemistry)
+2018-02-11 20:53:33.553  INFO 1645 --- [restartedMain] main.Appllication                        : No active profile set, falling back to default profiles: default
+2018-02-11 20:53:42.134  INFO 1645 --- [restartedMain] main.Appllication                        : Started Appllication in 9.348 seconds (JVM running for 10.98)
+2018-02-11 20:53:42.134  INFO 1645 --- [restartedMain] main.Appllication                        : Application "Ruchemistry" started
+2018-02-11 20:53:46.433 ERROR 1645 --- [http-nio-8081-exec-1] main.controller.ShoppingController       : while updating cart count
