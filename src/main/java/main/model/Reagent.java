@@ -96,9 +96,6 @@ public class Reagent {
     @Column (name = "type")
     private int type;
 
-    @Column (name = "price")
-    private Double price;
-
     @OneToMany(mappedBy = "reagentId", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<GoodsReagent> goodsReagent;
 
@@ -367,14 +364,6 @@ public class Reagent {
         this.kind = kind;
     }
 
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -446,7 +435,7 @@ public class Reagent {
             return false;
         if (formula != null ? !formula.equals(reagent.formula) : reagent.formula != null)
             return false;
-        return price != null ? price.equals(reagent.price) : reagent.price == null;
+        return goodsReagent != null ? goodsReagent.equals(reagent.goodsReagent) : reagent.goodsReagent == null;
     }
 
     @Override
@@ -482,7 +471,7 @@ public class Reagent {
         result = 31 * result + (description != null ? description.hashCode() : 0);
         result = 31 * result + (formula != null ? formula.hashCode() : 0);
         result = 31 * result + type;
-        result = 31 * result + (price != null ? price.hashCode() : 0);
+        result = 31 * result + (goodsReagent != null ? goodsReagent.hashCode() : 0);
         return result;
     }
 }

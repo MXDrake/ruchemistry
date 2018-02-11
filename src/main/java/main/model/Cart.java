@@ -1,6 +1,8 @@
 package main.model;
 
+import javax.validation.constraints.Min;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Cart {
 
@@ -10,6 +12,7 @@ public class Cart {
 
 	private HashMap<Goods, Integer> basket;
 
+	@Min(0)
 	private Double amount = 0d;
 
 	private Double amountAndTax = 0d;
@@ -53,6 +56,10 @@ public class Cart {
 	}
 
 	public void addPosition(Goods goods, Integer count) {
+		if (count<1) {
+			return;
+		}
+
 		if (this.basket.containsKey(goods)) {
 			this.amount -= goods.getPrice() * this.basket.get(goods);
 			this.amountAndTax -= this.amount * TAX;
@@ -60,6 +67,13 @@ public class Cart {
 		this.amount += goods.getPrice() * count;
 		this.amountAndTax = this.amount * TAX;
 		this.basket.put(goods, count);
+	}
+
+	public void deletePosition(Goods goods){
+		this.basket.remove(goods);
+		this.amount -= goods.getPrice() * this.basket.get(goods);
+		this.amountAndTax -= this.amount * TAX;
+
 	}
 
 	@Override
@@ -88,4 +102,8 @@ public class Cart {
 		result = 31 * result + (amountAndTax != null ? amountAndTax.hashCode() : 0);
 		return result;
 	}
+
+
+
+
 }

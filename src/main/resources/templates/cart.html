@@ -228,10 +228,11 @@
                                     <td>На складе</td>
                                     <td>Цена/упак</td>
                                     <td>Сумма</td>
+                                    <td></td>
 
                                 </tr>
                                 </thead>
-                                <form method="post" action="/user/cart/position/update">
+
                                 <tr th:each="element, stat:${session.cart?.basket}">
                                     <td th:text="${stat.count}">
 
@@ -240,24 +241,33 @@
                                     <td th:text="${element?.key?.type}"></td>
                                     <td th:text="${element?.key?.getPackage()}"></td>
                                     <td>
+                                        <form method="post" action="/user/cart/position/update">
                                     <input style="width: 70px" oninput="showUpdateBtn()" th:value="${element?.value}"
                                            name="count"
                                             type="number"
-                                           pattern="[0-9]">
-                                        <button id="changeBtn" type="submit" name="positionId"
+                                           pattern="[0-9]" min="1"
+                                           th:oninput="'showItemBtn(itemBtn'+${element?.key?.id}+')'" >
+                                        <button
+                                                th:id="'itemBtn'+${element?.key?.id}"
+                                                type="submit"
+                                                name="positionId"
                                                 th:value="${element?.key?.id}"
                                                 hidden>
                                             Пересчитать</button>
+                                        </form>
                                     </td>
                                     <td th:text="${element?.key?.inStock()}"></td>
                                     <td th:text="${element?.key?.price}"></td>
                                     <td th:text="${element?.key?.price} * ${element?.value} "></td>
+                                    <td><a
+                                            th:href="'/user/cart/position/delete/'+${element?.key?.id}"><span class="glyphicon glyphicon-remove"
+                                   style="color: red;"  ></span></a></td>
                                 </tr>
-                                </form>
+
                                 <tfoot style="text-align: right">
                                 <tr>
 
-                                    <td colspan="8">
+                                    <td colspan="9">
                                         <th:block th:if="${session.cart?.amount} != null">
                                           <span>Итого: <span
                                                   th:text="${session.cart?.amount}"></span></span>
@@ -270,7 +280,7 @@
                                 </tr>
                                 <tr>
 
-                                    <td colspan="8">
+                                    <td colspan="9">
                                         <th:block th:if="${session.cart?.amount} != null">
                                         <span>Итого с НДС: <span
                                                 th:text="${session.cart?.amountAndTax}"></span></span>

@@ -1,6 +1,8 @@
 package main.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "reagentsGoods")
 public class GoodsReagent implements Goods {
@@ -84,6 +86,10 @@ public class GoodsReagent implements Goods {
 		this.price = price;
 	}
 
+	public Integer getStock() {
+		return stock;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o)
@@ -95,22 +101,22 @@ public class GoodsReagent implements Goods {
 
 		if (id != null ? !id.equals(that.id) : that.id != null)
 			return false;
-		if (reagentId != null ? !reagentId.equals(that.reagentId) : that.reagentId != null)
-			return false;
 		if (type != null ? !type.equals(that.type) : that.type != null)
 			return false;
 		if (pack != null ? !pack.equals(that.pack) : that.pack != null)
 			return false;
-		return price != null ? price.equals(that.price) : that.price == null;
+		if (price != null ? !price.equals(that.price) : that.price != null)
+			return false;
+		return stock != null ? stock.equals(that.stock) : that.stock == null;
 	}
 
 	@Override
 	public int hashCode() {
 		int result = id != null ? id.hashCode() : 0;
-		result = 31 * result + (reagentId != null ? reagentId.hashCode() : 0);
 		result = 31 * result + (type != null ? type.hashCode() : 0);
 		result = 31 * result + (pack != null ? pack.hashCode() : 0);
 		result = 31 * result + (price != null ? price.hashCode() : 0);
+		result = 31 * result + (stock != null ? stock.hashCode() : 0);
 		return result;
 	}
 }
