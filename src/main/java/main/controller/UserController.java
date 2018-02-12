@@ -319,15 +319,37 @@ public class UserController {
 	}
 
 	@RequestMapping("/user/profile")
-	public ModelAndView profile(HttpServletRequest request) {
+	public ModelAndView profile(HttpServletRequest request, String action) {
 		ModelAndView model = new ModelAndView("profile");
 		model = Helper.getMenu(model, "profile");
 		if (model == null) {
 			return new ModelAndView("redirect: /");
 		}
+		if (action != null){
+			model.addObject("edit", true);
+		}
 		User user = userService.getCurrentUser();
 		model.addObject("user", user);
 		model.addObject("page", pageService.getByName("profile"));
+
+		//link for back url
+		String backUrl = request.getHeader("Referer");
+		model.addObject("backurl", backUrl);
+
+		return model;
+	}
+
+
+	@RequestMapping("/user/registration")
+	public ModelAndView registration(HttpServletRequest request) {
+		ModelAndView model = new ModelAndView("registration");
+		model = Helper.getMenu(model, "registration");
+		if (model == null) {
+			return new ModelAndView("redirect: /");
+		}
+		User user = userService.getCurrentUser();
+		model.addObject("user", user);
+		model.addObject("page", pageService.getByName("registration"));
 
 		//link for back url
 		String backUrl = request.getHeader("Referer");

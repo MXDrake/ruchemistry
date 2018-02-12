@@ -232,6 +232,8 @@
                                     <h2> <a th:href="${backurl}">Назад</a></h2>
                                 </div>
 
+                               <a href="/user/profile?action=edit">Изменить</a>
+                                <th:block th:if="${edit}==null">
                                 <table class="table table-responsive " >
                                     <tbody>
                                     <tr>
@@ -263,7 +265,7 @@
 
                                     </tbody>
                                 </table>
-
+                                </th:block>
                             </div>
 
                         </div>
