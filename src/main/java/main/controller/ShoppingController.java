@@ -1,13 +1,8 @@
 package main.controller;
 
 import main.Helper;
-import main.model.Cart;
-import main.model.Goods;
-import main.model.Reagent;
-import main.service.GoodsService;
-import main.service.PageService;
-import main.service.ReagentService;
-import main.service.UserService;
+import main.model.*;
+import main.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,14 +23,16 @@ public class ShoppingController {
 	private ReagentService reagentService;
 	private PageService pageService;
 	private GoodsService goodsService;
+	private OrderService orderService;
 
 	@Autowired
 	public ShoppingController(UserService userService, ReagentService reagentService, PageService pageService,
-							  GoodsService goodsService) {
+							  GoodsService goodsService, OrderService orderService) {
 		this.userService = userService;
 		this.reagentService = reagentService;
 		this.pageService = pageService;
 		this.goodsService = goodsService;
+		this.orderService = orderService;
 	}
 
 	@RequestMapping(value = {"/user/reagent/buy"}, method = RequestMethod.POST)
@@ -84,7 +81,6 @@ public class ShoppingController {
 			}
 			model.addObject("page", pageService.getByName("cart"));
 			//Меняем количество в позиции корзины
-			//Reagent reagent = reagentService.get(positionId);
 			Goods goods = goodsService.get(positionId);
 			Cart cart = (Cart) session.getAttribute("cart");
 			cart.addPosition(goods, count);
@@ -105,8 +101,7 @@ public class ShoppingController {
 				return new ModelAndView("redirect: /");
 			}
 			model.addObject("page", pageService.getByName("cart"));
-			//Меняем количество в позиции корзины
-			//Reagent reagent = reagentService.get(positionId);
+			//Удаляем позицию из корзины
 			Goods goods = goodsService.get(goodsId);
 			Cart cart = (Cart) session.getAttribute("cart");
 			cart.deletePosition(goods);
@@ -115,5 +110,16 @@ public class ShoppingController {
 			logger.error("while deleted cart count");
 		}
 		return model;
+	}
+
+	@RequestMapping(value = "/user/order/create", method = RequestMethod.POST)
+	public ModelAndView createOrder(HttpSession session){
+		ModelAndView model = new ModelAndView("profile");
+		User user = userService.getCurrentUser();
+		Cart cart = (Cart) session.getAttribute("cart");
+		orderService.createOrder(cart, user);
+		session.setAttribute("cart", null);
+		return model;
+
 	}
 }

@@ -15,6 +15,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     private AuthenticationService authenticationService;
 
+    @Autowired
+    private FeedSuccessHandler feedSuccessHandler;
+
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
@@ -32,7 +35,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**").hasAnyAuthority("ADMIN")////?????.access("hasRole('ROLE_admin')")
                 .antMatchers("/parsr/**").authenticated()
                 .antMatchers("/pars/**").hasAnyAuthority("ADMIN")
-                .and().formLogin().loginPage("/login").and().exceptionHandling().accessDeniedPage("/403");
+                .and().formLogin().successHandler(feedSuccessHandler).loginPage("/login").and().exceptionHandling().accessDeniedPage
+                ("/403");
     }
 
 

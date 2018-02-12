@@ -4,12 +4,14 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name="users")
-public class User implements UserDetails {
+public class User implements UserDetails, Serializable {
 
     @Id
     @Column(name = "id")
@@ -27,6 +29,9 @@ public class User implements UserDetails {
 
     @Column(name = "mail")
     private String mail;
+
+    @OneToMany(mappedBy = "customerId", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Order> orders;
 
     public User(){
 
@@ -116,6 +121,16 @@ public class User implements UserDetails {
         this.mail = mail;
     }
 
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -135,6 +150,8 @@ public class User implements UserDetails {
             return false;
         if (mail != null ? !mail.equals(user.mail) : user.mail != null)
             return false;
+        if (orders != null ? !orders.equals(user.orders) : user.orders != null)
+            return false;
         return roles != null ? roles.equals(user.roles) : user.roles == null;
     }
 
@@ -145,6 +162,7 @@ public class User implements UserDetails {
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (enable ? 1 : 0);
         result = 31 * result + (mail != null ? mail.hashCode() : 0);
+        result = 31 * result + (orders != null ? orders.hashCode() : 0);
         result = 31 * result + (roles != null ? roles.hashCode() : 0);
         return result;
     }

@@ -1,9 +1,10 @@
 package main.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.HashMap;
 
-public class Cart {
+public class Cart implements Serializable{
 
 	private long id;
 
@@ -25,7 +26,8 @@ public class Cart {
 
 	public void setBasket(Goods goods, Integer count) {
 		this.basket.put(goods, count);
-		this.amount = this.amount.add(new BigDecimal(count).multiply(goods.getPrice()));
+		//this.amount = this.amount.add(new BigDecimal(count).multiply(goods.getPrice()));
+		this.amount = new BigDecimal(count).multiply(goods.getPrice());
 		this.amountAndTax = this.amount.multiply(TAX);
 	}
 
