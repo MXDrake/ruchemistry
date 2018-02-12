@@ -3,14 +3,17 @@ package main.controller;
 import main.Helper;
 import main.model.Goods;
 import main.model.Reagent;
+import main.model.User;
 import main.service.PageService;
 import main.service.ReagentService;
+import main.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +22,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -31,10 +36,13 @@ public class UserController {
 
 	private final PageService pageService;
 
+	private UserService userService;
+
 	@Autowired
-	public UserController(PageService pageService, ReagentService reagentService) {
+	public UserController(PageService pageService, ReagentService reagentService, UserService userService) {
 		this.pageService = pageService;
 		this.reagentService = reagentService;
+		this.userService = userService;
 	}
 
 	@RequestMapping(value = {"/reagents"}, method = RequestMethod.GET)
@@ -240,11 +248,21 @@ public class UserController {
 
 	@RequestMapping(value = {"/login"}, method = RequestMethod.GET)
 	public ModelAndView login(@RequestParam(value = "error", required = false) String error,
-							  @RequestParam(value = "logout", required = false) String logout) {
+							  @RequestParam(value = "logout", required = false) String logout,HttpServletRequest request) {
 		try {
 			ModelAndView model = new ModelAndView("page");
-			model = Helper.getMenu(model, "login");
-			model.addObject("page", pageService.getByName("login"));
+
+			User user = userService.getCurrentUser();
+			if (user == null){
+				model = Helper.getMenu(model, "login");
+				model.addObject("page", pageService.getByName("login"));
+			} else {
+				model = new ModelAndView("profile");
+				model.addObject("user", user);
+				model = Helper.getMenu(model, "profile");
+				return model;
+			}
+
 			if (error != null) {
 				model.addObject("error", "Неверное имя или пароль");
 			}
@@ -253,7 +271,9 @@ public class UserController {
 				model.addObject("msg", "Вы успешно вышли из системы.");
 				logger.info("logged out successfully.");
 			}
-			//model.setViewName("login");
+				//link for back url
+				String backUrl = request.getHeader("Referer");
+				model.addObject("backurl", backUrl);
 			return model;
 		} catch (Exception e) {
 			logger.error("while singin");
@@ -296,6 +316,24 @@ public class UserController {
 			logger.error("while getting chemical_agents ");
 			return new ModelAndView("redirect: /reagents/");
 		}
+	}
+
+	@RequestMapping("/user/profile")
+	public ModelAndView profile(HttpServletRequest request) {
+		ModelAndView model = new ModelAndView("profile");
+		model = Helper.getMenu(model, "profile");
+		if (model == null) {
+			return new ModelAndView("redirect: /");
+		}
+		User user = userService.getCurrentUser();
+		model.addObject("user", user);
+		model.addObject("page", pageService.getByName("profile"));
+
+		//link for back url
+		String backUrl = request.getHeader("Referer");
+		model.addObject("backurl", backUrl);
+
+		return model;
 	}
 
 //	@Override

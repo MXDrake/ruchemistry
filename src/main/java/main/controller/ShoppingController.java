@@ -7,11 +7,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -54,7 +58,7 @@ public class ShoppingController {
 	}
 
 	@RequestMapping(value = {"/user/cart"}, method = RequestMethod.GET)
-	public ModelAndView cart() {
+	public ModelAndView cart(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("cart");
 		try {
 			//создаем меню и описание страницы
@@ -62,24 +66,21 @@ public class ShoppingController {
 			if (model == null) {
 				return new ModelAndView("redirect: /");
 			}
+			//link for back url
+			String backUrl = request.getHeader("Referer");
+			model.addObject("backurl", backUrl);
+
 			model.addObject("page", pageService.getByName("cart"));
 			return model;
 		} catch (Exception e) {
 			logger.error("while opened page = cart");
-			return new ModelAndView("redirect: /");
+			return new ModelAndView("redirect:/");
 		}
 	}
 
 	@RequestMapping(value = {"/user/cart/position/update"}, method = RequestMethod.POST)
 	public ModelAndView cartUpdatePosition(Long positionId, Integer count, HttpSession session) {
-		ModelAndView model = new ModelAndView("cart");
 		try {
-			//создаем меню и описание страницы
-			model = Helper.getMenu(model, "cart");
-			if (model == null) {
-				return new ModelAndView("redirect: /");
-			}
-			model.addObject("page", pageService.getByName("cart"));
 			//Меняем количество в позиции корзины
 			Goods goods = goodsService.get(positionId);
 			Cart cart = (Cart) session.getAttribute("cart");
@@ -88,19 +89,12 @@ public class ShoppingController {
 		} catch (Exception e) {
 			logger.error("while updating cart count");
 		}
-		return model;
+		return new ModelAndView("redirect:/user/cart");
 	}
 
 	@RequestMapping(value = {"/user/cart/position/delete/{goodsId}"}, method = RequestMethod.GET)
 	public ModelAndView cartDeletePosition(@PathVariable Long goodsId, HttpSession session) {
-		ModelAndView model = new ModelAndView("cart");
 		try {
-			//создаем меню и описание страницы
-			model = Helper.getMenu(model, "cart");
-			if (model == null) {
-				return new ModelAndView("redirect: /");
-			}
-			model.addObject("page", pageService.getByName("cart"));
 			//Удаляем позицию из корзины
 			Goods goods = goodsService.get(goodsId);
 			Cart cart = (Cart) session.getAttribute("cart");
@@ -109,7 +103,7 @@ public class ShoppingController {
 		} catch (Exception e) {
 			logger.error("while deleted cart count");
 		}
-		return model;
+		return new ModelAndView("redirect:/user/cart");
 	}
 
 	@RequestMapping(value = "/user/order/create", method = RequestMethod.POST)

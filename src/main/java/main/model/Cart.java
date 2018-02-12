@@ -70,10 +70,16 @@ public class Cart implements Serializable{
 	}
 
 	public void deletePosition(Goods goods) {
-		this.basket.remove(goods);
 		this.amount = this.amount.subtract(goods.getPrice().multiply(new BigDecimal(this.basket.get(goods))));
 		this.amountAndTax = this.amount.multiply(TAX);
+		this.basket.remove(goods);
+	}
 
+	public int getSize(){
+		if (basket == null){
+			return 0;
+		}
+		return basket.size();
 	}
 
 	@Override

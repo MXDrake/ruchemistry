@@ -35,7 +35,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin/**").hasAnyAuthority("ADMIN")////?????.access("hasRole('ROLE_admin')")
                 .antMatchers("/parsr/**").authenticated()
                 .antMatchers("/pars/**").hasAnyAuthority("ADMIN")
-                .and().formLogin().successHandler(feedSuccessHandler).loginPage("/login").and().exceptionHandling().accessDeniedPage
+                .antMatchers("/user/profile").authenticated()
+                .and().formLogin().successHandler(feedSuccessHandler).loginPage("/login").and()
+                .exceptionHandling()
+                .accessDeniedPage
                 ("/403");
     }
 

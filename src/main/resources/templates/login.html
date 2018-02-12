@@ -20,6 +20,7 @@
 
     <div class="center-block" ></div>
     <div class="container-fluid" >
+        <th:block th:if="${!#authorization.expression('isAuthenticated()')}" >
         <div id="login-box" class="form-group">
 
             <h2>Sing in</h2>
@@ -48,6 +49,7 @@
             </form>
 
         </div>
+
         <div class="col-md-4"></div>
 
     </div>

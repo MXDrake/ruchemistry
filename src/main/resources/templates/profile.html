@@ -1,10 +1,324 @@
+
 <!DOCTYPE html>
-<html lang="en">
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <link type="image/x-icon" href="/favicon.gif" rel="icon">
+
+    <link rel="stylesheet" href="/css/jquery-ui-1.7.2.custom.css" type="text/css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/maxstyle.css" type="text/css">
+    <!--<link rel="stylesheet" href="/css/profile.css" type="text/css">-->
+
+
 </head>
-<body>
-jjjj
+<body >
+
+<div class="container-fluid rounded inheritBack">
+
+    <!--Шапка -->
+    <div class="row  mxHat" >
+        <div class="container" >
+
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-10 main col-lg-12 ">
+                <div class="container-fluid hidden-xs hidden-sm col-md-6 main col-lg-6 inheritBack row"  >
+
+                    <div class="row">
+                        <a href="http://russian-chemistry.ru"> <img src="/img/logo.png" ></a>
+                        <th:block th:if="${#authorization.expression('isAuthenticated()')}">
+                            <div class="inline">
+                                <form class="form-group" th:action="@{/logout}" method="post">
+                                <span class="glyphicon glyphicon-user" th:text="${#authentication.principal.name}"
+                                      style="color: white; margin-right: 10px;">Name
+                                </span>
+                                    <button type="submit" value="LOGOUT" class="btn btn-default btn-sm"><span
+                                            class="glyphicon glyphicon-log-out"
+                                            aria-hidden="true"></span>Выход
+                                    </button>
+                                </form>
+                            </div>
+                        </th:block>
+
+                        <th:block th:if="${!#authorization.expression('isAuthenticated()')}" >
+
+                            <div class="inline input-group " style="text-align: left; padding-bottom: 7px">
+                                <form th:action="@{/login}" method="post">
+                                    <input type="text" class="form-control" placeholder="Логин" name='username'
+                                           style="width: 100px;height: 26px; margin-right: 10px; background-color: whitesmoke">
+
+                                    <input type="text" class="form-control" placeholder="Пароль" name='password'
+                                           style="width: 100px;height: 26px; margin-right: 10px;background-color: whitesmoke">
+
+
+                                    <button type="submit" class="btn btn-default btn-sm" style="height: 27px;
+                                    background-color:whitesmoke;">
+                                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>  Вход
+                                    </button>
+                                </form>
+                            </div>
+                        </th:block>
+
+                    </div>
+                </div>
+
+
+                <!-- Правая сторона поиск -->
+                <div class="container-fluid col-xs-12 col-sm-12  col-md-6 main col-lg-6 inheritBack row">
+
+                    <div class="row">
+                        <form method="get" action="/reagents">
+                            <div class="search mxRight">
+                                Поиск:
+                                <div class="input-group">
+                                    <input type="text" name="search"/>
+                                    <span class="input-group-btn">
+                                    <input class="find" type="submit" value=""/>
+                                <br>
+                            </span>
+                                </div>
+                            </div>
+
+                            <div class="searchRL mxRight">
+                                <input id="radioName" type="radio" name="type" checked value="name">
+                                <label for="radioName">по названию</label>
+                                <input type="radio" value="cas" name="type">
+                                <label>по CAS</label>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <!-- Конец поиска -->
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- конец Шапки -->
+
+
+
+
+
+
+    <!-- тело -->
+
+    <div class="row mxContentBack" >
+        <br>
+        <div class="container " >
+
+            <!-- Menu -->
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-2 main col-lg-2 mxMenu">
+
+                <div class="row slim " id="leftSide" >
+                    <ul id="leftMenu" class="nav">
+
+                        <li th:each ="element: ${menu}">
+
+                            <span th:utext="${element}" > </span>
+
+                        </li>
+
+
+                        </li>
+
+
+                    </ul>
+                    <!-- Yandex.RTB R-A-252178-1 -->
+                    <div id="yandex_rtb_R-A-252178-3" class="col-xs-12 col-sm-12  hidden-md hidden-lg"></div>
+                    <!-- Yandex.RTB R-A-252178-3 -->
+                    <script type="text/javascript">
+                        (function(w, d, n, s, t) {
+                            w[n] = w[n] || [];
+                            w[n].push(function() {
+                                Ya.Context.AdvManager.render({
+                                    blockId: "R-A-252178-3",
+                                    renderTo: "yandex_rtb_R-A-252178-3",
+                                    async: true
+                                });
+                            });
+                            t = d.getElementsByTagName("script")[0];
+                            s = d.createElement("script");
+                            s.type = "text/javascript";
+                            s.src = "//an.yandex.ru/system/context.js";
+                            s.async = true;
+                            t.parentNode.insertBefore(s, t);
+                        })(this, this.document, "yandexContextAsyncCallbacks");
+                    </script>
+
+
+
+
+                    <!-- Yandex.RTB R-A-252178-2 -->
+                    <div id="yandex_rtb_R-A-252178-2" class=" container-fluid hidden-xs hidden-sm"></div>
+                    <script type="text/javascript">
+                        (function(w, d, n, s, t) {
+                            w[n] = w[n] || [];
+                            w[n].push(function() {
+                                Ya.Context.AdvManager.render({
+                                    blockId: "R-A-252178-2",
+                                    renderTo: "yandex_rtb_R-A-252178-2",
+                                    async: true
+                                });
+                            });
+                            t = d.getElementsByTagName("script")[0];
+                            s = d.createElement("script");
+                            s.type = "text/javascript";
+                            s.src = "//an.yandex.ru/system/context.js";
+                            s.async = true;
+                            t.parentNode.insertBefore(s, t);
+                        })(this, this.document, "yandexContextAsyncCallbacks");
+                    </script>
+                </div>
+
+            </div>
+            <!-- end menu -->
+
+            <div class="container-fluid col-xs-12 col-sm-12  col-md-9 main col-lg-9 mxContent"  >
+
+                <div class="row" >
+
+                    <div id="rightSide"   th:style="${color}" >
+
+                        <div id="rightSideHat">
+
+                            <div class="leftPart" >
+                                <!--<p id="h1" th:text="${page.getTitle()}"></p>-->
+                            </div>
+
+                        </div>
+
+                        <div id="rightSideBody" style="min-height: 700px">
+
+                            <div class="fix"></div>
+                            <div id="content" class="pL20">
+                                <div><!-- Yandex.RTB R-A-252178-1 -->
+                                    <div id="yandex_rtb_R-A-252178-1"></div>
+                                    <script type="text/javascript">
+                                        (function(w, d, n, s, t) {
+                                            w[n] = w[n] || [];
+                                            w[n].push(function() {
+                                                Ya.Context.AdvManager.render({
+                                                    blockId: "R-A-252178-1",
+                                                    renderTo: "yandex_rtb_R-A-252178-1",
+                                                    async: true
+                                                });
+                                            });
+                                            t = d.getElementsByTagName("script")[0];
+                                            s = d.createElement("script");
+                                            s.type = "text/javascript";
+                                            s.src = "//an.yandex.ru/system/context.js";
+                                            s.async = true;
+                                            t.parentNode.insertBefore(s, t);
+                                        })(this, this.document, "yandexContextAsyncCallbacks");
+                                    </script></div>
+                                <div style="text-align: right" th:if="${backurl} != null">
+                                    <h2> <a th:href="${backurl}">Назад</a></h2>
+                                </div>
+
+                                <table class="table table-responsive " >
+                                    <tbody>
+                                    <tr>
+                                        <td style=" text-align: center;">Имя</td>
+                                        <td th:text="${user.name}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style=" text-align: center;">Фамилия</td>
+                                        <td>06/23/2013</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=" text-align: center;">Отчество</td>
+                                        <td>01/24/1988</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td style=" text-align: center;">Адрес</td>
+                                        <td>Female</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=" text-align: center;">Почта</td>
+                                        <td th:text="${user.mail}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style=" text-align: center;">Телефон</td>
+                                        <td><a href="mailto:info@support.com">info@support.com</a></td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- конец тела -->
+
+</div>
+
+<!-- Footer -->
+
+<div class="navbar-fixed-bottom row-fluid">
+    <div id="basement">
+        <a href="/" id="baseLogo"></a>
+        <div class="emailLink">E-mail для связи:<br><b>info@russian-chemistry.ru</b></div>
+    </div>
+</div>
+<!-- конец Footer -->
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter46046490 = new Ya.Metrika({
+                    id:46046490,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46046490" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 </body>
 </html>

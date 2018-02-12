@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
-//    @Autowired
-//    UserDao userDao;
 
     private UserRepository userRepository;
 
@@ -21,13 +19,17 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User getByName(String login) {
-        //return userDao.getByName(login);
         return userRepository.findAllByName(login);
     }
 
     @Override
     public User getCurrentUser() {
-        return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        try{
+            return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        } catch (Exception e){
+            return null;
+        }
+
     }
 
     @Override
